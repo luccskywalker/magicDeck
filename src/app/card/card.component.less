@@ -1,23 +1,23 @@
 .card {
-  width: 160px;
-  height: 226px;
+  width: 350px;
+  height: 529px;
   box-shadow: 0 0 1px 1px rgba(white, 0.4), 0 25px 15px -10px rgba(0, 0, 0, 0.5);
 }
 
-.card:nth-of-type {
+.card-holo:nth-of-type {
   &:before,
   &:after {
     animation: none;
     opacity: 1;
   }
 }
-.card:nth-of-type {
+.card-holo:nth-of-type {
   &:before,
   &:after {
     display: none;
   }
 }
-.card:nth-of-type {
+.card-holo:nth-of-type {
   background: none;
   &:before {
     background-position: center;
@@ -27,7 +27,7 @@
   }
 }
 
-.card {
+.card-holo {
   width: 350px;
   height: 529px;
   background-color: #211799;
@@ -51,8 +51,8 @@
   top: 45%;
 }
 
-.card:before,
-.card:after {
+.card-holo:before,
+.card-holo:after {
   content: "";
   position: absolute;
   left: 0;
@@ -74,7 +74,7 @@
   z-index: 1;
   // animation: holoGradient 15s ease infinite;
 }
-.card:after {
+.card-holo:after {
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/13471/sparkles.gif");
   background-position: center;
   background-size: 180%;
@@ -84,7 +84,7 @@
   // animation: holoSparkle 20s ease infinite;
 }
 
-.card.active:before {
+.card-holo.active:before {
   opacity: 1;
   animation: none;
   transition: none;

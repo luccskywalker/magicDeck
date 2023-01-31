@@ -1,10 +1,8 @@
-<script></script>
-
 <main id="app">
-  <div class="card">
-    <img style="width: 100%; height: 100%" [src]="img" />
+  <div class="holo-card">
+    <div [ngClass]="isHolo ? 'card' : 'card-holo'">
+      <img style="width: 100%; height: 100%" [src]="img" />
+    </div>
+    <style class="hover"></style>
   </div>
-
-  <style class="hover"></style>
 </main>
-<script src="holoscript.js"></script>

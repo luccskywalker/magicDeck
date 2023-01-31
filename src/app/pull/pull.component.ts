@@ -12,7 +12,10 @@ export class PullComponent implements OnInit {
 
   public loading = false;
 
+  public cardList = []<Scry.Card>;
+
   public randomCard!: Scry.Card;
+
   public testCard!: Card;
 
   constructor() {}

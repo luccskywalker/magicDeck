@@ -8,6 +8,7 @@ import { Component, Inject, Input, OnInit, Renderer2 } from '@angular/core';
 })
 export class CardComponent implements OnInit {
   @Input() img!: string | undefined;
+  @Input() isHolo = false;
 
   constructor() {}
 
