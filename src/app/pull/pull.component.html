@@ -13,8 +13,7 @@
   <h1>
     {{ randomCard.name }}
   </h1>
-  <img [src]="randomCard.image_uris?.normal" />
-
+  <app-card [img]="randomCard.image_uris?.normal"></app-card>
   <h2>
     {{ randomCard | json }}
   </h2>
