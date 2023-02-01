@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { promises } from 'dns';
+import { toArray } from 'rxjs';
 import * as Scry from 'scryfall-sdk';
 import { Card } from 'scryfall-sdk';
 
@@ -32,13 +33,8 @@ export class PullComponent implements OnInit {
   }
 
   public async roll() {
-    let testArray: any[];
-    this.loading = true;
-    testArray = await this.getRandomCard2();
-    setTimeout(() => {
-      this.loading = false;
-      this.cardList = testArray;
-    }, 5000);
+    this.cardList = await this.getRandomCards();
+    this.loading = false;
   }
 
   public generateRandom(number: number) {
@@ -47,10 +43,11 @@ export class PullComponent implements OnInit {
 
   public getCard(id: number) {}
 
-  public async getRandomCard2() {
+  public async getRandomCards() {
+    this.loading = true;
     const cardArray = [];
     for (let i = 0; i < this.rollsCounter; i++) {
-      const card = await Scry.Cards.random();
+      const card = await this.getRandomCard();
       cardArray.push(card);
     }
     return await Promise.all(cardArray);
