@@ -1,34 +1,33 @@
-<p>pull works!</p>
-
 <button (click)="generateRandom(9999)">Test the Random Funcion</button>
 <button (click)="getCard(randomNumber)">Get card Funcion</button>
 <button (click)="getRandomCard()">Get Random card Funcion</button>
 
-<h1>
-  {{ randomNumber }}
-</h1>
-
+<span>How many times do you want to pull</span>
+<input type="text" [(ngModel)]="rollsCounter" />
+<button (click)="getRandomCard2()">Pull {{ rollsCounter }} times!</button>
 <div *ngIf="loading">Carregando ....</div>
 
-<div *ngIf="!loading">
+<div *ngIf="!loading && !!cardList">
   <div class="wrapper">
-    <div class="normal-card">
-      <h1>
-        {{ randomCard.name }}
-      </h1>
-      <app-card
-        [isHolo]="true"
-        [img]="randomCard.image_uris?.normal"
-      ></app-card>
+    <div *ngFor="let card of cardList">
+      <div class="card-container">
+        <h1>
+          {{ card?.name }}
+        </h1>
+        <app-card
+          [isHolo]="!card.rarity.includes('rare')"
+          [img]="card?.image_uris?.normal"
+        ></app-card>
+      </div>
     </div>
-    <div class="holo-card">
-      <h1>
-        {{ randomCard.name }}
-      </h1>
-      <app-card
-        [isHolo]="!randomCard.rarity.includes('rare')"
-        [img]="randomCard.image_uris?.normal"
-      ></app-card>
-    </div>
+  </div>
+  <div class="holo-card">
+    <h1>
+      {{ randomCard.name }}
+    </h1>
+    <app-card
+      [isHolo]="!randomCard.rarity.includes('rare')"
+      [img]="randomCard.image_uris?.normal"
+    ></app-card>
   </div>
 </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Card, CardFilter } from 'mtgsdk-ts';
+import { promises } from 'dns';
 import * as Scry from 'scryfall-sdk';
+import { Card } from 'scryfall-sdk';
 
 @Component({
   selector: 'app-pull',
@@ -12,7 +13,9 @@ export class PullComponent implements OnInit {
 
   public loading = false;
 
-  public cardList = []<Scry.Card>;
+  public rollsCounter = 0;
+
+  public cardList!: Scry.Card[];
 
   public randomCard!: Scry.Card;
 
@@ -24,18 +27,38 @@ export class PullComponent implements OnInit {
     return Math.floor(Math.random() * max);
   }
 
+  public updateRollCounter(counter: number) {
+    this.rollsCounter = counter;
+  }
+
+  public async roll() {
+    let testArray: any[];
+    this.loading = true;
+    testArray = await this.getRandomCard2();
+    setTimeout(() => {
+      this.loading = false;
+      this.cardList = testArray;
+    }, 5000);
+  }
+
   public generateRandom(number: number) {
     this.randomNumber = this.getRandom(number);
   }
 
   public getCard(id: number) {}
 
+  public async getRandomCard2() {
+    const cardArray = [];
+    for (let i = 0; i < this.rollsCounter; i++) {
+      const card = await Scry.Cards.random();
+      cardArray.push(card);
+    }
+    return await Promise.all(cardArray);
+  }
+
   public async getRandomCard() {
-    this.loading = true;
-    const card = await Scry.Cards.random();
-    this.randomCard = card;
-    this.loading = false;
-    console.log('Random Card', this.randomCard);
+    this.randomCard = await Scry.Cards.random();
+    return this.randomCard;
   }
 
   ngOnInit() {}
