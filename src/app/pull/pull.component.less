@@ -1,3 +1,9 @@
+@base-line-height: 35px;
+@white: rgb(255, 255, 255);
+@off-white: rgba(gray, 0.2);
+@spin-duration: 1s;
+@pulse-duration: 750ms;
+
 .wrapper {
   display: grid;
   grid-template-columns: repeat(
@@ -19,55 +25,65 @@
   }
 }
 
-.spinner {
-  animation: rotator 1.4s linear infinite;
-}
-
-@keyframes rotator {
+@keyframes spin {
   0% {
     transform: rotate(0deg);
   }
   100% {
-    transform: rotate(270deg);
+    transform: rotate(360deg);
   }
 }
 
-.path {
-  stroke-dasharray: 0;
-  stroke-dashoffset: 0;
-  transform-origin: center;
-  animation: dash 1.4s ease-in-out infinite,
-    colors (1.4s * 4) ease-in-out infinite;
-}
-
-@keyframes colors {
-  0% {
-    stroke: #4285f4;
-  }
-  25% {
-    stroke: #de3e35;
-  }
+@keyframes pulse {
   50% {
-    stroke: #f7c223;
-  }
-  75% {
-    stroke: #1b9a59;
-  }
-  100% {
-    stroke: #4285f4;
+    background: white;
   }
 }
 
-@keyframes dash {
-  0% {
-    stroke-dashoffset: 187;
+.loading-pulse {
+  position: relative;
+  width: (@base-line-height / 4);
+  height: @base-line-height;
+  background: @off-white;
+  animation: pulse @pulse-duration infinite;
+  animation-delay: (@pulse-duration / 3);
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: (@base-line-height / 1.5);
+    width: (@base-line-height / 4);
+    background: @off-white;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: pulse @pulse-duration infinite;
   }
-  50% {
-    stroke-dashoffset: 187 / 4;
-    transform: rotate(135deg);
+  &:before {
+    left: -(@base-line-height / 2);
   }
-  100% {
-    stroke-dashoffset: 187;
-    transform: rotate(450deg);
+  &:after {
+    left: (@base-line-height / 2);
+    animation-delay: (@pulse-duration / 1.5);
   }
+}
+
+.pull-container {
+  margin: 5%;
+}
+.input {
+  text-align: center;
+  height: 50%;
+  padding: 0 1.6rem;
+  border-radius: 2.25rem;
+  margin: 1.6rem;
+  border: none;
+  background: #f6f8ff;
+  color: gray;
+  font-size: 1.9rem;
+  outline: none;
+  box-shadow: inset -1px -1px 9px hsla(0, 100%, 100%, 1),
+    inset 1px 1px 9px hsla(0, 0%, 0%, 0.2),
+    -3px -3px 12px hsla(0, 100%, 100%, 1), 3px 3px 12px hsla(0, 0%, 0%, 0.2);
+  transition: all 0.3s ease;
 }

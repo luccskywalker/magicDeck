@@ -1,9 +1,14 @@
-<span>How many times do you want to pull?</span>
-<input type="text" [(ngModel)]="rollsCounter" />
-<button (click)="roll()">Pull {{ rollsCounter }} times!</button>
+<div class="pull-container flex-column align-center">
+  <h3>How many times do you want to pull?</h3>
+  <input class="input" type="text" [(ngModel)]="rollsCounter" />
+  <button class="btn" (click)="roll()">Pull {{ rollsCounter }} times!</button>
+</div>
 
 <div *ngIf="loading">
-  Carregando ....
+  <div class="loading flex-column align-center">
+    <h1>Carregando...</h1>
+    <div class="loading-pulse"></div>
+  </div>
   <svg
     class="spinner"
     width="65px"
@@ -27,10 +32,7 @@
   <div class="wrapper">
     <div *ngFor="let card of cardList">
       <div class="card-container">
-        <app-card
-          [isHolo]="!card.rarity.includes('rare')"
-          [img]="card?.image_uris?.normal"
-        ></app-card>
+        <app-card [card]="card"></app-card>
       </div>
     </div>
   </div>

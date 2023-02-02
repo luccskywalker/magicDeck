@@ -1,8 +1,31 @@
+.img {
+  border-radius: 4%;
+  width: 100%;
+  height: 100%;
+}
+
+.flip-container {
+  position: relative;
+  -webkit-transform: perspective(600px);
+  -webkit-transform-style: preserve-3d;
+}
+
+.flip {
+  -webkit-transition: -webkit-transform 1s;
+  -webkit-transform: rotateY(0deg);
+}
+
+.flip:hover {
+  -webkit-transform: rotateY(-360deg);
+  -webkit-transition: -webkit-transform 1s;
+}
+
 .card {
   cursor: pointer;
   width: 100%;
   height: auto;
-  box-shadow: 0 0 1px 1px rgba(white, 0.4), 0 25px 15px -10px rgba(0, 0, 0, 0.5);
+  border-radius: 4%;
+  background-color: #fff 50%;
 }
 
 .card-holo:nth-of-type {
@@ -32,17 +55,16 @@
   cursor: pointer;
   width: 100%;
   height: auto;
-  background-color: #211799;
   background-image: url(https://cdn.discordapp.com/attachments/671493771766136839/674081668507893780/Elias.png);
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 8px;
+  border-radius: 4%;
   box-shadow: -3px -3px 3px 0 rgba(#26e6f7, 0.6),
     3px 3px 3px 0 rgba(#f759e4, 0.6), 0 0 6px 2px rgba(#ffe759, 0.6),
     0 35px 25px -15px rgba(0, 0, 0, 0.5);
-  position: relative;
   overflow: hidden;
+  position: relative;
   display: inline-block;
   vertical-align: middle;
 }
@@ -73,7 +95,7 @@
   mix-blend-mode: color-dodge;
   opacity: 0.2;
   z-index: 1;
-  // animation: holoGradient 15s ease infinite;
+  animation: holoGradient 15s ease infinite;
 }
 .card-holo:after {
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/13471/sparkles.gif");
@@ -82,7 +104,7 @@
   mix-blend-mode: color-dodge;
   opacity: 1;
   z-index: 2;
-  // animation: holoSparkle 20s ease infinite;
+  animation: holoSparkle ease infinite;
 }
 
 .card-holo.active:before {
