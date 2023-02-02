@@ -1,4 +1,3 @@
-import { DOCUMENT } from '@angular/common';
 import { Component, Inject, Input, OnInit, Renderer2 } from '@angular/core';
 
 @Component({

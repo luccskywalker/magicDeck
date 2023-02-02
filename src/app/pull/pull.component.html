@@ -1,19 +1,32 @@
-<button (click)="generateRandom(9999)">Test the Random Funcion</button>
-<button (click)="getCard(randomNumber)">Get card Funcion</button>
-<button (click)="getRandomCard()">Get Random card Funcion</button>
-
-<span>How many times do you want to pull</span>
+<span>How many times do you want to pull?</span>
 <input type="text" [(ngModel)]="rollsCounter" />
 <button (click)="roll()">Pull {{ rollsCounter }} times!</button>
-<div *ngIf="loading">Carregando ....</div>
+
+<div *ngIf="loading">
+  Carregando ....
+  <svg
+    class="spinner"
+    width="65px"
+    height="65px"
+    viewBox="0 0 66 66"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      class="path"
+      fill="none"
+      stroke-width="6"
+      stroke-linecap="round"
+      cx="33"
+      cy="33"
+      r="30"
+    ></circle>
+  </svg>
+</div>
 
 <div *ngIf="!loading">
   <div class="wrapper">
     <div *ngFor="let card of cardList">
       <div class="card-container">
-        <h1>
-          {{ card?.name }}
-        </h1>
         <app-card
           [isHolo]="!card.rarity.includes('rare')"
           [img]="card?.image_uris?.normal"
