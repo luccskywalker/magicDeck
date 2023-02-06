@@ -1,5 +1,6 @@
 import { Component, Inject, Input, OnInit, Renderer2 } from '@angular/core';
-import { Card } from 'scryfall-sdk';
+import { Card, Rarity } from 'scryfall-sdk';
+import { ImageConfig } from '../card-image/card-image.component';
 const DEFAULT_CARD_BACK =
   'https://static.wikia.nocookie.net/mtgsalvation_gamepedia/images/f/f8/Magic_card_back.jpg';
 @Component({
@@ -11,13 +12,29 @@ export class CardComponent implements OnInit {
   @Input() card!: Card;
   public img!: string | undefined;
   public isHolo = false;
+  public showModal = false;
+  public imageConfig!: ImageConfig;
   constructor() {}
 
   public reveal() {
-    this.img = this.card.image_uris?.normal;
+    this.imageConfig.img = this.card.image_uris?.normal;
   }
+  toggleModal() {
+    this.showModal = !this.showModal;
+  }
+  public openModal() {
+    this.toggleModal();
+  }
+  public closeModal() {
+    this.toggleModal();
+  }
+
   ngOnInit() {
     this.isHolo = this.card.rarity === 'rare';
     this.img = DEFAULT_CARD_BACK;
+    this.imageConfig = {
+      img: DEFAULT_CARD_BACK,
+      rarity: this.card.rarity as unknown as Rarity,
+    };
   }
 }

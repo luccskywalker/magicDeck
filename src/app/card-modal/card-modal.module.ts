@@ -4,7 +4,8 @@ import { CardModalComponent } from './card-modal.component';
 import { CardModule } from '../card/card.module';
 
 @NgModule({
-  imports: [CommonModule, CardModule],
+  imports: [CommonModule],
   declarations: [CardModalComponent],
+  exports: [CardModalComponent],
 })
 export class CardModalModule {}

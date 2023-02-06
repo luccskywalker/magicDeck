@@ -8,8 +8,13 @@ import { Card } from 'scryfall-sdk';
 })
 export class CardModalComponent implements OnInit {
   @Input() card!: Card;
+  public img!: string | undefined;
 
   constructor() {}
+  public closeModal() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log('Carta:', this.card);
+    this.img = this.card.image_uris?.normal;
+  }
 }

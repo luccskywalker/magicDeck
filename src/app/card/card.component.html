@@ -1,8 +1,13 @@
 <main id="app">
-  <div (mouseenter)="reveal()" class="card-container">
-    <div [ngClass]="isHolo ? 'card' : 'card-holo'" class="flip">
-      <img id="card" class="img" [src]="img" />
+  <div (click)="openModal()" (mouseenter)="reveal()" class="card-container">
+    <div class="flip">
+      <app-card-image [config]="imageConfig"></app-card-image>
     </div>
     <style class="hover"></style>
   </div>
 </main>
+
+<div *ngIf="showModal">
+  <app-card-modal [card]="card"></app-card-modal>
+</div>
+<!-- [ngClass]="isHolo ? 'card' : 'card-holo'"  -->
