@@ -11,7 +11,7 @@ const DEFAULT_CARD_BACK =
 export class CardComponent implements OnInit {
   @Input() card!: Card;
   public img!: string | undefined;
-  public isHolo = false;
+
   public showModal = false;
   public imageConfig!: ImageConfig;
   constructor() {}
@@ -30,7 +30,6 @@ export class CardComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.isHolo = this.card.rarity === 'rare';
     this.img = DEFAULT_CARD_BACK;
     this.imageConfig = {
       img: DEFAULT_CARD_BACK,

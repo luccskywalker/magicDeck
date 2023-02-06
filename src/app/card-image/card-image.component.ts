@@ -22,10 +22,13 @@ export interface ImageConfig {
 })
 export class CardImageComponent implements OnInit {
   @Input() config!: ImageConfig;
-  public classTemplate: Rarity = Rarity.common;
+  public isHolo = false;
+  public classTemplate!: Rarity;
+
   constructor() {}
 
   ngOnInit() {
     this.classTemplate = this.config.rarity;
+    this.isHolo = !(this.config.rarity === Rarity.common);
   }
 }

@@ -1,5 +1,30 @@
+.img {
+  border-radius: 4%;
+  width: 100%;
+  height: 100%;
+}
 .rare {
-  background: blue;
+  .rare:before,
+  .rare:after {
+    background-image: linear-gradient(
+      115deg,
+      transparent 0%,
+      rgb(0, 231, 255) 30%,
+      rgb(255, 0, 231) 70%,
+      transparent 100%
+    );
+  }
+  .rare.active::before {
+    background-image: linear-gradient(
+      115deg,
+      transparent 0%,
+      transparent 25%,
+      rgba(0, 231, 255, 0.7) 45%,
+      rgba(255, 0, 231, 0.7) 55%,
+      transparent 70%,
+      transparent 100%
+    );
+  }
 }
 .uncommon {
   background: purple;
@@ -9,4 +34,133 @@
 }
 .bonus {
   background: yellowgreen;
+}
+
+.card {
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+  border-radius: 4%;
+  background-color: #fff 50%;
+}
+
+.card-holo:nth-of-type {
+  &:before,
+  &:after {
+    animation: none;
+    opacity: 1;
+  }
+}
+.card-holo:nth-of-type {
+  &:before,
+  &:after {
+    display: none;
+  }
+}
+.card-holo:nth-of-type {
+  background: none;
+  &:before {
+    background-position: center;
+  }
+  &:after {
+    display: none;
+  }
+}
+
+.card-holo {
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+  background-image: url(https://cdn.discordapp.com/attachments/671493771766136839/674081668507893780/Elias.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4%;
+  box-shadow: -3px -3px 3px 0 rgba(#26e6f7, 0.6),
+    3px 3px 3px 0 rgba(#f759e4, 0.6), 0 0 6px 2px rgba(#ffe759, 0.6),
+    0 35px 25px -15px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.card > span {
+  position: relative;
+  top: 45%;
+}
+
+.card-holo:before,
+.card-holo:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  background-size: 300% 300%;
+  mix-blend-mode: color-dodge;
+  opacity: 0.2;
+  z-index: 1;
+  animation: holoGradient 15s ease infinite;
+}
+.card-holo:after {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/13471/sparkles.gif");
+  background-position: center;
+  background-size: 180%;
+  mix-blend-mode: color-dodge;
+  opacity: 1;
+  z-index: 2;
+  animation: holoSparkle ease infinite;
+}
+.card-holo.active:before {
+  opacity: 1;
+  animation: none;
+  transition: none;
+}
+
+@keyframes holoSparkle {
+  0% {
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  95% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes holoGradient {
+  3% {
+    opacity: 0;
+  }
+  5% {
+    background-position: 0% 0%;
+  }
+  7% {
+    opacity: 0.5;
+  }
+  9% {
+    background-position: 100% 100%;
+  }
+  11% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    background-position: 100% 100%;
+  }
+  55% {
+    opacity: 0.3;
+  }
+  70% {
+    opacity: 0;
+    background-position: 0% 0%;
+  }
 }
