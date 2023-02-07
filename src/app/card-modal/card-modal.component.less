@@ -1,5 +1,27 @@
+@media (max-width: 1000px) {
+  .close-button {
+    z-index: 9;
+  }
+  .content {
+    display: flex;
+    flex-direction: column-reverse;
+    left: 0 !important;
+  }
+}
+@media (max-width: 500px) {
+  .card-description {
+    font-size: 0.7em;
+  }
+}
+.close-button {
+  cursor: pointer;
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  border-radius: 50%;
+}
 .modal-container {
-  background: #ededed;
+  background: white;
   border-radius: 8px;
   box-shadow: 0 2px 8px #333;
   position: fixed;
@@ -29,6 +51,9 @@ img {
   border-radius: 5%;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.card-image {
+  position: relative;
 }
 .card-description {
   width: 300px;

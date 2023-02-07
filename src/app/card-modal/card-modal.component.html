@@ -1,9 +1,10 @@
 <div class="modal-container">
+  <div>
+    <button class="btn close-button" (click)="closeModal()">X</button>
+  </div>
   <div class="content flex-row">
     <div class="card-image">
-      <div>a</div>
       <app-card-image [config]="imageConfig"></app-card-image>
-      <div>a</div>
     </div>
     <div class="card-description">
       <h1>{{ card.name }}.</h1>
@@ -19,6 +20,5 @@
     </div>
   </div>
 </div>
-<div style="z-index: 5; cursor: pointer" (click)="closeModal()">Close X</div>
 
 <div class="overlay"></div>

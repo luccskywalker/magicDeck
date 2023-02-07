@@ -1,6 +1,8 @@
 <div class="pull-container flex-column align-center">
   <h3>How many times do you want to pull?</h3>
-  <input class="input" type="text" [(ngModel)]="rollsCounter" />
+  <div class="form">
+    <input class="input" type="text" [(ngModel)]="rollsCounter" />
+  </div>
   <button class="btn" (click)="roll()">Pull {{ rollsCounter }} times!</button>
 </div>
 

@@ -5,12 +5,26 @@
 @error-color: #fa5032;
 @success-color: #adc865;
 @neutral-color: #89d5c9;
-@background-color: #f6f8ff;
+@background-color: white;
 @main-font: "Inter";
 
 body {
   background-color: @background-color;
   font-family: @main-font;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  margin: 0;
+}
+.neumorphic {
+  border: none;
+  background: #f6f8ff;
+  color: gray;
+  outline: none;
+  box-shadow: inset -1px -1px 9px hsla(0, 100%, 100%, 1),
+    inset 1px 1px 9px hsla(0, 0%, 0%, 0.2),
+    -3px -3px 12px hsla(0, 100%, 100%, 1), 3px 3px 12px hsla(0, 0%, 0%, 0.2);
+  transition: all 0.3s ease;
 }
 
 .flex-column {
@@ -54,11 +68,9 @@ body {
 
 .btn {
   display: inline-block;
-  min-width: 185px;
   font-family: hero-new, sans-serif;
   font-size: 15px;
   line-height: 1;
-  font-weight: 600;
   text-align: center;
   text-decoration: none;
   color: #000;

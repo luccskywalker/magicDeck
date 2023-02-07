@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Card, Rarity } from 'scryfall-sdk';
 import { ImageConfig } from '../card-image/card-image.component';
 
@@ -9,10 +9,13 @@ import { ImageConfig } from '../card-image/card-image.component';
 })
 export class CardModalComponent implements OnInit {
   @Input() card!: Card;
+  @Output() emitClose: EventEmitter<any> = new EventEmitter();
   public imageConfig!: ImageConfig;
 
   constructor() {}
-  public closeModal() {}
+  public closeModal() {
+    this.emitClose.emit(null);
+  }
 
   ngOnInit() {
     this.imageConfig = {

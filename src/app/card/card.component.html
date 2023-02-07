@@ -8,6 +8,5 @@
 </main>
 
 <div *ngIf="showModal">
-  <app-card-modal [card]="card"></app-card-modal>
+  <app-card-modal (emitClose)="closeModal()" [card]="card"></app-card-modal>
 </div>
-<!-- [ngClass]="isHolo ? 'card' : 'card-holo'"  -->
