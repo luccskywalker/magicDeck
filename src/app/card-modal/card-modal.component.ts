@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Card } from 'scryfall-sdk';
+import { Card, Rarity } from 'scryfall-sdk';
+import { ImageConfig } from '../card-image/card-image.component';
 
 @Component({
   selector: 'app-card-modal',
@@ -8,13 +9,15 @@ import { Card } from 'scryfall-sdk';
 })
 export class CardModalComponent implements OnInit {
   @Input() card!: Card;
-  public img!: string | undefined;
+  public imageConfig!: ImageConfig;
 
   constructor() {}
   public closeModal() {}
 
   ngOnInit() {
-    console.log('Carta:', this.card);
-    this.img = this.card.image_uris?.normal;
+    this.imageConfig = {
+      img: this.card.image_uris?.normal,
+      rarity: this.card.rarity as unknown as Rarity,
+    };
   }
 }
