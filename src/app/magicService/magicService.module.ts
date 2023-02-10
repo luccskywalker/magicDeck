@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MagicServiceComponent } from './magicService.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  imports: [
-    CommonModule
-  ],
-  declarations: [MagicServiceComponent]
+  imports: [CommonModule, HttpClientModule],
+  exports: [MagicServiceComponent],
+  declarations: [MagicServiceComponent],
 })
-export class MagicServiceModule { }
+export class MagicServiceModule {}

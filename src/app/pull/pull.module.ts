@@ -4,9 +4,10 @@ import { PullComponent } from './pull.component';
 import { CardModule } from '../card/card.module';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  imports: [CommonModule, CardModule, FormsModule],
+  imports: [CommonModule, CardModule, FormsModule, HttpClientModule],
   declarations: [PullComponent],
   providers: [PullComponent],
   exports: [PullComponent],

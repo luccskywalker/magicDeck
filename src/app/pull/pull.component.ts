@@ -3,6 +3,7 @@ import { promises } from 'dns';
 import { toArray } from 'rxjs';
 import * as Scry from 'scryfall-sdk';
 import { Card } from 'scryfall-sdk';
+import { MagicServiceService } from '../magicService/magicService.service';
 
 @Component({
   selector: 'app-pull',
@@ -16,13 +17,13 @@ export class PullComponent implements OnInit {
 
   public rollsCounter = 0;
 
-  public cardList!: Scry.Card[];
+  public cardList!: Card[];
 
-  public randomCard!: Scry.Card;
+  public randomCard!: Card;
 
   public testCard!: Card;
 
-  constructor() {}
+  constructor(private magicService: MagicServiceService) {}
 
   public getRandom(max: number) {
     return Math.floor(Math.random() * max);
@@ -39,6 +40,10 @@ export class PullComponent implements OnInit {
 
   public generateRandom(number: number) {
     this.randomNumber = this.getRandom(number);
+  }
+
+  public saveToLibrary(cards: Card[]) {
+    this.magicService.saveCardsToLibrary(cards);
   }
 
   public getCard(id: number) {}
