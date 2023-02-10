@@ -12,18 +12,11 @@ interface UserLibrary {
 })
 export class UserLibraryComponent implements OnInit {
   constructor() {}
-  public loading = false;
   public userLibrary!: UserLibrary;
-  public setsList!: Set[];
 
   public addToLibrary(card: Card) {
     this.userLibrary.cards.push(card);
   }
-  public async getSets() {
-    this.loading = true;
-    this.setsList = await Promise.all(await Sets.all());
-    this.loading = false;
-    return this.setsList;
-  }
+
   ngOnInit() {}
 }

@@ -97,3 +97,23 @@ body {
     5px 5px 10px #bbb inset;
   transition: box-shadow 0.05s;
 }
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(
+    5,
+    1fr
+  ); /* 10 is the number of items per column */
+  grid-template-rows: repeat(auto, 1fr); /* 20 is the number of items per row */
+  gap: 15px; /* The gap between the row and columns */
+}
+
+@media (max-width: 800px) {
+  .wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

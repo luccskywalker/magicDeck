@@ -10,7 +10,7 @@
     5,
     1fr
   ); /* 10 is the number of items per column */
-  grid-template-rows: repeat(5, 1fr); /* 20 is the number of items per row */
+  grid-template-rows: repeat(auto, 1fr); /* 20 is the number of items per row */
   gap: 15px; /* The gap between the row and columns */
 }
 
@@ -81,4 +81,8 @@
   padding: 1rem;
   margin: 2%;
   transition: all 0.3s ease;
+}
+textarea:focus,
+input:focus {
+  outline: none;
 }
