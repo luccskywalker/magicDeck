@@ -10,6 +10,7 @@ import { UserDeckComponent } from './user-deck/user-deck.component';
 import { UserLibraryComponent } from './user-library/user-library.component';
 import { CommonModule } from '@angular/common';
 import { UserLibraryModule } from './user-library/user-library.module';
+import { SetsComponent } from './sets/sets.component';
 
 const appRoutes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
@@ -17,6 +18,7 @@ const appRoutes: Routes = [
   { path: 'pull', pathMatch: 'full', component: PullComponent },
   { path: 'deck', pathMatch: 'full', component: UserDeckComponent },
   { path: 'library', pathMatch: 'full', component: UserLibraryComponent },
+  { path: 'sets', pathMatch: 'full', component: SetsComponent },
 ];
 @NgModule({
   declarations: [AppComponent],

@@ -13,27 +13,18 @@ interface UserLibrary {
 })
 export class UserLibraryComponent implements OnInit {
   constructor(private magicService: MagicServiceService) {}
-  public userLibrary!: UserLibrary;
+  public userLibrary: Card[] = [];
 
-  public addToLibrary(cardsParams: Card[]) {
-    this.userLibrary.cards = cardsParams;
+  public addToLibrary(cardsParams: Card) {
+    this.userLibrary.push(cardsParams);
   }
+
   public async populateLibrary() {
-    const teste = this.magicService.getCardsFromLibrary().subscribe(
-      (response) => {
-        console.log(response);
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
-
-    this.userLibrary = teste as unknown as UserLibrary;
-    setTimeout(() => {
-      console.log('A:', this.userLibrary);
-
-      console.log('Teste', teste);
-    }, 2000);
+    this.magicService.getCardsFromLibrary().subscribe((data: Card[]) => {
+      data.map((results) => {
+        this.addToLibrary(results);
+      });
+    });
   }
 
   ngOnInit() {

@@ -1,2 +1,8 @@
 <h1>User Cards List</h1>
-<app-sets></app-sets>
+<div class="wrapper">
+  <div *ngFor="let card of userLibrary">
+    <div class="card-container">
+      <app-card [card]="card"></app-card>
+    </div>
+  </div>
+</div>
