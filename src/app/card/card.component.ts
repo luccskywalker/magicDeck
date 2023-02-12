@@ -10,6 +10,7 @@ const DEFAULT_CARD_BACK =
 })
 export class CardComponent implements OnInit {
   @Input() card!: Card;
+  @Input() revealed = false;
   public img!: string | undefined;
 
   public showModal = false;
@@ -19,6 +20,11 @@ export class CardComponent implements OnInit {
   public reveal() {
     this.imageConfig.img = this.card.image_uris?.normal;
   }
+
+  public showBackCard() {
+    this.img = DEFAULT_CARD_BACK;
+  }
+
   toggleModal() {
     this.showModal = !this.showModal;
   }
@@ -30,10 +36,10 @@ export class CardComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.img = DEFAULT_CARD_BACK;
     this.imageConfig = {
       img: DEFAULT_CARD_BACK,
       rarity: this.card.rarity as unknown as Rarity,
     };
+    this.revealed ? this.reveal() : this.showBackCard();
   }
 }
