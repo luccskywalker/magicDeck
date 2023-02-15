@@ -20,32 +20,38 @@ export class SetsComponent implements OnInit {
   constructor() {}
 
   public async showSetCards(set: Set) {
-    const cardsList = await Cards.search('set:' + set.code).map(
-      (data: Card) => {
-        this.cardsList.push(data);
-      }
-    );
+    await Cards.search('set:' + set.code).map((data: Card) => {
+      this.cardsList.push(data);
+    });
     this.showSetCardList = true;
     return await Promise.all(this.cardsList);
+  }
+  public increaseYear() {}
+  public decreaseYear() {}
+
+  public searchBySpecificYear(year: String) {
+    this.getSetsByYear(year);
   }
 
   public async getSetsByYear(year: String) {
     this.loading = true;
+    // TENHO QUE IMPLEMENTAR A BUSCA PELO SDK
     this.setsList = await this.getAllSets();
-    this.setsList = this.setsList.filter((Set) => {
+    // POIS ESTOU BUSCANDO TODOS OS SETS PARA DEPOIS FILTRÁ-LOS
+    this.setsList = await this.setsList.filter((Set) => {
       const yearSplitted = year.split('-');
       this.yearTitle = yearSplitted[0];
       const dateSplitted = Set.released_at?.split('-');
       if (dateSplitted) {
-        if (dateSplitted[0] > yearSplitted[0]) {
-          this.loading = false;
+        if (dateSplitted[0] === yearSplitted[0]) {
           return Set;
         }
       }
-      this.loading = false;
-
       return;
     });
+    setTimeout(() => {
+      this.loading = false;
+    }, 5000);
   }
 
   public async getAllSets() {
@@ -53,5 +59,7 @@ export class SetsComponent implements OnInit {
     return this.setsList;
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getSetsByYear(FIRST_YEAR_RELEASE);
+  }
 }

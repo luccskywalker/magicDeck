@@ -1,4 +1,6 @@
-<button (click)="getSetsByYear('2022-01-01')">All Sets from 2022</button>
+<button (click)="getSetsByYear('2000-01-01')">
+  All Sets from {{ yearTitle }}
+</button>
 
 <div *ngIf="showSetCardList">
   <div class="wrapper">
@@ -9,6 +11,7 @@
     </div>
   </div>
 </div>
+
 <div *ngIf="loading">
   <div class="loading flex-column align-center">
     <h1>Carregando...</h1>
@@ -33,7 +36,7 @@
   </svg>
 </div>
 
-<div *ngIf="!loading && !showSetCardList">
+<div *ngIf="!loading">
   <div style="text-align: center">
     <h1>{{ yearTitle }}</h1>
   </div>

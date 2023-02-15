@@ -10,14 +10,16 @@ export class MagicServiceService {
   constructor(private httpService: HttpClient) {}
 
   public saveCardsToLibrary(cards: Card[]) {
-    this.httpService.post('http://localhost:3000/cards', cards).subscribe(
-      (response) => {
-        return response;
-      },
-      (error) => {
-        return error;
-      }
-    );
+    cards.forEach((card) => {
+      this.httpService.post('http://localhost:3000/cards', card).subscribe(
+        (response) => {
+          return response;
+        },
+        (error) => {
+          return error;
+        }
+      );
+    });
   }
   public getCardsFromLibrary(): Observable<Card[]> {
     console.log("this.cardsService.put('http://localhost:3000/cartas', cards)");

@@ -3,6 +3,8 @@ import { Card, Rarity } from 'scryfall-sdk';
 import { ImageConfig } from '../card-image/card-image.component';
 const DEFAULT_CARD_BACK =
   'https://static.wikia.nocookie.net/mtgsalvation_gamepedia/images/f/f8/Magic_card_back.jpg';
+const BLANK_CARD =
+  'https://cards.scryfall.io/large/front/8/d/8d7f421e-6947-4509-a179-8522fa4a29f8.jpg';
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
@@ -18,6 +20,11 @@ export class CardComponent implements OnInit {
   constructor() {}
 
   public reveal() {
+    if (!this.card.image_uris) {
+      this.imageConfig.img = BLANK_CARD;
+      console.log('Card:', this.card);
+      return;
+    }
     this.imageConfig.img = this.card.image_uris?.normal;
   }
 
@@ -34,10 +41,16 @@ export class CardComponent implements OnInit {
   public closeModal() {
     this.toggleModal();
   }
+  public defaultBackFrame() {
+    if (this.card.image_uris?.normal) {
+      return DEFAULT_CARD_BACK;
+    }
+    return BLANK_CARD;
+  }
 
   ngOnInit() {
     this.imageConfig = {
-      img: DEFAULT_CARD_BACK,
+      img: this.defaultBackFrame(),
       rarity: this.card.rarity as unknown as Rarity,
     };
     this.revealed ? this.reveal() : this.showBackCard();
