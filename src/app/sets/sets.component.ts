@@ -16,6 +16,7 @@ export class SetsComponent implements OnInit {
   public cardsList: Card[] = [];
   public yearTitle = '----';
   public setsList!: Set[];
+  public optionValue = FIRST_YEAR_RELEASE;
 
   constructor() {}
 
@@ -26,11 +27,18 @@ export class SetsComponent implements OnInit {
     this.showSetCardList = true;
     return await Promise.all(this.cardsList);
   }
+  public getOptionValue() {
+    console.log('Value: ', this.optionValue);
+  }
   public increaseYear() {}
   public decreaseYear() {}
 
   public searchBySpecificYear(year: String) {
+    this.closeCardContainer();
     this.getSetsByYear(year);
+  }
+  public closeCardContainer() {
+    this.showSetCardList = false;
   }
 
   public async getSetsByYear(year: String) {
@@ -59,6 +67,9 @@ export class SetsComponent implements OnInit {
     return this.setsList;
   }
 
+  onChange(eventValue: any) {
+    console.log(eventValue);
+  }
   ngOnInit() {
     this.getSetsByYear(FIRST_YEAR_RELEASE);
   }

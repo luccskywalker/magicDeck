@@ -1,8 +1,30 @@
-<button (click)="getSetsByYear('2000-01-01')">
-  All Sets from {{ yearTitle }}
-</button>
+<div style="float: right">
+  <select
+    required
+    id="year"
+    [(ngModel)]="optionValue"
+    (ngModelChange)="getOptionValue()"
+  >
+    <option value="" disabled selected>Year</option>
+    <option value="2010">2010</option>
+    <option value="2011">2011</option>
+    <option value="2012">2012</option>
+    <option value="2013">2013</option>
+    <option value="2014">2014</option>
+    <option value="2015">2015</option>
+  </select>
+  <button
+    class="neumorphic align-center"
+    (click)="searchBySpecificYear(optionValue)"
+  >
+    Buscar
+  </button>
+</div>
 
 <div *ngIf="showSetCardList">
+  <button style="float: right" (click)="(closeCardContainer)">
+    <-----Voltar
+  </button>
   <div class="wrapper">
     <div *ngFor="let card of cardsList">
       <div class="card-container">
@@ -36,7 +58,7 @@
   </svg>
 </div>
 
-<div *ngIf="!loading">
+<div *ngIf="!loading && !showSetCardList">
   <div style="text-align: center">
     <h1>{{ yearTitle }}</h1>
   </div>
