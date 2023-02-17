@@ -2,7 +2,7 @@
   <select
     required
     id="year"
-    [(ngModel)]="optionValues"
+    [(ngModel)]="yearTitle"
     (ngModelChange)="getOptionValue($event)"
   >
     <ng-container *ngFor="let option of optionValues">
@@ -13,13 +13,13 @@
       ></option>
     </ng-container>
   </select>
-  <button class="neumorphic align-center" (click)="searchBySpecificYear()">
+  <button class="btn" (click)="searchBySpecificYear(currentSearchYear)">
     Buscar
   </button>
 </div>
 
 <div *ngIf="showSetCardList">
-  <button style="float: right" (click)="closeCardContainer()">
+  <button class="btn" style="float: right" (click)="closeCardContainer()">
     <-----Voltar
   </button>
   <div class="wrapper">

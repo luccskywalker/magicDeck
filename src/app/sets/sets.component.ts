@@ -23,6 +23,7 @@ export class SetsComponent implements OnInit {
   constructor() {}
 
   public async showSetCards(set: Set) {
+    this.cardsList = [];
     await Cards.search('set:' + set.code).map((data: Card) => {
       this.cardsList.push(data);
     });
@@ -30,21 +31,22 @@ export class SetsComponent implements OnInit {
     return await Promise.all(this.cardsList);
   }
   public getOptionValue(event: any) {
-    console.log('Event:', event);
+    this.currentSearchYear = new Date(event);
   }
   public increaseYear() {}
   public decreaseYear() {}
 
-  public searchBySpecificYear() {
+  public searchBySpecificYear(year: any) {
     this.closeCardContainer();
-    console.log('Entrei Current Year: ', this.currentSearchYear);
-    this.getSetsByYear(new Date(LAST_YEAR_RELEASE));
+    this.getSetsByYear(new Date(year));
   }
   public closeCardContainer() {
     this.showSetCardList = false;
   }
 
   public async getSetsByYear(year: Date) {
+    this.setsList = [];
+    this.cardsList = [];
     this.loading = true;
     // TENHO QUE IMPLEMENTAR A BUSCA PELO SDK
     this.setsList = await this.getAllSets();
@@ -72,7 +74,7 @@ export class SetsComponent implements OnInit {
   public fillDatesArray(firstDate: Date, secondDate: Date) {
     let iteratorDate = new Date(firstDate);
     while (iteratorDate < secondDate) {
-      this.optionValues.push(iteratorDate);
+      this.optionValues.push(new Date(iteratorDate));
       iteratorDate.setFullYear(iteratorDate.getFullYear() + 1);
     }
   }
