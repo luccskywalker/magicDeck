@@ -1,9 +1,10 @@
+import { getLocaleDateFormat } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { format } from 'path';
 import { Sets, Set, Card, Cards, setFuzzySearch } from 'scryfall-sdk';
 
-const FIRST_YEAR_RELEASE = '1993';
-const LAST_YEAR_RELEASE = '2022';
+const FIRST_YEAR_RELEASE = new Date('1994-01-01');
+const LAST_YEAR_RELEASE = new Date('2023-01-01');
 
 @Component({
   selector: 'app-sets',
@@ -14,9 +15,10 @@ export class SetsComponent implements OnInit {
   public loading = false;
   public showSetCardList = false;
   public cardsList: Card[] = [];
-  public yearTitle = '----';
+  public yearTitle = new Date();
   public setsList!: Set[];
-  public optionValue = FIRST_YEAR_RELEASE;
+  public optionValues: Date[] = [];
+  public currentSearchYear = FIRST_YEAR_RELEASE;
 
   constructor() {}
 
@@ -27,39 +29,39 @@ export class SetsComponent implements OnInit {
     this.showSetCardList = true;
     return await Promise.all(this.cardsList);
   }
-  public getOptionValue() {
-    console.log('Value: ', this.optionValue);
+  public getOptionValue(event: any) {
+    console.log('Event:', event);
   }
   public increaseYear() {}
   public decreaseYear() {}
 
-  public searchBySpecificYear(year: String) {
+  public searchBySpecificYear() {
     this.closeCardContainer();
-    this.getSetsByYear(year);
+    console.log('Entrei Current Year: ', this.currentSearchYear);
+    this.getSetsByYear(new Date(LAST_YEAR_RELEASE));
   }
   public closeCardContainer() {
     this.showSetCardList = false;
   }
 
-  public async getSetsByYear(year: String) {
+  public async getSetsByYear(year: Date) {
     this.loading = true;
     // TENHO QUE IMPLEMENTAR A BUSCA PELO SDK
     this.setsList = await this.getAllSets();
     // POIS ESTOU BUSCANDO TODOS OS SETS PARA DEPOIS FILTRÁ-LOS
     this.setsList = await this.setsList.filter((Set) => {
-      const yearSplitted = year.split('-');
-      this.yearTitle = yearSplitted[0];
-      const dateSplitted = Set.released_at?.split('-');
-      if (dateSplitted) {
-        if (dateSplitted[0] === yearSplitted[0]) {
-          return Set;
+      this.yearTitle = year;
+      if (Set.released_at) {
+        const releasedDate = new Date(Set.released_at);
+        if (releasedDate) {
+          if (releasedDate.getFullYear() === this.yearTitle.getFullYear()) {
+            return Set;
+          }
         }
       }
       return;
     });
-    setTimeout(() => {
-      this.loading = false;
-    }, 5000);
+    this.loading = false;
   }
 
   public async getAllSets() {
@@ -67,10 +69,16 @@ export class SetsComponent implements OnInit {
     return this.setsList;
   }
 
-  onChange(eventValue: any) {
-    console.log(eventValue);
+  public fillDatesArray(firstDate: Date, secondDate: Date) {
+    let iteratorDate = new Date(firstDate);
+    while (iteratorDate < secondDate) {
+      this.optionValues.push(iteratorDate);
+      iteratorDate.setFullYear(iteratorDate.getFullYear() + 1);
+    }
   }
+
   ngOnInit() {
     this.getSetsByYear(FIRST_YEAR_RELEASE);
+    this.fillDatesArray(FIRST_YEAR_RELEASE, LAST_YEAR_RELEASE);
   }
 }
