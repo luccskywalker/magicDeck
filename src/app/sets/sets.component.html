@@ -1,77 +1,81 @@
-<div style="float: right">
-  <select
-    required
-    id="year"
-    [(ngModel)]="yearTitle"
-    (ngModelChange)="getOptionValue($event)"
-  >
-    <ng-container *ngFor="let option of optionValues">
-      <option
-        type="date"
-        [innerHTML]="option.getFullYear()"
-        [ngValue]="option"
-      ></option>
-    </ng-container>
-  </select>
-  <button class="btn" (click)="searchBySpecificYear(currentSearchYear)">
-    Buscar
-  </button>
-</div>
-
-<div *ngIf="showSetCardList">
-  <button class="btn" style="float: right" (click)="closeCardContainer()">
-    <-----Voltar
-  </button>
-  <div class="wrapper">
-    <div *ngFor="let card of cardsList">
-      <div class="card-container">
-        <app-card [card]="card" [revealed]="true"></app-card>
-      </div>
+<div class="flex-column">
+  <div>
+    <div style="gap: 5%; display: flex; float: right">
+      <select
+        required
+        class="btn"
+        [(ngModel)]="yearTitle"
+        (ngModelChange)="getOptionValue($event)"
+      >
+        <option [value]="yearTitle" disabled selected>Choose a Year...</option>
+        <ng-container *ngFor="let option of optionValues">
+          <option
+            type="date"
+            [innerHTML]="option.getFullYear()"
+            [ngValue]="option"
+            selected
+          ></option>
+        </ng-container>
+      </select>
+      <button class="btn" (click)="searchBySpecificYear(currentSearchYear)">
+        Buscar
+      </button>
     </div>
   </div>
-</div>
+  <div>
+    <div *ngIf="showSetCardList">
+      <div class="wrapper">
+        <div *ngFor="let card of cardsList">
+          <div class="card-container">
+            <app-card [card]="card" [revealed]="true"></app-card>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<div *ngIf="loading">
-  <div class="loading flex-column align-center">
-    <h1>Carregando...</h1>
-    <div class="loading-pulse"></div>
-  </div>
-  <svg
-    class="spinner"
-    width="65px"
-    height="65px"
-    viewBox="0 0 66 66"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <circle
-      class="path"
-      fill="none"
-      stroke-width="6"
-      stroke-linecap="round"
-      cx="33"
-      cy="33"
-      r="30"
-    ></circle>
-  </svg>
-</div>
+    <div *ngIf="loading">
+      <div class="loading flex-column align-center">
+        <h1>Carregando...</h1>
+        <div class="loading-pulse"></div>
+      </div>
+      <svg
+        class="spinner"
+        width="65px"
+        height="65px"
+        viewBox="0 0 66 66"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          class="path"
+          fill="none"
+          stroke-width="6"
+          stroke-linecap="round"
+          cx="33"
+          cy="33"
+          r="30"
+        ></circle>
+      </svg>
+    </div>
 
-<div *ngIf="!loading && !showSetCardList">
-  <div style="text-align: center">
-    <h1 [innerHTML]="yearTitle.getFullYear()"></h1>
-  </div>
-  <div class="wrapper">
-    <div *ngFor="let set of setsList">
-      <div class="flex-column align-center">
-        <a (click)="showSetCards(set)">
-          <img
-            style="width: 200px; height: 200px; cursor: pointer"
-            [src]="set.icon_svg_uri"
-            alt=""
-          />
-        </a>
-        <div style="text-align: center">
-          <h6>{{ set.name }}({{ set.released_at }})</h6>
-          <h6>( 0 / {{ set.card_count }})</h6>
+    <div *ngIf="!loading && !showSetCardList">
+      <div style="text-align: center">
+        <h1 [innerHTML]="yearTitle.getFullYear()"></h1>
+      </div>
+      <div class="wrapper">
+        <div *ngFor="let set of setsList">
+          <div class="flex-column align-center">
+            <a (click)="showSetCards(set)">
+              <img
+                style="width: 200px; height: 200px; cursor: pointer"
+                [src]="set.icon_svg_uri"
+                alt=""
+              />
+            </a>
+            <div style="text-align: center">
+              <h6>{{ set.name }}({{ set.released_at }})</h6>
+              <h6>( 0 / {{ set.card_count }})</h6>
+            </div>
+          </div>
         </div>
       </div>
     </div>

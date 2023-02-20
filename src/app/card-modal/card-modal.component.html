@@ -1,6 +1,6 @@
 <div class="modal-container">
   <div>
-    <button class="btn close-button" (click)="closeModal()">X</button>
+    <button class="btn close-button" (click)="closeModal()">x</button>
   </div>
   <div class="content flex-row">
     <div class="card-image">
@@ -8,14 +8,16 @@
     </div>
     <div class="card-description">
       <h1>{{ card.name }}.</h1>
-      <p>
+      <p>{{ card.type_line }}</p>
+      <p>{{ card.rarity }} {{ card.mana_cost }}</p>
+      <p style="text-align: justify; text-justify: auto">
         {{ card.oracle_text }}
       </p>
       <p>
-        {{ card.set_name }}
+        {{ card.flavor_text }}
       </p>
       <p>
-        {{ card.rarity }}
+        {{ card.set_name }}
       </p>
     </div>
   </div>
