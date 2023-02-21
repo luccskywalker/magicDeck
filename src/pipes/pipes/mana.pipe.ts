@@ -12,12 +12,32 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 export class ManaPipe implements PipeTransform {
   constructor(private _sanitizer: DomSanitizer) {}
 
-  public imageSymbol!: CardSymbol;
+  public imageSymbol!: string;
 
-  transform(value: any, event?: any): SafeHtml {
-    let termsApply =
-      '<span> <img style="height: 50px;width: 50px" src="https://svgs.scryfall.io/card-symbols/7.svg"> </span>';
+  async transform(
+    value: string | null | undefined,
+    event?: any
+  ): Promise<SafeHtml> {
+    console.log('Valores: ', value);
+    if (value) {
+      const test = value.slice(3);
+      console.log('Slice', test[1]);
+    }
 
-    return this._sanitizer.bypassSecurityTrustHtml(termsApply);
+    const a: CardSymbol[] = await Symbology.all();
+
+    a.filter((symbol) => {
+      if (symbol.symbol == value) {
+        this.imageSymbol =
+          '<span> <img style="width= 10px; height=10px" src="' +
+          symbol.svg_uri +
+          '"/> </span>';
+      }
+      return;
+    });
+    setTimeout(() => {
+      console.log('A ', this.imageSymbol);
+    }, 2000);
+    return this._sanitizer.bypassSecurityTrustHtml(this.imageSymbol);
   }
 }
