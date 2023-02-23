@@ -32,7 +32,7 @@ export class ManaPipe implements PipeTransform {
           if (symbol.symbol == element) {
             this.symbolsToReturn =
               this.symbolsToReturn +
-              '<span> <img style="width: 40px; height:40px" src="' +
+              '<span> <img class="mana-icon" src="' +
               symbol.svg_uri +
               '"/> </span>';
           }

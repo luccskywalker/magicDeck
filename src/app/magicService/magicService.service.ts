@@ -22,7 +22,6 @@ export class MagicServiceService {
     });
   }
   public getCardsFromLibrary(): Observable<Card[]> {
-    console.log("this.cardsService.put('http://localhost:3000/cartas', cards)");
     return this.httpService.get<Card[]>('http://localhost:3000/cards');
   }
 }

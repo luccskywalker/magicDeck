@@ -22,7 +22,6 @@ export class CardComponent implements OnInit {
   public reveal() {
     if (!this.card.image_uris) {
       this.imageConfig.img = BLANK_CARD;
-      console.log('Card:', this.card);
       return;
     }
     this.imageConfig.img = this.card.image_uris?.normal;

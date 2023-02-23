@@ -1,6 +1,6 @@
 <div class="flex-column">
   <div>
-    <div style="gap: 5%; display: flex; float: right">
+    <div class="set-buttons">
       <select
         required
         class="btn"
@@ -58,20 +58,16 @@
     </div>
 
     <div *ngIf="!loading && !showSetCardList">
-      <div style="text-align: center">
+      <div class="text-justify">
         <h1 [innerHTML]="yearTitle.getFullYear()"></h1>
       </div>
       <div class="wrapper">
         <div *ngFor="let set of setsList">
           <div class="flex-column align-center">
             <a (click)="showSetCards(set)">
-              <img
-                style="width: 200px; height: 200px; cursor: pointer"
-                [src]="set.icon_svg_uri"
-                alt=""
-              />
+              <img class="set-icons" [src]="set.icon_svg_uri" alt="" />
             </a>
-            <div style="text-align: center">
+            <div class="text-justify">
               <h6>{{ set.name }}({{ set.released_at }})</h6>
               <h6>( 0 / {{ set.card_count }})</h6>
             </div>

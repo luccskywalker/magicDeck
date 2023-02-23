@@ -18,6 +18,6 @@ export class CardImageComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    this.isHolo = this.config.rarity.toString() === Rarity[0].toString();
+    this.isHolo = this.config.rarity?.toString() === Rarity[0].toString();
   }
 }
