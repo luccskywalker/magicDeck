@@ -7,13 +7,15 @@
       <app-card-image [config]="imageConfig"></app-card-image>
     </div>
     <div class="card-description">
-      <h1>{{ card.name }}.</h1>
+      <h1>
+        {{ card.name }}
+        <span [innerHtml]="card.mana_cost | mana | async"></span>
+      </h1>
       <p>{{ card.type_line }}</p>
       <div>
         <span>
           {{ card.rarity }}
         </span>
-        <span [innerHtml]="card.mana_cost | mana | async"></span>
       </div>
       <p style="text-align: justify; text-justify: auto">
         {{ card.oracle_text }}

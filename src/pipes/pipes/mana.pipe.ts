@@ -12,32 +12,34 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 export class ManaPipe implements PipeTransform {
   constructor(private _sanitizer: DomSanitizer) {}
 
-  public imageSymbol!: string;
+  public symbolsToReturn: string = '';
+  public symbolsList: CardSymbol[] = [];
+
+  public removeEmptyObjects(array: string[]) {
+    return array.filter((obj) => Object.keys(obj).length !== 0);
+  }
 
   async transform(
     value: string | null | undefined,
     event?: any
   ): Promise<SafeHtml> {
-    console.log('Valores: ', value);
+    this.symbolsList = await Symbology.all();
     if (value) {
-      const test = value.slice(3);
-      console.log('Slice', test[1]);
+      let stringValues = value.split(/(\{.*?\})/);
+      stringValues = this.removeEmptyObjects(stringValues);
+      stringValues.forEach((element) => {
+        this.symbolsList.filter((symbol) => {
+          if (symbol.symbol == element) {
+            this.symbolsToReturn =
+              this.symbolsToReturn +
+              '<span> <img style="width: 40px; height:40px" src="' +
+              symbol.svg_uri +
+              '"/> </span>';
+          }
+          return;
+        });
+      });
     }
-
-    const a: CardSymbol[] = await Symbology.all();
-
-    a.filter((symbol) => {
-      if (symbol.symbol == value) {
-        this.imageSymbol =
-          '<span> <img style="width= 10px; height=10px" src="' +
-          symbol.svg_uri +
-          '"/> </span>';
-      }
-      return;
-    });
-    setTimeout(() => {
-      console.log('A ', this.imageSymbol);
-    }, 2000);
-    return this._sanitizer.bypassSecurityTrustHtml(this.imageSymbol);
+    return this._sanitizer.bypassSecurityTrustHtml(this.symbolsToReturn);
   }
 }
