@@ -24,7 +24,7 @@ export class CardComponent implements OnInit {
       this.imageConfig.img = BLANK_CARD;
       return;
     }
-    this.imageConfig.img = this.card.image_uris?.normal;
+    this.imageConfig.img = this.card.image_uris?.large;
   }
 
   public showBackCard() {

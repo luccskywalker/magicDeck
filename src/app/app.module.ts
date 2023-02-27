@@ -13,6 +13,7 @@ import { UserLibraryModule } from './user-library/user-library.module';
 import { SetsComponent } from './sets/sets.component';
 import { PipesModule } from 'src/pipes/pipes/pipes.module';
 import { ManaPipe } from 'src/pipes/pipes/mana.pipe';
+import { UserDeckModule } from './user-deck/user-deck.module';
 
 const appRoutes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
@@ -32,6 +33,7 @@ const appRoutes: Routes = [
     UserLibraryModule,
     RouterModule.forRoot(appRoutes),
     PipesModule,
+    UserDeckModule,
   ],
   providers: [AppModule],
   bootstrap: [AppComponent],

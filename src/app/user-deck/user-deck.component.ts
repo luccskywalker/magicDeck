@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Card } from 'scryfall-sdk';
+import { MagicServiceService } from '../magicService/magicService.service';
 
 interface Deck {
   name: string;
@@ -13,7 +14,23 @@ interface Deck {
 })
 export class UserDeckComponent implements OnInit {
   public deck!: Deck;
-  constructor() {}
+  constructor(private magicService: MagicServiceService) {}
 
-  ngOnInit() {}
+  public userFavouriteCards: Card[] = [];
+
+  public addToLibrary(cardsParams: Card) {
+    this.userFavouriteCards.push(cardsParams);
+  }
+
+  public async populateFavCards() {
+    this.magicService.getFavouriteCards().subscribe((data: Card[]) => {
+      data.map((results) => {
+        this.addToLibrary(results);
+      });
+    });
+  }
+
+  ngOnInit() {
+    this.populateFavCards();
+  }
 }

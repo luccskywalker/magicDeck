@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Card, Rarity } from 'scryfall-sdk';
 import { ImageConfig } from '../card-image/card-image.component';
+import { MagicServiceService } from '../magicService/magicService.service';
 
 @Component({
   selector: 'app-card-modal',
@@ -12,7 +13,12 @@ export class CardModalComponent implements OnInit {
   @Output() emitClose: EventEmitter<any> = new EventEmitter();
   public imageConfig!: ImageConfig;
 
-  constructor() {}
+  public favouriteCard(card: Card) {
+    this.magicService.favouriteCard(card);
+  }
+
+  constructor(private magicService: MagicServiceService) {}
+
   public closeModal() {
     this.emitClose.emit(null);
   }
