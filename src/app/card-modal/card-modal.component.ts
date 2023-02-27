@@ -20,7 +20,7 @@ export class CardModalComponent implements OnInit {
   ngOnInit() {
     this.imageConfig = {
       img: this.card.image_uris?.normal,
-      rarity: this.card.rarity as unknown as Rarity,
+      rarity: this.card.rarity,
     };
   }
 }

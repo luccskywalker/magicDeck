@@ -3,7 +3,7 @@ import { Rarity } from 'scryfall-sdk';
 
 export interface ImageConfig {
   img: string | undefined;
-  rarity: Rarity;
+  rarity: keyof typeof Rarity;
 }
 
 @Component({

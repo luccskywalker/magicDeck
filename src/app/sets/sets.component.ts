@@ -3,8 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { format } from 'path';
 import { Sets, Set, Card, Cards, setFuzzySearch } from 'scryfall-sdk';
 
-const FIRST_YEAR_RELEASE = new Date('1994-01-01');
-const LAST_YEAR_RELEASE = new Date('2023-01-01');
+const FIRST_YEAR_RELEASE = new Date('1993-01-20');
+const LAST_YEAR_RELEASE = new Date('2023-01-20');
 
 @Component({
   selector: 'app-sets',

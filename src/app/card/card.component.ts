@@ -50,7 +50,7 @@ export class CardComponent implements OnInit {
   ngOnInit() {
     this.imageConfig = {
       img: this.defaultBackFrame(),
-      rarity: this.card.rarity as unknown as Rarity,
+      rarity: this.card.rarity,
     };
     this.revealed ? this.reveal() : this.showBackCard();
   }
