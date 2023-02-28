@@ -16,6 +16,13 @@ export class CardModalComponent implements OnInit {
   public favouriteCard(card: Card) {
     this.magicService.favouriteCard(card);
   }
+  public checkAlreadyHave() {
+    this.magicService.checkAlreadyHaveCard(this.card).subscribe((response) => {
+      console.log('Response:', response);
+    });
+  }
+
+  public unfavouriteCard() {}
 
   constructor(private magicService: MagicServiceService) {}
 

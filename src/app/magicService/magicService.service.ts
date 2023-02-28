@@ -34,6 +34,11 @@ export class MagicServiceService {
       }
     );
   }
+  public checkAlreadyHaveCard(card: Card): Observable<Card> {
+    return this.httpService.get<Card>(
+      'http://localhost:3000/cards/?' + card.id
+    );
+  }
   public getFavouriteCards(): Observable<Card[]> {
     return this.httpService.get<Card[]>('http://localhost:3000/favourites/');
   }

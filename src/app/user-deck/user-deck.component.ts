@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Card } from 'scryfall-sdk';
 import { MagicServiceService } from '../magicService/magicService.service';
 
-interface Deck {
+export interface Deck {
   name: string;
   cards: Card[];
 }
