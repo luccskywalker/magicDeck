@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { finalize, take } from 'rxjs';
 import { Card, Rarity } from 'scryfall-sdk';
 import { ImageConfig } from '../card-image/card-image.component';
 import { MagicServiceService } from '../magicService/magicService.service';
@@ -13,36 +14,78 @@ export class CardModalComponent implements OnInit {
   @Output() emitClose: EventEmitter<any> = new EventEmitter();
   public imageConfig!: ImageConfig;
   public alreadyHave = false;
+  public isFavourite = false;
   public saveToLibrary: Card[] = [];
 
+  constructor(private magicService: MagicServiceService) {}
+
+  public checkFavourite(card: Card) {
+    this.magicService
+      .checkAlreadyFavourited(card)
+      .pipe(
+        take(1),
+        finalize(() => {
+          if (this.isFavourite) {
+            this.unfavouriteCard(card);
+            return;
+          }
+          this.favouriteCard(card);
+        })
+      )
+      .subscribe((card) => {
+        if (card.length) {
+          this.isFavourite = true;
+          return;
+        }
+        this.isFavourite = false;
+      });
+  }
+  public unfavouriteCard(card: Card) {
+    this.magicService.unfavouriteCard(card).subscribe();
+  }
   public favouriteCard(card: Card) {
-    this.checkAlreadyHave();
-    console.log('Already?', this.alreadyHave);
-
-    if (this.alreadyHave) {
-      console.log('Entrei');
-
-      this.magicService.favouriteCard(card);
-      return;
-    }
-    console.log('Não entrei');
-    this.saveToLibrary.push(card);
-    this.magicService.saveCardsToLibrary(this.saveToLibrary);
     this.magicService.favouriteCard(card);
   }
-  public checkAlreadyHave() {
-    this.magicService.checkAlreadyHaveCard(this.card).subscribe((card) => {
-      if (card.length) {
-        this.alreadyHave = true;
-        return;
-      }
-      this.alreadyHave = false;
-    });
+
+  public toggleFavourite(card: Card) {
+    this.magicService
+      .checkAlreadyHaveCard(this.card)
+      .pipe(
+        take(1),
+        finalize(() => {
+          if (this.alreadyHave) {
+            this.checkFavourite(card);
+            return;
+          }
+          this.saveToLibrary.push(card);
+          this.magicService.saveCardsToLibrary(this.saveToLibrary);
+          this.checkFavourite(card);
+        })
+      )
+      .subscribe((card) => {
+        if (card.length) {
+          this.alreadyHave = true;
+          return;
+        }
+        this.alreadyHave = false;
+      });
   }
 
-  public unfavouriteCard() {}
-
-  constructor(private magicService: MagicServiceService) {}
+  public async checkAlreadyHave() {
+    this.magicService
+      .checkAlreadyHaveCard(this.card)
+      .pipe(
+        take(1),
+        finalize(() => {})
+      )
+      .subscribe((card) => {
+        if (card.length) {
+          this.alreadyHave = true;
+          return;
+        }
+        this.alreadyHave = false;
+      });
+  }
 
   public closeModal() {
     this.emitClose.emit(null);

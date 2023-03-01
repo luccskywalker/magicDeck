@@ -26,6 +26,12 @@ export class MagicServiceService {
     return this.httpService.get<Card[]>('http://localhost:3000/cards/');
   }
 
+  public unfavouriteCard(card: Card) {
+    return this.httpService.delete(
+      'http://localhost:3000/favourites/' + card.id
+    );
+  }
+
   public favouriteCard(card: Card) {
     this.httpService.post('http://localhost:3000/favourites', card).subscribe(
       (response) => {
@@ -39,6 +45,11 @@ export class MagicServiceService {
   public checkAlreadyHaveCard(card: Card): Observable<Card[]> {
     return this.httpService.get<Card[]>(
       'http://localhost:3000/cards?id=' + `${card.id}`
+    );
+  }
+  public checkAlreadyFavourited(card: Card): Observable<Card[]> {
+    return this.httpService.get<Card[]>(
+      'http://localhost:3000/favourites/?id=' + `${card.id}`
     );
   }
   public getFavouriteCards(): Observable<Card[]> {

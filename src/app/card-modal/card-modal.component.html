@@ -1,6 +1,6 @@
 <div class="modal-container">
   <div class="align-center close-buttons">
-    <button class="btn" (click)="favouriteCard(card)">
+    <button class="btn" (click)="toggleFavourite(card)">
       <div><3</div>
     </button>
     <button class="btn" (click)="closeModal()">
@@ -22,7 +22,9 @@
           {{ card.rarity }}
         </span>
       </div>
-      <p class="text-justify" [innerHtml]="card.oracle_text"></p>
+      <p class="text-justify" style="white-space: pre-line">
+        {{ card.oracle_text }}
+      </p>
       <p>
         {{ card.flavor_text }}
       </p>
