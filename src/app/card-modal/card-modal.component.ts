@@ -96,5 +96,18 @@ export class CardModalComponent implements OnInit {
       img: this.card.image_uris?.normal,
       rarity: this.card.rarity,
     };
+    this.magicService
+      .checkAlreadyFavourited(this.card)
+      .pipe(
+        take(1),
+        finalize(() => {})
+      )
+      .subscribe((card) => {
+        if (card.length) {
+          this.isFavourite = true;
+          return;
+        }
+        this.isFavourite = false;
+      });
   }
 }
