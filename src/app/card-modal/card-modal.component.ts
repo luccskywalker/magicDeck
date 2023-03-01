@@ -12,13 +12,31 @@ export class CardModalComponent implements OnInit {
   @Input() card!: Card;
   @Output() emitClose: EventEmitter<any> = new EventEmitter();
   public imageConfig!: ImageConfig;
+  public alreadyHave = false;
+  public saveToLibrary: Card[] = [];
 
   public favouriteCard(card: Card) {
+    this.checkAlreadyHave();
+    console.log('Already?', this.alreadyHave);
+
+    if (this.alreadyHave) {
+      console.log('Entrei');
+
+      this.magicService.favouriteCard(card);
+      return;
+    }
+    console.log('Não entrei');
+    this.saveToLibrary.push(card);
+    this.magicService.saveCardsToLibrary(this.saveToLibrary);
     this.magicService.favouriteCard(card);
   }
   public checkAlreadyHave() {
-    this.magicService.checkAlreadyHaveCard(this.card).subscribe((response) => {
-      console.log('Response:', response);
+    this.magicService.checkAlreadyHaveCard(this.card).subscribe((card) => {
+      if (card.length) {
+        this.alreadyHave = true;
+        return;
+      }
+      this.alreadyHave = false;
     });
   }
 

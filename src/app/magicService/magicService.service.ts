@@ -21,9 +21,11 @@ export class MagicServiceService {
       );
     });
   }
+
   public getCardsFromLibrary(): Observable<Card[]> {
     return this.httpService.get<Card[]>('http://localhost:3000/cards/');
   }
+
   public favouriteCard(card: Card) {
     this.httpService.post('http://localhost:3000/favourites', card).subscribe(
       (response) => {
@@ -34,9 +36,9 @@ export class MagicServiceService {
       }
     );
   }
-  public checkAlreadyHaveCard(card: Card): Observable<Card> {
-    return this.httpService.get<Card>(
-      'http://localhost:3000/cards/?' + card.id
+  public checkAlreadyHaveCard(card: Card): Observable<Card[]> {
+    return this.httpService.get<Card[]>(
+      'http://localhost:3000/cards?id=' + `${card.id}`
     );
   }
   public getFavouriteCards(): Observable<Card[]> {
