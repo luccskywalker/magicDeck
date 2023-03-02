@@ -1,4 +1,16 @@
 <h1 class="title-text">User Cards List</h1>
+<div>
+  Filtrar por:
+  <select>
+    <option>Raridade</option>
+    <option>Data de Lançamento</option>
+  </select>
+  Ordenar por:
+  <select>
+    <option>Ascendente</option>
+    <option>Descendente</option>
+  </select>
+</div>
 <div class="wrapper">
   <div *ngFor="let card of userLibrary">
     <div class="card-container">

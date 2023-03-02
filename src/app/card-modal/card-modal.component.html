@@ -1,14 +1,11 @@
 <div class="modal-container">
   <div class="align-center close-buttons">
-    <button
-      class="btn"
-      [ngClass]="isFavourite ? 'favourite' : 'unfavourite'"
-      (click)="toggleFavourite(card)"
-    >
-      <div></div>
+    <button (click)="toggleFavourite(card)" class="btn">
+      <img *ngIf="isFavourite" src="../../assets/heart.png" />
+      <img *ngIf="!isFavourite" src="../../assets/love.png" />
     </button>
     <button class="btn" (click)="closeModal()">
-      <div>X</div>
+      <div>x</div>
     </button>
   </div>
   <div class="content flex-row">
