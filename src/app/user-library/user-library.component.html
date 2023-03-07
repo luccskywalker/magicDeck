@@ -1,16 +1,16 @@
 <h1 class="title-text">User Cards List</h1>
-<button (click)="sortBy(order, sort)">Filtrar</button>
-<div>
+<div class="align-center">
   Filtrar por:
-  <select>
-    <option>Raridade</option>
-    <option>Data de Lançamento</option>
+  <select [(ngModel)]="sort">
+    <option value="rarity">Raridade</option>
+    <option value="released_at">Data de Lançamento</option>
   </select>
   Ordenar por:
-  <select>
-    <option>Ascendente</option>
-    <option>Descendente</option>
+  <select [(ngModel)]="order">
+    <option value="asc">Ascendente</option>
+    <option value="desc">Descendente</option>
   </select>
+  <button class="btn" (click)="sortBy(order, sort)">Filtrar</button>
 </div>
 <div class="wrapper">
   <div *ngFor="let card of userLibrary">

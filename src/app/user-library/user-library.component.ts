@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { finalize } from 'rxjs';
-import { Card, Set, Sets } from 'scryfall-sdk';
+import { Card, Rarity, Set, Sets } from 'scryfall-sdk';
 import { MagicServiceService } from '../magicService/magicService.service';
 
 enum Sort {
@@ -36,7 +36,7 @@ export class UserLibraryComponent implements OnInit {
     });
   }
 
-  public sortAsc(property: 'rarity' | 'released_at') {
+  public sortDesc(property: 'rarity' | 'released_at') {
     this.userLibrary.sort((a: Card, b: Card) => {
       if (a[property] <= b[property]) {
         return 1;
@@ -48,7 +48,7 @@ export class UserLibraryComponent implements OnInit {
     });
   }
 
-  public sortDesc(property: 'rarity' | 'released_at') {
+  public sortAsc(property: 'rarity' | 'released_at') {
     this.userLibrary.sort((a: Card, b: Card) => {
       if (a[property] >= b[property]) {
         return 1;
@@ -61,7 +61,7 @@ export class UserLibraryComponent implements OnInit {
   }
 
   public sortBy(sort: string, attr: 'rarity' | 'released_at') {
-    if ((sort = 'asc')) {
+    if (sort === 'asc') {
       this.sortAsc(attr);
       return;
     }
