@@ -15,6 +15,7 @@ export class CardModalComponent implements OnInit {
   public imageConfig!: ImageConfig;
   public alreadyHave = false;
   public isFavourite = false;
+  public loading = false;
   public saveToLibrary: Card[] = [];
 
   constructor(private magicService: MagicServiceService) {}
@@ -48,6 +49,7 @@ export class CardModalComponent implements OnInit {
   }
 
   public toggleFavourite(card: Card) {
+    this.loading = true;
     this.magicService
       .checkAlreadyHaveCard(this.card)
       .pipe(
@@ -55,6 +57,7 @@ export class CardModalComponent implements OnInit {
         finalize(() => {
           if (this.alreadyHave) {
             this.checkFavourite(card);
+            this.loading = false;
             return;
           }
           this.saveToLibrary.push(card);
