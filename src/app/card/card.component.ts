@@ -12,16 +12,20 @@ const BLANK_CARD =
 })
 export class CardComponent implements OnInit {
   @Input() card!: Card;
+
   @Input() revealed = false;
+
   public img!: string | undefined;
 
   public showModal = false;
+
   public imageConfig!: ImageConfig;
+
   constructor() {}
 
   public reveal() {
     if (!this.card.image_uris) {
-      this.imageConfig.img = BLANK_CARD;
+      this.imageConfig.img = this.card.card_faces[0].image_uris?.normal;
       return;
     }
     this.imageConfig.img = this.card.image_uris?.normal;
@@ -34,17 +38,27 @@ export class CardComponent implements OnInit {
   toggleModal() {
     this.showModal = !this.showModal;
   }
+
   public openModal() {
     this.toggleModal();
   }
+
   public closeModal() {
     this.toggleModal();
   }
+
   public defaultBackFrame() {
     if (this.card.image_uris?.normal) {
       return DEFAULT_CARD_BACK;
     }
     return BLANK_CARD;
+  }
+
+  public isDoubleFaced() {
+    if (this.card.card_faces.length >= 1) {
+      return true;
+    }
+    return false;
   }
 
   ngOnInit() {

@@ -28,9 +28,11 @@ export class CardModalComponent implements OnInit {
         finalize(() => {
           if (this.isFavourite) {
             this.unfavouriteCard(card);
+            this.loading = false;
             return;
           }
           this.favouriteCard(card);
+          this.loading = false;
         })
       )
       .subscribe((card) => {
@@ -57,7 +59,6 @@ export class CardModalComponent implements OnInit {
         finalize(() => {
           if (this.alreadyHave) {
             this.checkFavourite(card);
-            this.loading = false;
             return;
           }
           this.saveToLibrary.push(card);
@@ -94,11 +95,23 @@ export class CardModalComponent implements OnInit {
     this.emitClose.emit(null);
   }
 
-  ngOnInit() {
+  public checkIsDoubleSided() {
+    if (!this.card.image_uris) {
+      this.imageConfig = {
+        img: this.card.card_faces[1].image_uris?.normal,
+        rarity: this.card.rarity,
+      };
+      return;
+    }
     this.imageConfig = {
       img: this.card.image_uris?.normal,
       rarity: this.card.rarity,
     };
+  }
+
+  ngOnInit() {
+    this.checkIsDoubleSided();
+
     this.magicService
       .checkAlreadyFavourited(this.card)
       .pipe(

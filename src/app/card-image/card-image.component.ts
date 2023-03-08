@@ -13,11 +13,12 @@ export interface ImageConfig {
 })
 export class CardImageComponent implements OnInit {
   @Input() config!: ImageConfig;
+
   public isHolo = false;
 
   constructor() {}
 
   ngOnInit() {
-    this.isHolo = this.config.rarity?.toString() === Rarity[0].toString();
+    this.isHolo = this.config.rarity === Rarity[0];
   }
 }

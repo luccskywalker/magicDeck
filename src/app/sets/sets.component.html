@@ -31,6 +31,19 @@
   </div>
   <div>
     <div *ngIf="showSetCardList">
+      <div class="align-center">
+        Filtrar por:
+        <select [(ngModel)]="sort">
+          <option value="rarity">Raridade</option>
+          <option value="released_at">Data de Lançamento</option>
+        </select>
+        Ordenar por:
+        <select [(ngModel)]="order">
+          <option value="asc">Ascendente</option>
+          <option value="desc">Descendente</option>
+        </select>
+        <button class="btn" (click)="sortBy(order, sort)">Filtrar</button>
+      </div>
       <div class="wrapper">
         <div *ngFor="let card of cardsList">
           <div class="card-container">

@@ -4,13 +4,6 @@
   -webkit-transform-style: preserve-3d;
 }
 
-.revealed {
-  transition: transform 1s;
-  -webkit-transform: rotateY(0deg);
-
-  -webkit-transition: -webkit-transform 1s;
-}
-
 .flip {
   transition: transform 1s;
   transform: rotateY(0deg);
@@ -20,5 +13,12 @@
 
 .flip:hover {
   -webkit-transform: rotateY(-360deg);
+  -webkit-transition: -webkit-transform 1s;
+}
+
+.revealed {
+  transition: transform 1s;
+  -webkit-transform: rotateY(0deg);
+
   -webkit-transition: -webkit-transform 1s;
 }

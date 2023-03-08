@@ -19,6 +19,8 @@ export class SetsComponent implements OnInit {
   public setsList!: Set[];
   public optionValues: Date[] = [];
   public currentSearchYear = FIRST_YEAR_RELEASE;
+  public sort!: 'rarity' | 'released_at';
+  public order!: string;
 
   constructor() {}
 
@@ -48,9 +50,7 @@ export class SetsComponent implements OnInit {
     this.setsList = [];
     this.cardsList = [];
     this.loading = true;
-    // TENHO QUE IMPLEMENTAR A BUSCA PELO SDK
     this.setsList = await this.getAllSets();
-    // POIS ESTOU BUSCANDO TODOS OS SETS PARA DEPOIS FILTRÁ-LOS
     this.setsList = await this.setsList.filter((Set) => {
       this.yearTitle = year;
       if (Set.released_at) {
@@ -77,6 +77,38 @@ export class SetsComponent implements OnInit {
       this.optionValues.push(new Date(iteratorDate));
       iteratorDate.setFullYear(iteratorDate.getFullYear() + 1);
     }
+  }
+
+  public sortDesc(property: 'rarity' | 'released_at') {
+    this.cardsList.sort((a: Card, b: Card) => {
+      if (a[property] <= b[property]) {
+        return 1;
+      }
+      if (a[property] >= b[property]) {
+        return -1;
+      }
+      return 0;
+    });
+  }
+
+  public sortAsc(property: 'rarity' | 'released_at') {
+    this.cardsList.sort((a: Card, b: Card) => {
+      if (a[property] >= b[property]) {
+        return 1;
+      }
+      if (a[property] <= b[property]) {
+        return -1;
+      }
+      return 0;
+    });
+  }
+
+  public sortBy(sort: string, attr: 'rarity' | 'released_at') {
+    if (sort === 'asc') {
+      this.sortAsc(attr);
+      return;
+    }
+    this.sortDesc(attr);
   }
 
   ngOnInit() {

@@ -7212,6 +7212,789 @@
           "object": "card_face"
         }
       ]
+    },
+    {
+      "object": "card",
+      "id": "a9f52ae3-5cff-4a32-896d-a66cff51e97f",
+      "oracle_id": "9545f126-062f-4410-a362-e16255a128d6",
+      "multiverse_ids": [],
+      "mtgo_id": 96652,
+      "tcgplayer_id": 255428,
+      "cardmarket_id": 585126,
+      "name": "Outland Liberator // Frenzied Trapbreaker",
+      "lang": "en",
+      "released_at": "2022-01-28",
+      "uri": "https://api.scryfall.com/cards/a9f52ae3-5cff-4a32-896d-a66cff51e97f",
+      "scryfall_uri": "https://scryfall.com/card/dbl/190/outland-liberator-frenzied-trapbreaker?utm_source=api",
+      "layout": "transform",
+      "highres_image": true,
+      "image_status": "highres_scan",
+      "cmc": 2,
+      "type_line": "Creature — Human Werewolf // Creature — Werewolf",
+      "color_identity": [
+        "G"
+      ],
+      "keywords": [
+        "Daybound",
+        "Nightbound"
+      ],
+      "card_faces": [
+        {
+          "object": "card_face",
+          "name": "Outland Liberator",
+          "mana_cost": "{1}{G}",
+          "type_line": "Creature — Human Werewolf",
+          "oracle_text": "{1}, Sacrifice Outland Liberator: Destroy target artifact or enchantment.\nDaybound (If a player casts no spells during their own turn, it becomes night next turn.)",
+          "colors": [
+            "G"
+          ],
+          "power": "2",
+          "toughness": "2",
+          "flavor_text": "\"Just hold still. I'll help you.\"",
+          "artist": "Randy Vargas",
+          "artist_id": "d20672ca-0555-4238-a984-fd171d36b247",
+          "illustration_id": "d5a2b06c-31f4-4411-b103-c1a8c5110804",
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/a/9/a9f52ae3-5cff-4a32-896d-a66cff51e97f.jpg?1673160485",
+            "normal": "https://cards.scryfall.io/normal/front/a/9/a9f52ae3-5cff-4a32-896d-a66cff51e97f.jpg?1673160485",
+            "large": "https://cards.scryfall.io/large/front/a/9/a9f52ae3-5cff-4a32-896d-a66cff51e97f.jpg?1673160485",
+            "png": "https://cards.scryfall.io/png/front/a/9/a9f52ae3-5cff-4a32-896d-a66cff51e97f.png?1673160485",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/a/9/a9f52ae3-5cff-4a32-896d-a66cff51e97f.jpg?1673160485",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/a/9/a9f52ae3-5cff-4a32-896d-a66cff51e97f.jpg?1673160485"
+          }
+        },
+        {
+          "object": "card_face",
+          "name": "Frenzied Trapbreaker",
+          "flavor_name": "",
+          "mana_cost": "",
+          "type_line": "Creature — Werewolf",
+          "oracle_text": "{1}, Sacrifice Frenzied Trapbreaker: Destroy target artifact or enchantment.\nWhenever Frenzied Trapbreaker attacks, destroy target artifact or enchantment defending player controls.\nNightbound (If a player casts at least two spells during their own turn, it becomes day next turn.)",
+          "colors": [
+            "G"
+          ],
+          "color_indicator": [
+            "G"
+          ],
+          "power": "3",
+          "toughness": "3",
+          "artist": "Randy Vargas",
+          "artist_id": "d20672ca-0555-4238-a984-fd171d36b247",
+          "illustration_id": "84a0cc95-791f-440a-a85e-59f326c3bd32",
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/back/a/9/a9f52ae3-5cff-4a32-896d-a66cff51e97f.jpg?1673160485",
+            "normal": "https://cards.scryfall.io/normal/back/a/9/a9f52ae3-5cff-4a32-896d-a66cff51e97f.jpg?1673160485",
+            "large": "https://cards.scryfall.io/large/back/a/9/a9f52ae3-5cff-4a32-896d-a66cff51e97f.jpg?1673160485",
+            "png": "https://cards.scryfall.io/png/back/a/9/a9f52ae3-5cff-4a32-896d-a66cff51e97f.png?1673160485",
+            "art_crop": "https://cards.scryfall.io/art_crop/back/a/9/a9f52ae3-5cff-4a32-896d-a66cff51e97f.jpg?1673160485",
+            "border_crop": "https://cards.scryfall.io/border_crop/back/a/9/a9f52ae3-5cff-4a32-896d-a66cff51e97f.jpg?1673160485"
+          }
+        }
+      ],
+      "all_parts": [
+        {
+          "object": "related_card",
+          "id": "dc26e13b-7a0f-4e7f-8593-4f22234f4517",
+          "component": "combo_piece",
+          "name": "Day // Night",
+          "type_line": "Card // Card",
+          "uri": "https://api.scryfall.com/cards/dc26e13b-7a0f-4e7f-8593-4f22234f4517"
+        },
+        {
+          "object": "related_card",
+          "id": "a9f52ae3-5cff-4a32-896d-a66cff51e97f",
+          "component": "combo_piece",
+          "name": "Outland Liberator // Frenzied Trapbreaker",
+          "type_line": "Creature — Human Werewolf // Creature — Werewolf",
+          "uri": "https://api.scryfall.com/cards/a9f52ae3-5cff-4a32-896d-a66cff51e97f"
+        }
+      ],
+      "legalities": {
+        "standard": "legal",
+        "future": "legal",
+        "historic": "legal",
+        "gladiator": "legal",
+        "pioneer": "legal",
+        "explorer": "legal",
+        "modern": "legal",
+        "legacy": "legal",
+        "pauper": "not_legal",
+        "vintage": "legal",
+        "penny": "not_legal",
+        "commander": "legal",
+        "brawl": "legal",
+        "historicbrawl": "legal",
+        "alchemy": "legal",
+        "paupercommander": "restricted",
+        "duel": "legal",
+        "oldschool": "not_legal",
+        "premodern": "not_legal",
+        "predh": "not_legal"
+      },
+      "games": [
+        "paper",
+        "mtgo"
+      ],
+      "reserved": false,
+      "foil": true,
+      "nonfoil": true,
+      "finishes": [
+        "nonfoil",
+        "foil"
+      ],
+      "oversized": false,
+      "promo": false,
+      "reprint": true,
+      "variation": false,
+      "set_id": "5c1638d2-bce9-463e-b0ec-469336cb1bd2",
+      "set": "dbl",
+      "set_name": "Innistrad: Double Feature",
+      "set_type": "draft_innovation",
+      "set_uri": "https://api.scryfall.com/sets/5c1638d2-bce9-463e-b0ec-469336cb1bd2",
+      "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Adbl&unique=prints",
+      "scryfall_set_uri": "https://scryfall.com/sets/dbl?utm_source=api",
+      "rulings_uri": "https://api.scryfall.com/cards/a9f52ae3-5cff-4a32-896d-a66cff51e97f/rulings",
+      "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A9545f126-062f-4410-a362-e16255a128d6&unique=prints",
+      "collector_number": "190",
+      "digital": false,
+      "rarity": "uncommon",
+      "artist": "Randy Vargas",
+      "artist_ids": [
+        "d20672ca-0555-4238-a984-fd171d36b247"
+      ],
+      "border_color": "black",
+      "frame": "2015",
+      "frame_effects": [
+        "inverted",
+        "sunmoondfc"
+      ],
+      "full_art": false,
+      "textless": false,
+      "booster": true,
+      "story_spotlight": false,
+      "edhrec_rank": 2096,
+      "penny_rank": 888,
+      "prices": {
+        "usd": "0.88",
+        "usd_foil": "7.79",
+        "usd_etched": null,
+        "eur": "0.95",
+        "eur_foil": "10.99",
+        "tix": "0.48"
+      },
+      "related_uris": {
+        "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article&game=magic&partner=scryfall&q=Outland+Liberator+%2F%2F+Frenzied+Trapbreaker&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "tcgplayer_infinite_decks": "https://infinite.tcgplayer.com/search?contentMode=deck&game=magic&partner=scryfall&q=Outland+Liberator+%2F%2F+Frenzied+Trapbreaker&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "edhrec": "https://edhrec.com/route/?cc=Outland+Liberator"
+      },
+      "purchase_uris": {
+        "tcgplayer": "https://www.tcgplayer.com/product/255428?page=1&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Outland+Liberator&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+        "cardhoarder": "https://www.cardhoarder.com/cards/96652?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+      }
+    },
+    {
+      "object": "card",
+      "id": "ecbeb845-a7b7-4020-b28a-61f83e78dcc2",
+      "oracle_id": "1fb02bad-0d1f-437f-a269-f51cc19b280f",
+      "multiverse_ids": [
+        433105
+      ],
+      "tcgplayer_id": 139956,
+      "cardmarket_id": 300488,
+      "name": "Havengul Lich",
+      "lang": "en",
+      "released_at": "2017-08-25",
+      "uri": "https://api.scryfall.com/cards/ecbeb845-a7b7-4020-b28a-61f83e78dcc2",
+      "scryfall_uri": "https://scryfall.com/card/c17/173/havengul-lich?utm_source=api",
+      "layout": "normal",
+      "highres_image": true,
+      "image_status": "highres_scan",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/e/c/ecbeb845-a7b7-4020-b28a-61f83e78dcc2.jpg?1562627953",
+        "normal": "https://cards.scryfall.io/normal/front/e/c/ecbeb845-a7b7-4020-b28a-61f83e78dcc2.jpg?1562627953",
+        "large": "https://cards.scryfall.io/large/front/e/c/ecbeb845-a7b7-4020-b28a-61f83e78dcc2.jpg?1562627953",
+        "png": "https://cards.scryfall.io/png/front/e/c/ecbeb845-a7b7-4020-b28a-61f83e78dcc2.png?1562627953",
+        "art_crop": "https://cards.scryfall.io/art_crop/front/e/c/ecbeb845-a7b7-4020-b28a-61f83e78dcc2.jpg?1562627953",
+        "border_crop": "https://cards.scryfall.io/border_crop/front/e/c/ecbeb845-a7b7-4020-b28a-61f83e78dcc2.jpg?1562627953"
+      },
+      "mana_cost": "{3}{U}{B}",
+      "cmc": 5,
+      "type_line": "Creature — Zombie Wizard",
+      "oracle_text": "{1}: You may cast target creature card in a graveyard this turn. When you cast it this turn, Havengul Lich gains all activated abilities of that card until end of turn.",
+      "power": "4",
+      "toughness": "4",
+      "colors": [
+        "B",
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "keywords": [],
+      "legalities": {
+        "standard": "not_legal",
+        "future": "not_legal",
+        "historic": "not_legal",
+        "gladiator": "not_legal",
+        "pioneer": "not_legal",
+        "explorer": "not_legal",
+        "modern": "legal",
+        "legacy": "legal",
+        "pauper": "not_legal",
+        "vintage": "legal",
+        "penny": "not_legal",
+        "commander": "legal",
+        "brawl": "not_legal",
+        "historicbrawl": "not_legal",
+        "alchemy": "not_legal",
+        "paupercommander": "not_legal",
+        "duel": "legal",
+        "oldschool": "not_legal",
+        "premodern": "not_legal",
+        "predh": "not_legal"
+      },
+      "games": [
+        "paper"
+      ],
+      "reserved": false,
+      "foil": false,
+      "nonfoil": true,
+      "finishes": [
+        "nonfoil"
+      ],
+      "oversized": false,
+      "promo": false,
+      "reprint": true,
+      "variation": false,
+      "set_id": "5caec427-0c78-4c37-b4ec-30f7e0ba9abf",
+      "set": "c17",
+      "set_name": "Commander 2017",
+      "set_type": "commander",
+      "set_uri": "https://api.scryfall.com/sets/5caec427-0c78-4c37-b4ec-30f7e0ba9abf",
+      "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Ac17&unique=prints",
+      "scryfall_set_uri": "https://scryfall.com/sets/c17?utm_source=api",
+      "rulings_uri": "https://api.scryfall.com/cards/ecbeb845-a7b7-4020-b28a-61f83e78dcc2/rulings",
+      "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A1fb02bad-0d1f-437f-a269-f51cc19b280f&unique=prints",
+      "collector_number": "173",
+      "digital": false,
+      "rarity": "mythic",
+      "flavor_text": "Fusing intelligence with the power of undeath requires inspiration of the darkest kind.",
+      "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+      "artist": "James Ryman",
+      "artist_ids": [
+        "3852bbc9-11c0-4fe3-8722-a06ad7e2bcc5"
+      ],
+      "illustration_id": "eac75623-6949-4555-a987-71b9d07bd616",
+      "border_color": "black",
+      "frame": "2015",
+      "security_stamp": "oval",
+      "full_art": false,
+      "textless": false,
+      "booster": false,
+      "story_spotlight": false,
+      "edhrec_rank": 2986,
+      "prices": {
+        "usd": "2.94",
+        "usd_foil": null,
+        "usd_etched": null,
+        "eur": "2.00",
+        "eur_foil": null,
+        "tix": null
+      },
+      "related_uris": {
+        "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=433105",
+        "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article&game=magic&partner=scryfall&q=Havengul+Lich&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "tcgplayer_infinite_decks": "https://infinite.tcgplayer.com/search?contentMode=deck&game=magic&partner=scryfall&q=Havengul+Lich&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "edhrec": "https://edhrec.com/route/?cc=Havengul+Lich"
+      },
+      "purchase_uris": {
+        "tcgplayer": "https://www.tcgplayer.com/product/139956?page=1&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Havengul+Lich&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+        "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Havengul+Lich&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+      },
+      "card_faces": [
+        {
+          "object": "card_face"
+        }
+      ]
+    },
+    {
+      "object": "card",
+      "id": "5be8204f-8bb3-466c-a0c5-52b25bcdb7ba",
+      "oracle_id": "f227ce07-7e96-4a36-ab7c-9be6e777d649",
+      "multiverse_ids": [],
+      "mtgo_id": 96700,
+      "tcgplayer_id": 255430,
+      "cardmarket_id": 585129,
+      "name": "Arlinn, the Pack's Hope // Arlinn, the Moon's Fury",
+      "lang": "en",
+      "released_at": "2022-01-28",
+      "uri": "https://api.scryfall.com/cards/5be8204f-8bb3-466c-a0c5-52b25bcdb7ba",
+      "scryfall_uri": "https://scryfall.com/card/dbl/211/arlinn-the-packs-hope-arlinn-the-moons-fury?utm_source=api",
+      "layout": "transform",
+      "highres_image": true,
+      "image_status": "highres_scan",
+      "cmc": 4,
+      "type_line": "Legendary Planeswalker — Arlinn // Legendary Planeswalker — Arlinn",
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "keywords": [
+        "Daybound",
+        "Nightbound"
+      ],
+      "produced_mana": [
+        "G",
+        "R"
+      ],
+      "card_faces": [
+        {
+          "object": "card_face",
+          "name": "Arlinn, the Pack's Hope",
+          "mana_cost": "{2}{R}{G}",
+          "type_line": "Legendary Planeswalker — Arlinn",
+          "oracle_text": "Daybound (If a player casts no spells during their own turn, it becomes night next turn.)\n+1: Until your next turn, you may cast creature spells as though they had flash, and each creature you control enters the battlefield with an additional +1/+1 counter on it.\n−3: Create two 2/2 green Wolf creature tokens.",
+          "colors": [
+            "G",
+            "R"
+          ],
+          "loyalty": "4",
+          "artist": "Anna Steinbauer",
+          "artist_id": "3516496c-c279-4b56-8239-720683d03ae0",
+          "illustration_id": "d3c62188-93a7-42fe-b0e8-80b1e9cca8ab",
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/5/b/5be8204f-8bb3-466c-a0c5-52b25bcdb7ba.jpg?1673160703",
+            "normal": "https://cards.scryfall.io/normal/front/5/b/5be8204f-8bb3-466c-a0c5-52b25bcdb7ba.jpg?1673160703",
+            "large": "https://cards.scryfall.io/large/front/5/b/5be8204f-8bb3-466c-a0c5-52b25bcdb7ba.jpg?1673160703",
+            "png": "https://cards.scryfall.io/png/front/5/b/5be8204f-8bb3-466c-a0c5-52b25bcdb7ba.png?1673160703",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/5/b/5be8204f-8bb3-466c-a0c5-52b25bcdb7ba.jpg?1673160703",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/5/b/5be8204f-8bb3-466c-a0c5-52b25bcdb7ba.jpg?1673160703"
+          }
+        },
+        {
+          "object": "card_face",
+          "name": "Arlinn, the Moon's Fury",
+          "flavor_name": "",
+          "mana_cost": "",
+          "type_line": "Legendary Planeswalker — Arlinn",
+          "oracle_text": "Nightbound (If a player casts at least two spells during their own turn, it becomes day next turn.)\n+2: Add {R}{G}.\n0: Until end of turn, Arlinn, the Moon's Fury becomes a 5/5 Werewolf creature with trample, indestructible, and haste.",
+          "colors": [
+            "G",
+            "R"
+          ],
+          "color_indicator": [
+            "G",
+            "R"
+          ],
+          "loyalty": "4",
+          "artist": "Anna Steinbauer",
+          "artist_id": "3516496c-c279-4b56-8239-720683d03ae0",
+          "illustration_id": "d6a7da3a-b811-4a8b-a25e-cb714262edea",
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/back/5/b/5be8204f-8bb3-466c-a0c5-52b25bcdb7ba.jpg?1673160703",
+            "normal": "https://cards.scryfall.io/normal/back/5/b/5be8204f-8bb3-466c-a0c5-52b25bcdb7ba.jpg?1673160703",
+            "large": "https://cards.scryfall.io/large/back/5/b/5be8204f-8bb3-466c-a0c5-52b25bcdb7ba.jpg?1673160703",
+            "png": "https://cards.scryfall.io/png/back/5/b/5be8204f-8bb3-466c-a0c5-52b25bcdb7ba.png?1673160703",
+            "art_crop": "https://cards.scryfall.io/art_crop/back/5/b/5be8204f-8bb3-466c-a0c5-52b25bcdb7ba.jpg?1673160703",
+            "border_crop": "https://cards.scryfall.io/border_crop/back/5/b/5be8204f-8bb3-466c-a0c5-52b25bcdb7ba.jpg?1673160703"
+          }
+        }
+      ],
+      "all_parts": [
+        {
+          "object": "related_card",
+          "id": "dc26e13b-7a0f-4e7f-8593-4f22234f4517",
+          "component": "combo_piece",
+          "name": "Day // Night",
+          "type_line": "Card // Card",
+          "uri": "https://api.scryfall.com/cards/dc26e13b-7a0f-4e7f-8593-4f22234f4517"
+        },
+        {
+          "object": "related_card",
+          "id": "39133387-9cd3-49f1-88e1-d23636e020b3",
+          "component": "token",
+          "name": "Wolf",
+          "type_line": "Token Creature — Wolf",
+          "uri": "https://api.scryfall.com/cards/39133387-9cd3-49f1-88e1-d23636e020b3"
+        },
+        {
+          "object": "related_card",
+          "id": "5be8204f-8bb3-466c-a0c5-52b25bcdb7ba",
+          "component": "combo_piece",
+          "name": "Arlinn, the Pack's Hope // Arlinn, the Moon's Fury",
+          "type_line": "Legendary Planeswalker — Arlinn // Legendary Planeswalker — Arlinn",
+          "uri": "https://api.scryfall.com/cards/5be8204f-8bb3-466c-a0c5-52b25bcdb7ba"
+        }
+      ],
+      "legalities": {
+        "standard": "legal",
+        "future": "legal",
+        "historic": "legal",
+        "gladiator": "legal",
+        "pioneer": "legal",
+        "explorer": "legal",
+        "modern": "legal",
+        "legacy": "legal",
+        "pauper": "not_legal",
+        "vintage": "legal",
+        "penny": "not_legal",
+        "commander": "legal",
+        "brawl": "legal",
+        "historicbrawl": "legal",
+        "alchemy": "legal",
+        "paupercommander": "not_legal",
+        "duel": "legal",
+        "oldschool": "not_legal",
+        "premodern": "not_legal",
+        "predh": "not_legal"
+      },
+      "games": [
+        "paper",
+        "mtgo"
+      ],
+      "reserved": false,
+      "foil": true,
+      "nonfoil": true,
+      "finishes": [
+        "nonfoil",
+        "foil"
+      ],
+      "oversized": false,
+      "promo": false,
+      "reprint": true,
+      "variation": false,
+      "set_id": "5c1638d2-bce9-463e-b0ec-469336cb1bd2",
+      "set": "dbl",
+      "set_name": "Innistrad: Double Feature",
+      "set_type": "draft_innovation",
+      "set_uri": "https://api.scryfall.com/sets/5c1638d2-bce9-463e-b0ec-469336cb1bd2",
+      "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Adbl&unique=prints",
+      "scryfall_set_uri": "https://scryfall.com/sets/dbl?utm_source=api",
+      "rulings_uri": "https://api.scryfall.com/cards/5be8204f-8bb3-466c-a0c5-52b25bcdb7ba/rulings",
+      "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Af227ce07-7e96-4a36-ab7c-9be6e777d649&unique=prints",
+      "collector_number": "211",
+      "digital": false,
+      "rarity": "mythic",
+      "artist": "Anna Steinbauer",
+      "artist_ids": [
+        "3516496c-c279-4b56-8239-720683d03ae0"
+      ],
+      "border_color": "black",
+      "frame": "2015",
+      "frame_effects": [
+        "inverted",
+        "sunmoondfc"
+      ],
+      "security_stamp": "oval",
+      "full_art": false,
+      "textless": false,
+      "booster": true,
+      "story_spotlight": false,
+      "edhrec_rank": 4588,
+      "prices": {
+        "usd": "6.96",
+        "usd_foil": "47.01",
+        "usd_etched": null,
+        "eur": "8.47",
+        "eur_foil": "45.00",
+        "tix": "2.47"
+      },
+      "related_uris": {
+        "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article&game=magic&partner=scryfall&q=Arlinn%2C+the+Pack%27s+Hope+%2F%2F+Arlinn%2C+the+Moon%27s+Fury&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "tcgplayer_infinite_decks": "https://infinite.tcgplayer.com/search?contentMode=deck&game=magic&partner=scryfall&q=Arlinn%2C+the+Pack%27s+Hope+%2F%2F+Arlinn%2C+the+Moon%27s+Fury&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "edhrec": "https://edhrec.com/route/?cc=Arlinn%2C+the+Pack%27s+Hope"
+      },
+      "purchase_uris": {
+        "tcgplayer": "https://www.tcgplayer.com/product/255430?page=1&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Arlinn%2C+the+Pack%27s+Hope&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+        "cardhoarder": "https://www.cardhoarder.com/cards/96700?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+      }
+    },
+    {
+      "object": "card",
+      "id": "d1a38e25-297f-43e1-9455-73f00eb08cec",
+      "oracle_id": "fbffaf9f-40e7-4113-a037-533b733cebce",
+      "multiverse_ids": [],
+      "mtgo_id": 95876,
+      "tcgplayer_id": 255732,
+      "cardmarket_id": 585263,
+      "name": "Sorin the Mirthless",
+      "lang": "en",
+      "released_at": "2022-01-28",
+      "uri": "https://api.scryfall.com/cards/d1a38e25-297f-43e1-9455-73f00eb08cec",
+      "scryfall_uri": "https://scryfall.com/card/dbl/398/sorin-the-mirthless?utm_source=api",
+      "layout": "normal",
+      "highres_image": true,
+      "image_status": "highres_scan",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/d/1/d1a38e25-297f-43e1-9455-73f00eb08cec.jpg?1673162626",
+        "normal": "https://cards.scryfall.io/normal/front/d/1/d1a38e25-297f-43e1-9455-73f00eb08cec.jpg?1673162626",
+        "large": "https://cards.scryfall.io/large/front/d/1/d1a38e25-297f-43e1-9455-73f00eb08cec.jpg?1673162626",
+        "png": "https://cards.scryfall.io/png/front/d/1/d1a38e25-297f-43e1-9455-73f00eb08cec.png?1673162626",
+        "art_crop": "https://cards.scryfall.io/art_crop/front/d/1/d1a38e25-297f-43e1-9455-73f00eb08cec.jpg?1673162626",
+        "border_crop": "https://cards.scryfall.io/border_crop/front/d/1/d1a38e25-297f-43e1-9455-73f00eb08cec.jpg?1673162626"
+      },
+      "mana_cost": "{2}{B}{B}",
+      "cmc": 4,
+      "type_line": "Legendary Planeswalker — Sorin",
+      "oracle_text": "+1: Look at the top card of your library. You may reveal that card and put it into your hand. If you do, you lose life equal to its mana value.\n−2: Create a 2/3 black Vampire creature token with flying and lifelink.\n−7: Sorin the Mirthless deals 13 damage to any target. You gain 13 life.",
+      "loyalty": "4",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "keywords": [],
+      "all_parts": [
+        {
+          "object": "related_card",
+          "id": "ebd12ac1-d1b2-4e22-9a17-8f3964294e35",
+          "component": "token",
+          "name": "Vampire",
+          "type_line": "Token Creature — Vampire",
+          "uri": "https://api.scryfall.com/cards/ebd12ac1-d1b2-4e22-9a17-8f3964294e35"
+        },
+        {
+          "object": "related_card",
+          "id": "d1a38e25-297f-43e1-9455-73f00eb08cec",
+          "component": "combo_piece",
+          "name": "Sorin the Mirthless",
+          "type_line": "Legendary Planeswalker — Sorin",
+          "uri": "https://api.scryfall.com/cards/d1a38e25-297f-43e1-9455-73f00eb08cec"
+        }
+      ],
+      "legalities": {
+        "standard": "legal",
+        "future": "legal",
+        "historic": "legal",
+        "gladiator": "legal",
+        "pioneer": "legal",
+        "explorer": "legal",
+        "modern": "legal",
+        "legacy": "legal",
+        "pauper": "not_legal",
+        "vintage": "legal",
+        "penny": "not_legal",
+        "commander": "legal",
+        "brawl": "legal",
+        "historicbrawl": "legal",
+        "alchemy": "legal",
+        "paupercommander": "not_legal",
+        "duel": "legal",
+        "oldschool": "not_legal",
+        "premodern": "not_legal",
+        "predh": "not_legal"
+      },
+      "games": [
+        "paper",
+        "mtgo"
+      ],
+      "reserved": false,
+      "foil": true,
+      "nonfoil": true,
+      "finishes": [
+        "nonfoil",
+        "foil"
+      ],
+      "oversized": false,
+      "promo": false,
+      "reprint": true,
+      "variation": false,
+      "set_id": "5c1638d2-bce9-463e-b0ec-469336cb1bd2",
+      "set": "dbl",
+      "set_name": "Innistrad: Double Feature",
+      "set_type": "draft_innovation",
+      "set_uri": "https://api.scryfall.com/sets/5c1638d2-bce9-463e-b0ec-469336cb1bd2",
+      "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Adbl&unique=prints",
+      "scryfall_set_uri": "https://scryfall.com/sets/dbl?utm_source=api",
+      "rulings_uri": "https://api.scryfall.com/cards/d1a38e25-297f-43e1-9455-73f00eb08cec/rulings",
+      "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Afbffaf9f-40e7-4113-a037-533b733cebce&unique=prints",
+      "collector_number": "398",
+      "digital": false,
+      "rarity": "mythic",
+      "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+      "artist": "Martina Fackova",
+      "artist_ids": [
+        "6338124e-8e53-498d-8bf9-93a55db2f61c"
+      ],
+      "illustration_id": "3b0a815c-97c5-4cbd-8cc3-6213779e57ed",
+      "border_color": "black",
+      "frame": "2015",
+      "frame_effects": [
+        "inverted"
+      ],
+      "security_stamp": "oval",
+      "full_art": false,
+      "textless": false,
+      "booster": true,
+      "story_spotlight": false,
+      "edhrec_rank": 4381,
+      "preview": {
+        "source": "Wizards of the Coast",
+        "source_uri": "",
+        "previewed_at": "2021-10-31"
+      },
+      "prices": {
+        "usd": "9.12",
+        "usd_foil": "48.17",
+        "usd_etched": null,
+        "eur": "13.73",
+        "eur_foil": "21.90",
+        "tix": "6.19"
+      },
+      "related_uris": {
+        "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article&game=magic&partner=scryfall&q=Sorin+the+Mirthless&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "tcgplayer_infinite_decks": "https://infinite.tcgplayer.com/search?contentMode=deck&game=magic&partner=scryfall&q=Sorin+the+Mirthless&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "edhrec": "https://edhrec.com/route/?cc=Sorin+the+Mirthless"
+      },
+      "purchase_uris": {
+        "tcgplayer": "https://www.tcgplayer.com/product/255732?page=1&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Sorin+the+Mirthless&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+        "cardhoarder": "https://www.cardhoarder.com/cards/95876?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+      },
+      "card_faces": [
+        {
+          "object": "card_face"
+        }
+      ]
+    },
+    {
+      "object": "card",
+      "id": "71af51dd-80dc-427a-a3fa-63d809580fde",
+      "oracle_id": "24919141-82d2-42ad-963c-e53511a868b3",
+      "multiverse_ids": [],
+      "mtgo_id": 96768,
+      "tcgplayer_id": 255854,
+      "cardmarket_id": 585020,
+      "name": "Sigarda, Champion of Light",
+      "lang": "en",
+      "released_at": "2022-01-28",
+      "uri": "https://api.scryfall.com/cards/71af51dd-80dc-427a-a3fa-63d809580fde",
+      "scryfall_uri": "https://scryfall.com/card/dbl/240/sigarda-champion-of-light?utm_source=api",
+      "layout": "normal",
+      "highres_image": true,
+      "image_status": "highres_scan",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/7/1/71af51dd-80dc-427a-a3fa-63d809580fde.jpg?1673160993",
+        "normal": "https://cards.scryfall.io/normal/front/7/1/71af51dd-80dc-427a-a3fa-63d809580fde.jpg?1673160993",
+        "large": "https://cards.scryfall.io/large/front/7/1/71af51dd-80dc-427a-a3fa-63d809580fde.jpg?1673160993",
+        "png": "https://cards.scryfall.io/png/front/7/1/71af51dd-80dc-427a-a3fa-63d809580fde.png?1673160993",
+        "art_crop": "https://cards.scryfall.io/art_crop/front/7/1/71af51dd-80dc-427a-a3fa-63d809580fde.jpg?1673160993",
+        "border_crop": "https://cards.scryfall.io/border_crop/front/7/1/71af51dd-80dc-427a-a3fa-63d809580fde.jpg?1673160993"
+      },
+      "mana_cost": "{1}{G}{W}{W}",
+      "cmc": 4,
+      "type_line": "Legendary Creature — Angel",
+      "oracle_text": "Flying, trample\nHumans you control get +1/+1.\nCoven — Whenever Sigarda attacks, if you control three or more creatures with different powers, look at the top five cards of your library. You may reveal a Human creature card from among them and put it into your hand. Put the rest on the bottom of your library in a random order.",
+      "power": "4",
+      "toughness": "4",
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "keywords": [
+        "Flying",
+        "Trample",
+        "Coven"
+      ],
+      "legalities": {
+        "standard": "legal",
+        "future": "legal",
+        "historic": "legal",
+        "gladiator": "legal",
+        "pioneer": "legal",
+        "explorer": "legal",
+        "modern": "legal",
+        "legacy": "legal",
+        "pauper": "not_legal",
+        "vintage": "legal",
+        "penny": "not_legal",
+        "commander": "legal",
+        "brawl": "legal",
+        "historicbrawl": "legal",
+        "alchemy": "legal",
+        "paupercommander": "not_legal",
+        "duel": "legal",
+        "oldschool": "not_legal",
+        "premodern": "not_legal",
+        "predh": "not_legal"
+      },
+      "games": [
+        "paper",
+        "mtgo"
+      ],
+      "reserved": false,
+      "foil": true,
+      "nonfoil": true,
+      "finishes": [
+        "nonfoil",
+        "foil"
+      ],
+      "oversized": false,
+      "promo": false,
+      "reprint": true,
+      "variation": false,
+      "set_id": "5c1638d2-bce9-463e-b0ec-469336cb1bd2",
+      "set": "dbl",
+      "set_name": "Innistrad: Double Feature",
+      "set_type": "draft_innovation",
+      "set_uri": "https://api.scryfall.com/sets/5c1638d2-bce9-463e-b0ec-469336cb1bd2",
+      "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Adbl&unique=prints",
+      "scryfall_set_uri": "https://scryfall.com/sets/dbl?utm_source=api",
+      "rulings_uri": "https://api.scryfall.com/cards/71af51dd-80dc-427a-a3fa-63d809580fde/rulings",
+      "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A24919141-82d2-42ad-963c-e53511a868b3&unique=prints",
+      "collector_number": "240",
+      "digital": false,
+      "rarity": "mythic",
+      "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+      "artist": "Howard Lyon",
+      "artist_ids": [
+        "6dd06426-59fe-4b9c-aad5-6da8446a5c3d"
+      ],
+      "illustration_id": "47ab724f-89d1-42f2-a522-15e62148c482",
+      "border_color": "black",
+      "frame": "2015",
+      "frame_effects": [
+        "legendary",
+        "inverted"
+      ],
+      "security_stamp": "oval",
+      "full_art": false,
+      "textless": false,
+      "booster": true,
+      "story_spotlight": false,
+      "edhrec_rank": 4906,
+      "prices": {
+        "usd": "1.66",
+        "usd_foil": "43.43",
+        "usd_etched": null,
+        "eur": "1.45",
+        "eur_foil": "35.00",
+        "tix": "0.72"
+      },
+      "related_uris": {
+        "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article&game=magic&partner=scryfall&q=Sigarda%2C+Champion+of+Light&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "tcgplayer_infinite_decks": "https://infinite.tcgplayer.com/search?contentMode=deck&game=magic&partner=scryfall&q=Sigarda%2C+Champion+of+Light&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "edhrec": "https://edhrec.com/route/?cc=Sigarda%2C+Champion+of+Light"
+      },
+      "purchase_uris": {
+        "tcgplayer": "https://www.tcgplayer.com/product/255854?page=1&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Sigarda%2C+Champion+of+Light&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+        "cardhoarder": "https://www.cardhoarder.com/cards/96768?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+      },
+      "card_faces": [
+        {
+          "object": "card_face"
+        }
+      ]
     }
   ],
   "favourites": [
@@ -9798,6 +10581,145 @@
     },
     {
       "object": "card",
+      "id": "8b95de91-03bf-48a2-9947-b818ac78dec6",
+      "oracle_id": "1e048c15-50d6-4313-880a-e04348952a51",
+      "multiverse_ids": [
+        570285
+      ],
+      "tcgplayer_id": 272805,
+      "cardmarket_id": 660072,
+      "name": "Alaundo the Seer",
+      "lang": "en",
+      "released_at": "2022-06-10",
+      "uri": "https://api.scryfall.com/cards/8b95de91-03bf-48a2-9947-b818ac78dec6",
+      "scryfall_uri": "https://scryfall.com/card/clb/412/alaundo-the-seer?utm_source=api",
+      "layout": "normal",
+      "highres_image": true,
+      "image_status": "highres_scan",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/8/b/8b95de91-03bf-48a2-9947-b818ac78dec6.jpg?1674138660",
+        "normal": "https://cards.scryfall.io/normal/front/8/b/8b95de91-03bf-48a2-9947-b818ac78dec6.jpg?1674138660",
+        "large": "https://cards.scryfall.io/large/front/8/b/8b95de91-03bf-48a2-9947-b818ac78dec6.jpg?1674138660",
+        "png": "https://cards.scryfall.io/png/front/8/b/8b95de91-03bf-48a2-9947-b818ac78dec6.png?1674138660",
+        "art_crop": "https://cards.scryfall.io/art_crop/front/8/b/8b95de91-03bf-48a2-9947-b818ac78dec6.jpg?1674138660",
+        "border_crop": "https://cards.scryfall.io/border_crop/front/8/b/8b95de91-03bf-48a2-9947-b818ac78dec6.jpg?1674138660"
+      },
+      "mana_cost": "{2}{G}{U}",
+      "cmc": 4,
+      "type_line": "Legendary Creature — Human Shaman",
+      "oracle_text": "{T}: Draw a card, then exile a card from your hand and put a number of time counters on it equal to its mana value. It gains \"When the last time counter is removed from this card, if it's exiled, you may cast it without paying its mana cost. If you cast a creature spell this way, it gains haste until end of turn.\" Then remove a time counter from each other card you own in exile.",
+      "power": "3",
+      "toughness": "5",
+      "colors": [
+        "G",
+        "U"
+      ],
+      "color_identity": [
+        "G",
+        "U"
+      ],
+      "keywords": [],
+      "legalities": {
+        "standard": "not_legal",
+        "future": "not_legal",
+        "historic": "legal",
+        "gladiator": "legal",
+        "pioneer": "not_legal",
+        "explorer": "not_legal",
+        "modern": "not_legal",
+        "legacy": "legal",
+        "pauper": "not_legal",
+        "vintage": "legal",
+        "penny": "not_legal",
+        "commander": "legal",
+        "brawl": "not_legal",
+        "historicbrawl": "legal",
+        "alchemy": "legal",
+        "paupercommander": "not_legal",
+        "duel": "legal",
+        "oldschool": "not_legal",
+        "premodern": "not_legal",
+        "predh": "not_legal"
+      },
+      "games": [
+        "paper"
+      ],
+      "reserved": false,
+      "foil": true,
+      "nonfoil": true,
+      "finishes": [
+        "nonfoil",
+        "foil"
+      ],
+      "oversized": false,
+      "promo": false,
+      "reprint": false,
+      "variation": false,
+      "set_id": "5e4c3fe8-fd57-4b20-ad56-c03790a16cea",
+      "set": "clb",
+      "set_name": "Commander Legends: Battle for Baldur's Gate",
+      "set_type": "draft_innovation",
+      "set_uri": "https://api.scryfall.com/sets/5e4c3fe8-fd57-4b20-ad56-c03790a16cea",
+      "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Aclb&unique=prints",
+      "scryfall_set_uri": "https://scryfall.com/sets/clb?utm_source=api",
+      "rulings_uri": "https://api.scryfall.com/cards/8b95de91-03bf-48a2-9947-b818ac78dec6/rulings",
+      "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A1e048c15-50d6-4313-880a-e04348952a51&unique=prints",
+      "collector_number": "412",
+      "digital": false,
+      "rarity": "rare",
+      "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+      "artist": "Jeff Dee",
+      "artist_ids": [
+        "623129e5-3984-4d9b-b412-9b283a51b81d"
+      ],
+      "illustration_id": "733ab9c7-3043-429e-8f3b-81f0cf2ea57e",
+      "border_color": "black",
+      "frame": "2015",
+      "frame_effects": [
+        "showcase",
+        "legendary"
+      ],
+      "security_stamp": "oval",
+      "full_art": false,
+      "textless": false,
+      "booster": false,
+      "story_spotlight": false,
+      "promo_types": [
+        "boosterfun"
+      ],
+      "edhrec_rank": 9720,
+      "preview": {
+        "source": "Wizards of the Coast",
+        "source_uri": "",
+        "previewed_at": "2022-05-20"
+      },
+      "prices": {
+        "usd": "0.10",
+        "usd_foil": "0.18",
+        "usd_etched": null,
+        "eur": "0.30",
+        "eur_foil": "0.25",
+        "tix": null
+      },
+      "related_uris": {
+        "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=570285",
+        "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article&game=magic&partner=scryfall&q=Alaundo+the+Seer&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "tcgplayer_infinite_decks": "https://infinite.tcgplayer.com/search?contentMode=deck&game=magic&partner=scryfall&q=Alaundo+the+Seer&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "edhrec": "https://edhrec.com/route/?cc=Alaundo+the+Seer"
+      },
+      "purchase_uris": {
+        "tcgplayer": "https://www.tcgplayer.com/product/272805?page=1&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Alaundo+the+Seer&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+        "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Alaundo+the+Seer&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+      },
+      "card_faces": [
+        {
+          "object": "card_face"
+        }
+      ]
+    },
+    {
+      "object": "card",
       "id": "b7151c4b-4d42-44c1-a6f4-8be29ace1df3",
       "oracle_id": "43832745-5d7d-4957-8e30-2072ad012564",
       "multiverse_ids": [
@@ -9938,68 +10860,67 @@
     },
     {
       "object": "card",
-      "id": "8b95de91-03bf-48a2-9947-b818ac78dec6",
-      "oracle_id": "1e048c15-50d6-4313-880a-e04348952a51",
+      "id": "500062a5-1578-4c52-9608-b3b760772175",
+      "oracle_id": "44d1029f-604e-44d6-89f6-bd18344f5d79",
       "multiverse_ids": [
-        570285
+        184769
       ],
-      "tcgplayer_id": 272805,
-      "cardmarket_id": 660072,
-      "name": "Alaundo the Seer",
+      "mtgo_id": 30766,
+      "mtgo_foil_id": 30767,
+      "name": "Sea Drake",
       "lang": "en",
-      "released_at": "2022-06-10",
-      "uri": "https://api.scryfall.com/cards/8b95de91-03bf-48a2-9947-b818ac78dec6",
-      "scryfall_uri": "https://scryfall.com/card/clb/412/alaundo-the-seer?utm_source=api",
+      "released_at": "2008-09-22",
+      "uri": "https://api.scryfall.com/cards/500062a5-1578-4c52-9608-b3b760772175",
+      "scryfall_uri": "https://scryfall.com/card/me2/64/sea-drake?utm_source=api",
       "layout": "normal",
       "highres_image": true,
       "image_status": "highres_scan",
       "image_uris": {
-        "small": "https://cards.scryfall.io/small/front/8/b/8b95de91-03bf-48a2-9947-b818ac78dec6.jpg?1674138660",
-        "normal": "https://cards.scryfall.io/normal/front/8/b/8b95de91-03bf-48a2-9947-b818ac78dec6.jpg?1674138660",
-        "large": "https://cards.scryfall.io/large/front/8/b/8b95de91-03bf-48a2-9947-b818ac78dec6.jpg?1674138660",
-        "png": "https://cards.scryfall.io/png/front/8/b/8b95de91-03bf-48a2-9947-b818ac78dec6.png?1674138660",
-        "art_crop": "https://cards.scryfall.io/art_crop/front/8/b/8b95de91-03bf-48a2-9947-b818ac78dec6.jpg?1674138660",
-        "border_crop": "https://cards.scryfall.io/border_crop/front/8/b/8b95de91-03bf-48a2-9947-b818ac78dec6.jpg?1674138660"
+        "small": "https://cards.scryfall.io/small/front/5/0/500062a5-1578-4c52-9608-b3b760772175.jpg?1562868553",
+        "normal": "https://cards.scryfall.io/normal/front/5/0/500062a5-1578-4c52-9608-b3b760772175.jpg?1562868553",
+        "large": "https://cards.scryfall.io/large/front/5/0/500062a5-1578-4c52-9608-b3b760772175.jpg?1562868553",
+        "png": "https://cards.scryfall.io/png/front/5/0/500062a5-1578-4c52-9608-b3b760772175.png?1562868553",
+        "art_crop": "https://cards.scryfall.io/art_crop/front/5/0/500062a5-1578-4c52-9608-b3b760772175.jpg?1562868553",
+        "border_crop": "https://cards.scryfall.io/border_crop/front/5/0/500062a5-1578-4c52-9608-b3b760772175.jpg?1562868553"
       },
-      "mana_cost": "{2}{G}{U}",
-      "cmc": 4,
-      "type_line": "Legendary Creature — Human Shaman",
-      "oracle_text": "{T}: Draw a card, then exile a card from your hand and put a number of time counters on it equal to its mana value. It gains \"When the last time counter is removed from this card, if it's exiled, you may cast it without paying its mana cost. If you cast a creature spell this way, it gains haste until end of turn.\" Then remove a time counter from each other card you own in exile.",
-      "power": "3",
-      "toughness": "5",
+      "mana_cost": "{2}{U}",
+      "cmc": 3,
+      "type_line": "Creature — Drake",
+      "oracle_text": "Flying\nWhen Sea Drake enters the battlefield, return two target lands you control to their owner's hand.",
+      "power": "4",
+      "toughness": "3",
       "colors": [
-        "G",
         "U"
       ],
       "color_identity": [
-        "G",
         "U"
       ],
-      "keywords": [],
+      "keywords": [
+        "Flying"
+      ],
       "legalities": {
         "standard": "not_legal",
         "future": "not_legal",
-        "historic": "legal",
-        "gladiator": "legal",
+        "historic": "not_legal",
+        "gladiator": "not_legal",
         "pioneer": "not_legal",
         "explorer": "not_legal",
-        "modern": "not_legal",
+        "modern": "legal",
         "legacy": "legal",
         "pauper": "not_legal",
         "vintage": "legal",
-        "penny": "not_legal",
+        "penny": "legal",
         "commander": "legal",
         "brawl": "not_legal",
-        "historicbrawl": "legal",
-        "alchemy": "legal",
-        "paupercommander": "not_legal",
+        "historicbrawl": "not_legal",
+        "alchemy": "not_legal",
+        "paupercommander": "restricted",
         "duel": "legal",
         "oldschool": "not_legal",
-        "premodern": "not_legal",
-        "predh": "not_legal"
+        "premodern": "not_legal"
       },
       "games": [
-        "paper"
+        "mtgo"
       ],
       "reserved": false,
       "foil": true,
@@ -10010,64 +10931,972 @@
       ],
       "oversized": false,
       "promo": false,
-      "reprint": false,
+      "reprint": true,
       "variation": false,
-      "set_id": "5e4c3fe8-fd57-4b20-ad56-c03790a16cea",
-      "set": "clb",
-      "set_name": "Commander Legends: Battle for Baldur's Gate",
-      "set_type": "draft_innovation",
-      "set_uri": "https://api.scryfall.com/sets/5e4c3fe8-fd57-4b20-ad56-c03790a16cea",
-      "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Aclb&unique=prints",
-      "scryfall_set_uri": "https://scryfall.com/sets/clb?utm_source=api",
-      "rulings_uri": "https://api.scryfall.com/cards/8b95de91-03bf-48a2-9947-b818ac78dec6/rulings",
-      "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A1e048c15-50d6-4313-880a-e04348952a51&unique=prints",
-      "collector_number": "412",
-      "digital": false,
+      "set_id": "7d51a13b-dcd2-4ec2-b3a7-c89288e00b4e",
+      "set": "me2",
+      "set_name": "Masters Edition II",
+      "set_type": "masters",
+      "set_uri": "https://api.scryfall.com/sets/7d51a13b-dcd2-4ec2-b3a7-c89288e00b4e",
+      "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Ame2&unique=prints",
+      "scryfall_set_uri": "https://scryfall.com/sets/me2?utm_source=api",
+      "rulings_uri": "https://api.scryfall.com/cards/500062a5-1578-4c52-9608-b3b760772175/rulings",
+      "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A44d1029f-604e-44d6-89f6-bd18344f5d79&unique=prints",
+      "collector_number": "64",
+      "digital": true,
       "rarity": "rare",
       "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
-      "artist": "Jeff Dee",
+      "artist": "Rebecca Guay",
       "artist_ids": [
-        "623129e5-3984-4d9b-b412-9b283a51b81d"
+        "f8f662fa-d597-46a3-afb2-91d6e13243e2"
       ],
-      "illustration_id": "733ab9c7-3043-429e-8f3b-81f0cf2ea57e",
+      "illustration_id": "93a16e6a-f6e3-4159-8895-0cff64fe5a65",
+      "border_color": "black",
+      "frame": "1997",
+      "full_art": false,
+      "textless": false,
+      "booster": true,
+      "story_spotlight": false,
+      "edhrec_rank": 19778,
+      "penny_rank": 11511,
+      "prices": {
+        "usd": null,
+        "usd_foil": null,
+        "usd_etched": null,
+        "eur": null,
+        "eur_foil": null,
+        "tix": "0.02"
+      },
+      "related_uris": {
+        "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=184769",
+        "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article&game=magic&partner=scryfall&q=Sea+Drake&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "tcgplayer_infinite_decks": "https://infinite.tcgplayer.com/search?contentMode=deck&game=magic&partner=scryfall&q=Sea+Drake&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "edhrec": "https://edhrec.com/route/?cc=Sea+Drake"
+      },
+      "purchase_uris": {
+        "tcgplayer": "https://www.tcgplayer.com/search/magic/product?productLineName=magic&q=Sea+Drake&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall&view=grid",
+        "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Sea+Drake&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+        "cardhoarder": "https://www.cardhoarder.com/cards/30766?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+      },
+      "card_faces": [
+        {
+          "object": "card_face"
+        }
+      ]
+    },
+    {
+      "object": "card",
+      "id": "a6830e11-2f85-45b0-bd1f-cc66e5aa92c5",
+      "oracle_id": "22b5721d-c187-4e0f-b752-52c2a26f3505",
+      "multiverse_ids": [
+        534594
+      ],
+      "arena_id": 79373,
+      "name": "Davriel, Soul Broker",
+      "lang": "en",
+      "released_at": "2021-08-26",
+      "uri": "https://api.scryfall.com/cards/a6830e11-2f85-45b0-bd1f-cc66e5aa92c5",
+      "scryfall_uri": "https://scryfall.com/card/j21/15/davriel-soul-broker?utm_source=api",
+      "layout": "normal",
+      "highres_image": true,
+      "image_status": "highres_scan",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/a/6/a6830e11-2f85-45b0-bd1f-cc66e5aa92c5.jpg?1658014462",
+        "normal": "https://cards.scryfall.io/normal/front/a/6/a6830e11-2f85-45b0-bd1f-cc66e5aa92c5.jpg?1658014462",
+        "large": "https://cards.scryfall.io/large/front/a/6/a6830e11-2f85-45b0-bd1f-cc66e5aa92c5.jpg?1658014462",
+        "png": "https://cards.scryfall.io/png/front/a/6/a6830e11-2f85-45b0-bd1f-cc66e5aa92c5.png?1658014462",
+        "art_crop": "https://cards.scryfall.io/art_crop/front/a/6/a6830e11-2f85-45b0-bd1f-cc66e5aa92c5.jpg?1658014462",
+        "border_crop": "https://cards.scryfall.io/border_crop/front/a/6/a6830e11-2f85-45b0-bd1f-cc66e5aa92c5.jpg?1658014462"
+      },
+      "mana_cost": "{2}{B}{B}",
+      "cmc": 4,
+      "type_line": "Legendary Planeswalker — Davriel",
+      "oracle_text": "+1: Until your next turn, whenever an opponent attacks you and/or planeswalkers you control, they discard a card. If they can't, they sacrifice an attacking creature.\n−2: Accept one of Davriel's offers, then accept one of Davriel's conditions.\n−3: Target creature an opponent controls perpetually gets -3/-3.",
+      "loyalty": "4",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "keywords": [],
+      "all_parts": [
+        {
+          "object": "related_card",
+          "id": "2940839a-9aa3-4e0e-801e-ef927d40dd77",
+          "component": "combo_piece",
+          "name": "Manor Guardian",
+          "type_line": "Creature — Demon",
+          "uri": "https://api.scryfall.com/cards/2940839a-9aa3-4e0e-801e-ef927d40dd77"
+        },
+        {
+          "object": "related_card",
+          "id": "a6830e11-2f85-45b0-bd1f-cc66e5aa92c5",
+          "component": "combo_piece",
+          "name": "Davriel, Soul Broker",
+          "type_line": "Legendary Planeswalker — Davriel",
+          "uri": "https://api.scryfall.com/cards/a6830e11-2f85-45b0-bd1f-cc66e5aa92c5"
+        }
+      ],
+      "legalities": {
+        "standard": "not_legal",
+        "future": "not_legal",
+        "historic": "legal",
+        "gladiator": "legal",
+        "pioneer": "not_legal",
+        "explorer": "not_legal",
+        "modern": "not_legal",
+        "legacy": "not_legal",
+        "pauper": "not_legal",
+        "vintage": "not_legal",
+        "penny": "not_legal",
+        "commander": "not_legal",
+        "brawl": "not_legal",
+        "historicbrawl": "legal",
+        "alchemy": "not_legal",
+        "paupercommander": "not_legal",
+        "duel": "not_legal",
+        "oldschool": "not_legal",
+        "premodern": "not_legal"
+      },
+      "games": [
+        "arena"
+      ],
+      "reserved": false,
+      "foil": false,
+      "nonfoil": true,
+      "finishes": [
+        "nonfoil"
+      ],
+      "oversized": false,
+      "promo": false,
+      "reprint": false,
+      "variation": false,
+      "set_id": "e1cc23bd-379b-4f2c-a4e0-83fc1e7be023",
+      "set": "j21",
+      "set_name": "Jumpstart: Historic Horizons",
+      "set_type": "draft_innovation",
+      "set_uri": "https://api.scryfall.com/sets/e1cc23bd-379b-4f2c-a4e0-83fc1e7be023",
+      "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Aj21&unique=prints",
+      "scryfall_set_uri": "https://scryfall.com/sets/j21?utm_source=api",
+      "rulings_uri": "https://api.scryfall.com/cards/a6830e11-2f85-45b0-bd1f-cc66e5aa92c5/rulings",
+      "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A22b5721d-c187-4e0f-b752-52c2a26f3505&unique=prints",
+      "collector_number": "15",
+      "digital": true,
+      "rarity": "mythic",
+      "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+      "artist": "Justine Cruz",
+      "artist_ids": [
+        "4d6acc42-7bac-42cb-ac57-a56355292e89"
+      ],
+      "illustration_id": "941062ae-35d4-481b-8a83-d2f6337c5c93",
+      "border_color": "black",
+      "frame": "2015",
+      "full_art": false,
+      "textless": false,
+      "booster": true,
+      "story_spotlight": false,
+      "preview": {
+        "source": "IGN",
+        "source_uri": "https://www.ign.com/articles/jumpstart-historic-horizons-spoilers-mtg-arena-digital-only-card-reveal-details",
+        "previewed_at": "2021-07-26"
+      },
+      "prices": {
+        "usd": null,
+        "usd_foil": null,
+        "usd_etched": null,
+        "eur": null,
+        "eur_foil": null,
+        "tix": null
+      },
+      "related_uris": {
+        "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=534594",
+        "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article&game=magic&partner=scryfall&q=Davriel%2C+Soul+Broker&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "tcgplayer_infinite_decks": "https://infinite.tcgplayer.com/search?contentMode=deck&game=magic&partner=scryfall&q=Davriel%2C+Soul+Broker&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "edhrec": "https://edhrec.com/route/?cc=Davriel%2C+Soul+Broker"
+      },
+      "card_faces": [
+        {
+          "object": "card_face"
+        }
+      ]
+    },
+    {
+      "object": "card",
+      "id": "a9f52ae3-5cff-4a32-896d-a66cff51e97f",
+      "oracle_id": "9545f126-062f-4410-a362-e16255a128d6",
+      "multiverse_ids": [],
+      "mtgo_id": 96652,
+      "tcgplayer_id": 255428,
+      "cardmarket_id": 585126,
+      "name": "Outland Liberator // Frenzied Trapbreaker",
+      "lang": "en",
+      "released_at": "2022-01-28",
+      "uri": "https://api.scryfall.com/cards/a9f52ae3-5cff-4a32-896d-a66cff51e97f",
+      "scryfall_uri": "https://scryfall.com/card/dbl/190/outland-liberator-frenzied-trapbreaker?utm_source=api",
+      "layout": "transform",
+      "highres_image": true,
+      "image_status": "highres_scan",
+      "cmc": 2,
+      "type_line": "Creature — Human Werewolf // Creature — Werewolf",
+      "color_identity": [
+        "G"
+      ],
+      "keywords": [
+        "Daybound",
+        "Nightbound"
+      ],
+      "card_faces": [
+        {
+          "object": "card_face",
+          "name": "Outland Liberator",
+          "mana_cost": "{1}{G}",
+          "type_line": "Creature — Human Werewolf",
+          "oracle_text": "{1}, Sacrifice Outland Liberator: Destroy target artifact or enchantment.\nDaybound (If a player casts no spells during their own turn, it becomes night next turn.)",
+          "colors": [
+            "G"
+          ],
+          "power": "2",
+          "toughness": "2",
+          "flavor_text": "\"Just hold still. I'll help you.\"",
+          "artist": "Randy Vargas",
+          "artist_id": "d20672ca-0555-4238-a984-fd171d36b247",
+          "illustration_id": "d5a2b06c-31f4-4411-b103-c1a8c5110804",
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/a/9/a9f52ae3-5cff-4a32-896d-a66cff51e97f.jpg?1673160485",
+            "normal": "https://cards.scryfall.io/normal/front/a/9/a9f52ae3-5cff-4a32-896d-a66cff51e97f.jpg?1673160485",
+            "large": "https://cards.scryfall.io/large/front/a/9/a9f52ae3-5cff-4a32-896d-a66cff51e97f.jpg?1673160485",
+            "png": "https://cards.scryfall.io/png/front/a/9/a9f52ae3-5cff-4a32-896d-a66cff51e97f.png?1673160485",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/a/9/a9f52ae3-5cff-4a32-896d-a66cff51e97f.jpg?1673160485",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/a/9/a9f52ae3-5cff-4a32-896d-a66cff51e97f.jpg?1673160485"
+          }
+        },
+        {
+          "object": "card_face",
+          "name": "Frenzied Trapbreaker",
+          "flavor_name": "",
+          "mana_cost": "",
+          "type_line": "Creature — Werewolf",
+          "oracle_text": "{1}, Sacrifice Frenzied Trapbreaker: Destroy target artifact or enchantment.\nWhenever Frenzied Trapbreaker attacks, destroy target artifact or enchantment defending player controls.\nNightbound (If a player casts at least two spells during their own turn, it becomes day next turn.)",
+          "colors": [
+            "G"
+          ],
+          "color_indicator": [
+            "G"
+          ],
+          "power": "3",
+          "toughness": "3",
+          "artist": "Randy Vargas",
+          "artist_id": "d20672ca-0555-4238-a984-fd171d36b247",
+          "illustration_id": "84a0cc95-791f-440a-a85e-59f326c3bd32",
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/back/a/9/a9f52ae3-5cff-4a32-896d-a66cff51e97f.jpg?1673160485",
+            "normal": "https://cards.scryfall.io/normal/back/a/9/a9f52ae3-5cff-4a32-896d-a66cff51e97f.jpg?1673160485",
+            "large": "https://cards.scryfall.io/large/back/a/9/a9f52ae3-5cff-4a32-896d-a66cff51e97f.jpg?1673160485",
+            "png": "https://cards.scryfall.io/png/back/a/9/a9f52ae3-5cff-4a32-896d-a66cff51e97f.png?1673160485",
+            "art_crop": "https://cards.scryfall.io/art_crop/back/a/9/a9f52ae3-5cff-4a32-896d-a66cff51e97f.jpg?1673160485",
+            "border_crop": "https://cards.scryfall.io/border_crop/back/a/9/a9f52ae3-5cff-4a32-896d-a66cff51e97f.jpg?1673160485"
+          }
+        }
+      ],
+      "all_parts": [
+        {
+          "object": "related_card",
+          "id": "dc26e13b-7a0f-4e7f-8593-4f22234f4517",
+          "component": "combo_piece",
+          "name": "Day // Night",
+          "type_line": "Card // Card",
+          "uri": "https://api.scryfall.com/cards/dc26e13b-7a0f-4e7f-8593-4f22234f4517"
+        },
+        {
+          "object": "related_card",
+          "id": "a9f52ae3-5cff-4a32-896d-a66cff51e97f",
+          "component": "combo_piece",
+          "name": "Outland Liberator // Frenzied Trapbreaker",
+          "type_line": "Creature — Human Werewolf // Creature — Werewolf",
+          "uri": "https://api.scryfall.com/cards/a9f52ae3-5cff-4a32-896d-a66cff51e97f"
+        }
+      ],
+      "legalities": {
+        "standard": "legal",
+        "future": "legal",
+        "historic": "legal",
+        "gladiator": "legal",
+        "pioneer": "legal",
+        "explorer": "legal",
+        "modern": "legal",
+        "legacy": "legal",
+        "pauper": "not_legal",
+        "vintage": "legal",
+        "penny": "not_legal",
+        "commander": "legal",
+        "brawl": "legal",
+        "historicbrawl": "legal",
+        "alchemy": "legal",
+        "paupercommander": "restricted",
+        "duel": "legal",
+        "oldschool": "not_legal",
+        "premodern": "not_legal",
+        "predh": "not_legal"
+      },
+      "games": [
+        "paper",
+        "mtgo"
+      ],
+      "reserved": false,
+      "foil": true,
+      "nonfoil": true,
+      "finishes": [
+        "nonfoil",
+        "foil"
+      ],
+      "oversized": false,
+      "promo": false,
+      "reprint": true,
+      "variation": false,
+      "set_id": "5c1638d2-bce9-463e-b0ec-469336cb1bd2",
+      "set": "dbl",
+      "set_name": "Innistrad: Double Feature",
+      "set_type": "draft_innovation",
+      "set_uri": "https://api.scryfall.com/sets/5c1638d2-bce9-463e-b0ec-469336cb1bd2",
+      "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Adbl&unique=prints",
+      "scryfall_set_uri": "https://scryfall.com/sets/dbl?utm_source=api",
+      "rulings_uri": "https://api.scryfall.com/cards/a9f52ae3-5cff-4a32-896d-a66cff51e97f/rulings",
+      "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A9545f126-062f-4410-a362-e16255a128d6&unique=prints",
+      "collector_number": "190",
+      "digital": false,
+      "rarity": "uncommon",
+      "artist": "Randy Vargas",
+      "artist_ids": [
+        "d20672ca-0555-4238-a984-fd171d36b247"
+      ],
       "border_color": "black",
       "frame": "2015",
       "frame_effects": [
-        "showcase",
-        "legendary"
+        "inverted",
+        "sunmoondfc"
       ],
+      "full_art": false,
+      "textless": false,
+      "booster": true,
+      "story_spotlight": false,
+      "edhrec_rank": 2096,
+      "penny_rank": 888,
+      "prices": {
+        "usd": "0.88",
+        "usd_foil": "7.79",
+        "usd_etched": null,
+        "eur": "0.95",
+        "eur_foil": "10.99",
+        "tix": "0.48"
+      },
+      "related_uris": {
+        "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article&game=magic&partner=scryfall&q=Outland+Liberator+%2F%2F+Frenzied+Trapbreaker&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "tcgplayer_infinite_decks": "https://infinite.tcgplayer.com/search?contentMode=deck&game=magic&partner=scryfall&q=Outland+Liberator+%2F%2F+Frenzied+Trapbreaker&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "edhrec": "https://edhrec.com/route/?cc=Outland+Liberator"
+      },
+      "purchase_uris": {
+        "tcgplayer": "https://www.tcgplayer.com/product/255428?page=1&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Outland+Liberator&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+        "cardhoarder": "https://www.cardhoarder.com/cards/96652?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+      }
+    },
+    {
+      "object": "card",
+      "id": "ecbeb845-a7b7-4020-b28a-61f83e78dcc2",
+      "oracle_id": "1fb02bad-0d1f-437f-a269-f51cc19b280f",
+      "multiverse_ids": [
+        433105
+      ],
+      "tcgplayer_id": 139956,
+      "cardmarket_id": 300488,
+      "name": "Havengul Lich",
+      "lang": "en",
+      "released_at": "2017-08-25",
+      "uri": "https://api.scryfall.com/cards/ecbeb845-a7b7-4020-b28a-61f83e78dcc2",
+      "scryfall_uri": "https://scryfall.com/card/c17/173/havengul-lich?utm_source=api",
+      "layout": "normal",
+      "highres_image": true,
+      "image_status": "highres_scan",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/e/c/ecbeb845-a7b7-4020-b28a-61f83e78dcc2.jpg?1562627953",
+        "normal": "https://cards.scryfall.io/normal/front/e/c/ecbeb845-a7b7-4020-b28a-61f83e78dcc2.jpg?1562627953",
+        "large": "https://cards.scryfall.io/large/front/e/c/ecbeb845-a7b7-4020-b28a-61f83e78dcc2.jpg?1562627953",
+        "png": "https://cards.scryfall.io/png/front/e/c/ecbeb845-a7b7-4020-b28a-61f83e78dcc2.png?1562627953",
+        "art_crop": "https://cards.scryfall.io/art_crop/front/e/c/ecbeb845-a7b7-4020-b28a-61f83e78dcc2.jpg?1562627953",
+        "border_crop": "https://cards.scryfall.io/border_crop/front/e/c/ecbeb845-a7b7-4020-b28a-61f83e78dcc2.jpg?1562627953"
+      },
+      "mana_cost": "{3}{U}{B}",
+      "cmc": 5,
+      "type_line": "Creature — Zombie Wizard",
+      "oracle_text": "{1}: You may cast target creature card in a graveyard this turn. When you cast it this turn, Havengul Lich gains all activated abilities of that card until end of turn.",
+      "power": "4",
+      "toughness": "4",
+      "colors": [
+        "B",
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "keywords": [],
+      "legalities": {
+        "standard": "not_legal",
+        "future": "not_legal",
+        "historic": "not_legal",
+        "gladiator": "not_legal",
+        "pioneer": "not_legal",
+        "explorer": "not_legal",
+        "modern": "legal",
+        "legacy": "legal",
+        "pauper": "not_legal",
+        "vintage": "legal",
+        "penny": "not_legal",
+        "commander": "legal",
+        "brawl": "not_legal",
+        "historicbrawl": "not_legal",
+        "alchemy": "not_legal",
+        "paupercommander": "not_legal",
+        "duel": "legal",
+        "oldschool": "not_legal",
+        "premodern": "not_legal",
+        "predh": "not_legal"
+      },
+      "games": [
+        "paper"
+      ],
+      "reserved": false,
+      "foil": false,
+      "nonfoil": true,
+      "finishes": [
+        "nonfoil"
+      ],
+      "oversized": false,
+      "promo": false,
+      "reprint": true,
+      "variation": false,
+      "set_id": "5caec427-0c78-4c37-b4ec-30f7e0ba9abf",
+      "set": "c17",
+      "set_name": "Commander 2017",
+      "set_type": "commander",
+      "set_uri": "https://api.scryfall.com/sets/5caec427-0c78-4c37-b4ec-30f7e0ba9abf",
+      "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Ac17&unique=prints",
+      "scryfall_set_uri": "https://scryfall.com/sets/c17?utm_source=api",
+      "rulings_uri": "https://api.scryfall.com/cards/ecbeb845-a7b7-4020-b28a-61f83e78dcc2/rulings",
+      "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A1fb02bad-0d1f-437f-a269-f51cc19b280f&unique=prints",
+      "collector_number": "173",
+      "digital": false,
+      "rarity": "mythic",
+      "flavor_text": "Fusing intelligence with the power of undeath requires inspiration of the darkest kind.",
+      "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+      "artist": "James Ryman",
+      "artist_ids": [
+        "3852bbc9-11c0-4fe3-8722-a06ad7e2bcc5"
+      ],
+      "illustration_id": "eac75623-6949-4555-a987-71b9d07bd616",
+      "border_color": "black",
+      "frame": "2015",
       "security_stamp": "oval",
       "full_art": false,
       "textless": false,
       "booster": false,
       "story_spotlight": false,
-      "promo_types": [
-        "boosterfun"
-      ],
-      "edhrec_rank": 9720,
-      "preview": {
-        "source": "Wizards of the Coast",
-        "source_uri": "",
-        "previewed_at": "2022-05-20"
-      },
+      "edhrec_rank": 2986,
       "prices": {
-        "usd": "0.10",
-        "usd_foil": "0.18",
+        "usd": "2.94",
+        "usd_foil": null,
         "usd_etched": null,
-        "eur": "0.30",
-        "eur_foil": "0.25",
+        "eur": "2.00",
+        "eur_foil": null,
         "tix": null
       },
       "related_uris": {
-        "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=570285",
-        "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article&game=magic&partner=scryfall&q=Alaundo+the+Seer&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
-        "tcgplayer_infinite_decks": "https://infinite.tcgplayer.com/search?contentMode=deck&game=magic&partner=scryfall&q=Alaundo+the+Seer&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
-        "edhrec": "https://edhrec.com/route/?cc=Alaundo+the+Seer"
+        "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=433105",
+        "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article&game=magic&partner=scryfall&q=Havengul+Lich&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "tcgplayer_infinite_decks": "https://infinite.tcgplayer.com/search?contentMode=deck&game=magic&partner=scryfall&q=Havengul+Lich&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "edhrec": "https://edhrec.com/route/?cc=Havengul+Lich"
       },
       "purchase_uris": {
-        "tcgplayer": "https://www.tcgplayer.com/product/272805?page=1&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
-        "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Alaundo+the+Seer&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-        "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Alaundo+the+Seer&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+        "tcgplayer": "https://www.tcgplayer.com/product/139956?page=1&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Havengul+Lich&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+        "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Havengul+Lich&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+      },
+      "card_faces": [
+        {
+          "object": "card_face"
+        }
+      ]
+    },
+    {
+      "object": "card",
+      "id": "5be8204f-8bb3-466c-a0c5-52b25bcdb7ba",
+      "oracle_id": "f227ce07-7e96-4a36-ab7c-9be6e777d649",
+      "multiverse_ids": [],
+      "mtgo_id": 96700,
+      "tcgplayer_id": 255430,
+      "cardmarket_id": 585129,
+      "name": "Arlinn, the Pack's Hope // Arlinn, the Moon's Fury",
+      "lang": "en",
+      "released_at": "2022-01-28",
+      "uri": "https://api.scryfall.com/cards/5be8204f-8bb3-466c-a0c5-52b25bcdb7ba",
+      "scryfall_uri": "https://scryfall.com/card/dbl/211/arlinn-the-packs-hope-arlinn-the-moons-fury?utm_source=api",
+      "layout": "transform",
+      "highres_image": true,
+      "image_status": "highres_scan",
+      "cmc": 4,
+      "type_line": "Legendary Planeswalker — Arlinn // Legendary Planeswalker — Arlinn",
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "keywords": [
+        "Daybound",
+        "Nightbound"
+      ],
+      "produced_mana": [
+        "G",
+        "R"
+      ],
+      "card_faces": [
+        {
+          "object": "card_face",
+          "name": "Arlinn, the Pack's Hope",
+          "mana_cost": "{2}{R}{G}",
+          "type_line": "Legendary Planeswalker — Arlinn",
+          "oracle_text": "Daybound (If a player casts no spells during their own turn, it becomes night next turn.)\n+1: Until your next turn, you may cast creature spells as though they had flash, and each creature you control enters the battlefield with an additional +1/+1 counter on it.\n−3: Create two 2/2 green Wolf creature tokens.",
+          "colors": [
+            "G",
+            "R"
+          ],
+          "loyalty": "4",
+          "artist": "Anna Steinbauer",
+          "artist_id": "3516496c-c279-4b56-8239-720683d03ae0",
+          "illustration_id": "d3c62188-93a7-42fe-b0e8-80b1e9cca8ab",
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/5/b/5be8204f-8bb3-466c-a0c5-52b25bcdb7ba.jpg?1673160703",
+            "normal": "https://cards.scryfall.io/normal/front/5/b/5be8204f-8bb3-466c-a0c5-52b25bcdb7ba.jpg?1673160703",
+            "large": "https://cards.scryfall.io/large/front/5/b/5be8204f-8bb3-466c-a0c5-52b25bcdb7ba.jpg?1673160703",
+            "png": "https://cards.scryfall.io/png/front/5/b/5be8204f-8bb3-466c-a0c5-52b25bcdb7ba.png?1673160703",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/5/b/5be8204f-8bb3-466c-a0c5-52b25bcdb7ba.jpg?1673160703",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/5/b/5be8204f-8bb3-466c-a0c5-52b25bcdb7ba.jpg?1673160703"
+          }
+        },
+        {
+          "object": "card_face",
+          "name": "Arlinn, the Moon's Fury",
+          "flavor_name": "",
+          "mana_cost": "",
+          "type_line": "Legendary Planeswalker — Arlinn",
+          "oracle_text": "Nightbound (If a player casts at least two spells during their own turn, it becomes day next turn.)\n+2: Add {R}{G}.\n0: Until end of turn, Arlinn, the Moon's Fury becomes a 5/5 Werewolf creature with trample, indestructible, and haste.",
+          "colors": [
+            "G",
+            "R"
+          ],
+          "color_indicator": [
+            "G",
+            "R"
+          ],
+          "loyalty": "4",
+          "artist": "Anna Steinbauer",
+          "artist_id": "3516496c-c279-4b56-8239-720683d03ae0",
+          "illustration_id": "d6a7da3a-b811-4a8b-a25e-cb714262edea",
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/back/5/b/5be8204f-8bb3-466c-a0c5-52b25bcdb7ba.jpg?1673160703",
+            "normal": "https://cards.scryfall.io/normal/back/5/b/5be8204f-8bb3-466c-a0c5-52b25bcdb7ba.jpg?1673160703",
+            "large": "https://cards.scryfall.io/large/back/5/b/5be8204f-8bb3-466c-a0c5-52b25bcdb7ba.jpg?1673160703",
+            "png": "https://cards.scryfall.io/png/back/5/b/5be8204f-8bb3-466c-a0c5-52b25bcdb7ba.png?1673160703",
+            "art_crop": "https://cards.scryfall.io/art_crop/back/5/b/5be8204f-8bb3-466c-a0c5-52b25bcdb7ba.jpg?1673160703",
+            "border_crop": "https://cards.scryfall.io/border_crop/back/5/b/5be8204f-8bb3-466c-a0c5-52b25bcdb7ba.jpg?1673160703"
+          }
+        }
+      ],
+      "all_parts": [
+        {
+          "object": "related_card",
+          "id": "dc26e13b-7a0f-4e7f-8593-4f22234f4517",
+          "component": "combo_piece",
+          "name": "Day // Night",
+          "type_line": "Card // Card",
+          "uri": "https://api.scryfall.com/cards/dc26e13b-7a0f-4e7f-8593-4f22234f4517"
+        },
+        {
+          "object": "related_card",
+          "id": "39133387-9cd3-49f1-88e1-d23636e020b3",
+          "component": "token",
+          "name": "Wolf",
+          "type_line": "Token Creature — Wolf",
+          "uri": "https://api.scryfall.com/cards/39133387-9cd3-49f1-88e1-d23636e020b3"
+        },
+        {
+          "object": "related_card",
+          "id": "5be8204f-8bb3-466c-a0c5-52b25bcdb7ba",
+          "component": "combo_piece",
+          "name": "Arlinn, the Pack's Hope // Arlinn, the Moon's Fury",
+          "type_line": "Legendary Planeswalker — Arlinn // Legendary Planeswalker — Arlinn",
+          "uri": "https://api.scryfall.com/cards/5be8204f-8bb3-466c-a0c5-52b25bcdb7ba"
+        }
+      ],
+      "legalities": {
+        "standard": "legal",
+        "future": "legal",
+        "historic": "legal",
+        "gladiator": "legal",
+        "pioneer": "legal",
+        "explorer": "legal",
+        "modern": "legal",
+        "legacy": "legal",
+        "pauper": "not_legal",
+        "vintage": "legal",
+        "penny": "not_legal",
+        "commander": "legal",
+        "brawl": "legal",
+        "historicbrawl": "legal",
+        "alchemy": "legal",
+        "paupercommander": "not_legal",
+        "duel": "legal",
+        "oldschool": "not_legal",
+        "premodern": "not_legal",
+        "predh": "not_legal"
+      },
+      "games": [
+        "paper",
+        "mtgo"
+      ],
+      "reserved": false,
+      "foil": true,
+      "nonfoil": true,
+      "finishes": [
+        "nonfoil",
+        "foil"
+      ],
+      "oversized": false,
+      "promo": false,
+      "reprint": true,
+      "variation": false,
+      "set_id": "5c1638d2-bce9-463e-b0ec-469336cb1bd2",
+      "set": "dbl",
+      "set_name": "Innistrad: Double Feature",
+      "set_type": "draft_innovation",
+      "set_uri": "https://api.scryfall.com/sets/5c1638d2-bce9-463e-b0ec-469336cb1bd2",
+      "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Adbl&unique=prints",
+      "scryfall_set_uri": "https://scryfall.com/sets/dbl?utm_source=api",
+      "rulings_uri": "https://api.scryfall.com/cards/5be8204f-8bb3-466c-a0c5-52b25bcdb7ba/rulings",
+      "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Af227ce07-7e96-4a36-ab7c-9be6e777d649&unique=prints",
+      "collector_number": "211",
+      "digital": false,
+      "rarity": "mythic",
+      "artist": "Anna Steinbauer",
+      "artist_ids": [
+        "3516496c-c279-4b56-8239-720683d03ae0"
+      ],
+      "border_color": "black",
+      "frame": "2015",
+      "frame_effects": [
+        "inverted",
+        "sunmoondfc"
+      ],
+      "security_stamp": "oval",
+      "full_art": false,
+      "textless": false,
+      "booster": true,
+      "story_spotlight": false,
+      "edhrec_rank": 4588,
+      "prices": {
+        "usd": "6.96",
+        "usd_foil": "47.01",
+        "usd_etched": null,
+        "eur": "8.47",
+        "eur_foil": "45.00",
+        "tix": "2.47"
+      },
+      "related_uris": {
+        "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article&game=magic&partner=scryfall&q=Arlinn%2C+the+Pack%27s+Hope+%2F%2F+Arlinn%2C+the+Moon%27s+Fury&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "tcgplayer_infinite_decks": "https://infinite.tcgplayer.com/search?contentMode=deck&game=magic&partner=scryfall&q=Arlinn%2C+the+Pack%27s+Hope+%2F%2F+Arlinn%2C+the+Moon%27s+Fury&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "edhrec": "https://edhrec.com/route/?cc=Arlinn%2C+the+Pack%27s+Hope"
+      },
+      "purchase_uris": {
+        "tcgplayer": "https://www.tcgplayer.com/product/255430?page=1&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Arlinn%2C+the+Pack%27s+Hope&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+        "cardhoarder": "https://www.cardhoarder.com/cards/96700?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+      }
+    },
+    {
+      "object": "card",
+      "id": "d1a38e25-297f-43e1-9455-73f00eb08cec",
+      "oracle_id": "fbffaf9f-40e7-4113-a037-533b733cebce",
+      "multiverse_ids": [],
+      "mtgo_id": 95876,
+      "tcgplayer_id": 255732,
+      "cardmarket_id": 585263,
+      "name": "Sorin the Mirthless",
+      "lang": "en",
+      "released_at": "2022-01-28",
+      "uri": "https://api.scryfall.com/cards/d1a38e25-297f-43e1-9455-73f00eb08cec",
+      "scryfall_uri": "https://scryfall.com/card/dbl/398/sorin-the-mirthless?utm_source=api",
+      "layout": "normal",
+      "highres_image": true,
+      "image_status": "highres_scan",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/d/1/d1a38e25-297f-43e1-9455-73f00eb08cec.jpg?1673162626",
+        "normal": "https://cards.scryfall.io/normal/front/d/1/d1a38e25-297f-43e1-9455-73f00eb08cec.jpg?1673162626",
+        "large": "https://cards.scryfall.io/large/front/d/1/d1a38e25-297f-43e1-9455-73f00eb08cec.jpg?1673162626",
+        "png": "https://cards.scryfall.io/png/front/d/1/d1a38e25-297f-43e1-9455-73f00eb08cec.png?1673162626",
+        "art_crop": "https://cards.scryfall.io/art_crop/front/d/1/d1a38e25-297f-43e1-9455-73f00eb08cec.jpg?1673162626",
+        "border_crop": "https://cards.scryfall.io/border_crop/front/d/1/d1a38e25-297f-43e1-9455-73f00eb08cec.jpg?1673162626"
+      },
+      "mana_cost": "{2}{B}{B}",
+      "cmc": 4,
+      "type_line": "Legendary Planeswalker — Sorin",
+      "oracle_text": "+1: Look at the top card of your library. You may reveal that card and put it into your hand. If you do, you lose life equal to its mana value.\n−2: Create a 2/3 black Vampire creature token with flying and lifelink.\n−7: Sorin the Mirthless deals 13 damage to any target. You gain 13 life.",
+      "loyalty": "4",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "keywords": [],
+      "all_parts": [
+        {
+          "object": "related_card",
+          "id": "ebd12ac1-d1b2-4e22-9a17-8f3964294e35",
+          "component": "token",
+          "name": "Vampire",
+          "type_line": "Token Creature — Vampire",
+          "uri": "https://api.scryfall.com/cards/ebd12ac1-d1b2-4e22-9a17-8f3964294e35"
+        },
+        {
+          "object": "related_card",
+          "id": "d1a38e25-297f-43e1-9455-73f00eb08cec",
+          "component": "combo_piece",
+          "name": "Sorin the Mirthless",
+          "type_line": "Legendary Planeswalker — Sorin",
+          "uri": "https://api.scryfall.com/cards/d1a38e25-297f-43e1-9455-73f00eb08cec"
+        }
+      ],
+      "legalities": {
+        "standard": "legal",
+        "future": "legal",
+        "historic": "legal",
+        "gladiator": "legal",
+        "pioneer": "legal",
+        "explorer": "legal",
+        "modern": "legal",
+        "legacy": "legal",
+        "pauper": "not_legal",
+        "vintage": "legal",
+        "penny": "not_legal",
+        "commander": "legal",
+        "brawl": "legal",
+        "historicbrawl": "legal",
+        "alchemy": "legal",
+        "paupercommander": "not_legal",
+        "duel": "legal",
+        "oldschool": "not_legal",
+        "premodern": "not_legal",
+        "predh": "not_legal"
+      },
+      "games": [
+        "paper",
+        "mtgo"
+      ],
+      "reserved": false,
+      "foil": true,
+      "nonfoil": true,
+      "finishes": [
+        "nonfoil",
+        "foil"
+      ],
+      "oversized": false,
+      "promo": false,
+      "reprint": true,
+      "variation": false,
+      "set_id": "5c1638d2-bce9-463e-b0ec-469336cb1bd2",
+      "set": "dbl",
+      "set_name": "Innistrad: Double Feature",
+      "set_type": "draft_innovation",
+      "set_uri": "https://api.scryfall.com/sets/5c1638d2-bce9-463e-b0ec-469336cb1bd2",
+      "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Adbl&unique=prints",
+      "scryfall_set_uri": "https://scryfall.com/sets/dbl?utm_source=api",
+      "rulings_uri": "https://api.scryfall.com/cards/d1a38e25-297f-43e1-9455-73f00eb08cec/rulings",
+      "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Afbffaf9f-40e7-4113-a037-533b733cebce&unique=prints",
+      "collector_number": "398",
+      "digital": false,
+      "rarity": "mythic",
+      "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+      "artist": "Martina Fackova",
+      "artist_ids": [
+        "6338124e-8e53-498d-8bf9-93a55db2f61c"
+      ],
+      "illustration_id": "3b0a815c-97c5-4cbd-8cc3-6213779e57ed",
+      "border_color": "black",
+      "frame": "2015",
+      "frame_effects": [
+        "inverted"
+      ],
+      "security_stamp": "oval",
+      "full_art": false,
+      "textless": false,
+      "booster": true,
+      "story_spotlight": false,
+      "edhrec_rank": 4381,
+      "preview": {
+        "source": "Wizards of the Coast",
+        "source_uri": "",
+        "previewed_at": "2021-10-31"
+      },
+      "prices": {
+        "usd": "9.12",
+        "usd_foil": "48.17",
+        "usd_etched": null,
+        "eur": "13.73",
+        "eur_foil": "21.90",
+        "tix": "6.19"
+      },
+      "related_uris": {
+        "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article&game=magic&partner=scryfall&q=Sorin+the+Mirthless&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "tcgplayer_infinite_decks": "https://infinite.tcgplayer.com/search?contentMode=deck&game=magic&partner=scryfall&q=Sorin+the+Mirthless&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "edhrec": "https://edhrec.com/route/?cc=Sorin+the+Mirthless"
+      },
+      "purchase_uris": {
+        "tcgplayer": "https://www.tcgplayer.com/product/255732?page=1&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Sorin+the+Mirthless&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+        "cardhoarder": "https://www.cardhoarder.com/cards/95876?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+      },
+      "card_faces": [
+        {
+          "object": "card_face"
+        }
+      ]
+    },
+    {
+      "object": "card",
+      "id": "71af51dd-80dc-427a-a3fa-63d809580fde",
+      "oracle_id": "24919141-82d2-42ad-963c-e53511a868b3",
+      "multiverse_ids": [],
+      "mtgo_id": 96768,
+      "tcgplayer_id": 255854,
+      "cardmarket_id": 585020,
+      "name": "Sigarda, Champion of Light",
+      "lang": "en",
+      "released_at": "2022-01-28",
+      "uri": "https://api.scryfall.com/cards/71af51dd-80dc-427a-a3fa-63d809580fde",
+      "scryfall_uri": "https://scryfall.com/card/dbl/240/sigarda-champion-of-light?utm_source=api",
+      "layout": "normal",
+      "highres_image": true,
+      "image_status": "highres_scan",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/7/1/71af51dd-80dc-427a-a3fa-63d809580fde.jpg?1673160993",
+        "normal": "https://cards.scryfall.io/normal/front/7/1/71af51dd-80dc-427a-a3fa-63d809580fde.jpg?1673160993",
+        "large": "https://cards.scryfall.io/large/front/7/1/71af51dd-80dc-427a-a3fa-63d809580fde.jpg?1673160993",
+        "png": "https://cards.scryfall.io/png/front/7/1/71af51dd-80dc-427a-a3fa-63d809580fde.png?1673160993",
+        "art_crop": "https://cards.scryfall.io/art_crop/front/7/1/71af51dd-80dc-427a-a3fa-63d809580fde.jpg?1673160993",
+        "border_crop": "https://cards.scryfall.io/border_crop/front/7/1/71af51dd-80dc-427a-a3fa-63d809580fde.jpg?1673160993"
+      },
+      "mana_cost": "{1}{G}{W}{W}",
+      "cmc": 4,
+      "type_line": "Legendary Creature — Angel",
+      "oracle_text": "Flying, trample\nHumans you control get +1/+1.\nCoven — Whenever Sigarda attacks, if you control three or more creatures with different powers, look at the top five cards of your library. You may reveal a Human creature card from among them and put it into your hand. Put the rest on the bottom of your library in a random order.",
+      "power": "4",
+      "toughness": "4",
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "keywords": [
+        "Flying",
+        "Trample",
+        "Coven"
+      ],
+      "legalities": {
+        "standard": "legal",
+        "future": "legal",
+        "historic": "legal",
+        "gladiator": "legal",
+        "pioneer": "legal",
+        "explorer": "legal",
+        "modern": "legal",
+        "legacy": "legal",
+        "pauper": "not_legal",
+        "vintage": "legal",
+        "penny": "not_legal",
+        "commander": "legal",
+        "brawl": "legal",
+        "historicbrawl": "legal",
+        "alchemy": "legal",
+        "paupercommander": "not_legal",
+        "duel": "legal",
+        "oldschool": "not_legal",
+        "premodern": "not_legal",
+        "predh": "not_legal"
+      },
+      "games": [
+        "paper",
+        "mtgo"
+      ],
+      "reserved": false,
+      "foil": true,
+      "nonfoil": true,
+      "finishes": [
+        "nonfoil",
+        "foil"
+      ],
+      "oversized": false,
+      "promo": false,
+      "reprint": true,
+      "variation": false,
+      "set_id": "5c1638d2-bce9-463e-b0ec-469336cb1bd2",
+      "set": "dbl",
+      "set_name": "Innistrad: Double Feature",
+      "set_type": "draft_innovation",
+      "set_uri": "https://api.scryfall.com/sets/5c1638d2-bce9-463e-b0ec-469336cb1bd2",
+      "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Adbl&unique=prints",
+      "scryfall_set_uri": "https://scryfall.com/sets/dbl?utm_source=api",
+      "rulings_uri": "https://api.scryfall.com/cards/71af51dd-80dc-427a-a3fa-63d809580fde/rulings",
+      "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A24919141-82d2-42ad-963c-e53511a868b3&unique=prints",
+      "collector_number": "240",
+      "digital": false,
+      "rarity": "mythic",
+      "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+      "artist": "Howard Lyon",
+      "artist_ids": [
+        "6dd06426-59fe-4b9c-aad5-6da8446a5c3d"
+      ],
+      "illustration_id": "47ab724f-89d1-42f2-a522-15e62148c482",
+      "border_color": "black",
+      "frame": "2015",
+      "frame_effects": [
+        "legendary",
+        "inverted"
+      ],
+      "security_stamp": "oval",
+      "full_art": false,
+      "textless": false,
+      "booster": true,
+      "story_spotlight": false,
+      "edhrec_rank": 4906,
+      "prices": {
+        "usd": "1.66",
+        "usd_foil": "43.43",
+        "usd_etched": null,
+        "eur": "1.45",
+        "eur_foil": "35.00",
+        "tix": "0.72"
+      },
+      "related_uris": {
+        "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article&game=magic&partner=scryfall&q=Sigarda%2C+Champion+of+Light&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "tcgplayer_infinite_decks": "https://infinite.tcgplayer.com/search?contentMode=deck&game=magic&partner=scryfall&q=Sigarda%2C+Champion+of+Light&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "edhrec": "https://edhrec.com/route/?cc=Sigarda%2C+Champion+of+Light"
+      },
+      "purchase_uris": {
+        "tcgplayer": "https://www.tcgplayer.com/product/255854?page=1&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Sigarda%2C+Champion+of+Light&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+        "cardhoarder": "https://www.cardhoarder.com/cards/96768?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
       },
       "card_faces": [
         {
