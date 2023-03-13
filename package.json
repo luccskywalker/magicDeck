@@ -18,9 +18,10 @@
     "@angular/platform-browser": "^14.2.12",
     "@angular/platform-browser-dynamic": "^14.2.12",
     "@angular/router": "^14.2.12",
+    "firebase": "^9.17.2",
     "mtgsdk-ts": "^1.1.2",
     "rxjs": "^7.4.0",
-    "scryfall-sdk": "^3.2.1",
+    "scryfall-sdk": "^3.3.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
