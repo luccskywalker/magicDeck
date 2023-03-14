@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { Card } from 'scryfall-sdk';
 
 @Injectable({
@@ -20,10 +20,16 @@ export class MagicServiceService {
         }
       );
     });
+
+    localStorage.setItem('userCards', JSON.stringify(cards));
   }
 
   public getCardsFromLibrary(): Observable<Card[]> {
-    return this.httpService.get<Card[]>('http://localhost:3000/cards/');
+    const cards = JSON.parse(localStorage.getItem('userCards') || '{}');
+    return of(cards);
+
+    // json-server implementation
+    //  return this.httpService.get<Card[]>('http://localhost:3000/cards/');
   }
 
   public unfavouriteCard(card: Card) {
@@ -33,14 +39,17 @@ export class MagicServiceService {
   }
 
   public favouriteCard(card: Card) {
-    this.httpService.post('http://localhost:3000/favourites', card).subscribe(
-      (response) => {
-        return response;
-      },
-      (error) => {
-        return error;
-      }
-    );
+    localStorage.setItem('userFavouriteCards', JSON.stringify(card));
+
+    // json-server implementation
+    // this.httpService.post('http://localhost:3000/favourites', card).subscribe(
+    //   (response) => {
+    //     return response;
+    //   },
+    //   (error) => {
+    //     return error;
+    //   }
+    // );
   }
   public checkAlreadyHaveCard(card: Card): Observable<Card[]> {
     return this.httpService.get<Card[]>(
