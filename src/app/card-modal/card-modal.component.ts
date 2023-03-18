@@ -21,74 +21,98 @@ export class CardModalComponent implements OnInit {
   constructor(private magicService: MagicServiceService) {}
 
   public checkFavourite(card: Card) {
-    this.magicService
-      .checkAlreadyFavourited(card)
-      .pipe(
-        take(1),
-        finalize(() => {
-          if (this.isFavourite) {
-            this.unfavouriteCard(card);
-            this.loading = false;
-            return;
-          }
-          this.favouriteCard(card);
-          this.loading = false;
-        })
-      )
-      .subscribe((card) => {
-        if (card.length) {
-          this.isFavourite = true;
-          return;
-        }
-        this.isFavourite = false;
-      });
+    this.isFavourite = this.magicService.checkAlreadyFavourited(card);
+
+    if (this.isFavourite) {
+      this.unfavouriteCard(card);
+      return;
+    }
+    this.favouriteCard(card);
+
+    // json-implementation
+    // this.magicService
+    //   .checkAlreadyFavourited(card)
+    //   .pipe(
+    //     take(1),
+    //     finalize(() => {
+    //       if (this.isFavourite) {
+    //         this.unfavouriteCard(card);
+    //         this.loading = false;
+    //         return;
+    //       }
+    //       this.favouriteCard(card);
+    //       this.loading = false;
+    //     })
+    //   )
+    //   .subscribe((card) => {
+    //     if (card.length) {
+    //       this.isFavourite = true;
+    //       return;
+    //     }
+    //     this.isFavourite = false;
+    //   });
   }
   public unfavouriteCard(card: Card) {
-    this.magicService.unfavouriteCard(card).subscribe();
+    this.magicService.unfavouriteCard(card);
+    this.loading = false;
   }
   public favouriteCard(card: Card) {
     this.magicService.favouriteCard(card);
+    this.loading = false;
   }
 
   public toggleFavourite(card: Card) {
     this.loading = true;
-    this.magicService
-      .checkAlreadyHaveCard(this.card)
-      .pipe(
-        take(1),
-        finalize(() => {
-          if (this.alreadyHave) {
-            this.checkFavourite(card);
-            return;
-          }
-          this.saveToLibrary.push(card);
-          this.magicService.saveCardsToLibrary(this.saveToLibrary);
-          this.checkFavourite(card);
-        })
-      )
-      .subscribe((card) => {
-        if (card.length) {
-          this.alreadyHave = true;
-          return;
-        }
-        this.alreadyHave = false;
-      });
+    this.alreadyHave = this.magicService.checkAlreadyHaveCard(this.card);
+    if (this.alreadyHave) {
+      this.checkFavourite(card);
+      return;
+    }
+    this.saveToLibrary.push(card);
+    this.magicService.saveCardsToLibrary(this.saveToLibrary);
+    this.checkFavourite(card);
+
+    // json-server implementation
+    // this.magicService
+    //   .checkAlreadyHaveCard(this.card)
+    //   .pipe(
+    //     take(1),
+    //     finalize(() => {
+    //       if (this.alreadyHave) {
+    //         this.checkFavourite(card);
+    //         return;
+    //       }
+    //       this.saveToLibrary.push(card);
+    //       this.magicService.saveCardsToLibrary(this.saveToLibrary);
+    //       this.checkFavourite(card);
+    //     })
+    //   )
+    //   .subscribe((card) => {
+    //     if (card.length) {
+    //       this.alreadyHave = true;
+    //       return;
+    //     }
+    //     this.alreadyHave = false;
+    //   });
   }
 
   public async checkAlreadyHave() {
-    this.magicService
-      .checkAlreadyHaveCard(this.card)
-      .pipe(
-        take(1),
-        finalize(() => {})
-      )
-      .subscribe((card) => {
-        if (card.length) {
-          this.alreadyHave = true;
-          return;
-        }
-        this.alreadyHave = false;
-      });
+    this.alreadyHave = this.magicService.checkAlreadyHaveCard(this.card);
+
+    // json-server implementation
+    // this.magicService
+    //   .checkAlreadyHaveCard(this.card)
+    //   .pipe(
+    //     take(1),
+    //     finalize(() => {})
+    //   )
+    //   .subscribe((card) => {
+    //     if (card.length) {
+    //       this.alreadyHave = true;
+    //       return;
+    //     }
+    //     this.alreadyHave = false;
+    //   });
   }
 
   public closeModal() {
@@ -111,19 +135,21 @@ export class CardModalComponent implements OnInit {
 
   ngOnInit() {
     this.checkIsDoubleSided();
+    this.isFavourite = this.magicService.checkAlreadyFavourited(this.card);
 
-    this.magicService
-      .checkAlreadyFavourited(this.card)
-      .pipe(
-        take(1),
-        finalize(() => {})
-      )
-      .subscribe((card) => {
-        if (card.length) {
-          this.isFavourite = true;
-          return;
-        }
-        this.isFavourite = false;
-      });
+    //json-server implementation
+    // this.magicService
+    //   .checkAlreadyFavourited(this.card)
+    //   .pipe(
+    //     take(1),
+    //     finalize(() => {})
+    //   )
+    //   .subscribe((card) => {
+    //     if (card.length) {
+    //       this.isFavourite = true;
+    //       return;
+    //     }
+    //     this.isFavourite = false;
+    //   });
   }
 }
