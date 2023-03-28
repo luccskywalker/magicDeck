@@ -9,7 +9,16 @@ import { Card } from 'scryfall-sdk';
 export class MagicServiceService {
   constructor(private httpService: HttpClient) {}
 
+  public cardSet = new Set();
+
+  public removeDuplicates(array: Card[]) {
+    return [...new Set(array)];
+  }
+
   public saveCardsToLibrary(cards: Card[]) {
+    this.removeDuplicates(cards);
+    console.log('cards', cards);
+
     // json-server implementation
     // cards.forEach((card) => {
     //   this.httpService.post('http://localhost:3000/cards', card).subscribe(
@@ -21,9 +30,23 @@ export class MagicServiceService {
     //     }
     //   );
     // });
-    const previousCards: Card[] = JSON.parse(
+    let previousCards: Card[] = JSON.parse(
       localStorage.getItem('userCards') || '[]'
     );
+    this.removeDuplicates(previousCards);
+    previousCards.forEach((prevCard) => {
+      cards.forEach((card) => {
+        if (card.id === prevCard.id) {
+          let index: number = previousCards.findIndex(
+            (item) => item.id === card.id
+          );
+          console.log('Index', index);
+          previousCards.splice(index, 1);
+          console.log('previrous', previousCards);
+        }
+      });
+    });
+
     localStorage.setItem(
       'userCards',
       JSON.stringify([...previousCards, ...cards])

@@ -61,6 +61,9 @@ export class CardModalComponent implements OnInit {
     this.loading = false;
   }
 
+  public removeDuplicates(array: Card[]) {
+    return [...new Set(array)];
+  }
   public toggleFavourite(card: Card) {
     this.loading = true;
     this.alreadyHave = this.magicService.checkAlreadyHaveCard(this.card);
@@ -68,7 +71,10 @@ export class CardModalComponent implements OnInit {
       this.checkFavourite(card);
       return;
     }
+
     this.saveToLibrary.push(card);
+    this.saveToLibrary = this.removeDuplicates(this.saveToLibrary);
+
     this.magicService.saveCardsToLibrary(this.saveToLibrary);
     this.checkFavourite(card);
 

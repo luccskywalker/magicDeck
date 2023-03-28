@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { promises } from 'dns';
-import { toArray } from 'rxjs';
 import * as Scry from 'scryfall-sdk';
 import { Card } from 'scryfall-sdk';
 import { MagicServiceService } from '../magicService/magicService.service';
