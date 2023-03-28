@@ -17,7 +17,6 @@ export class MagicServiceService {
 
   public saveCardsToLibrary(cards: Card[]) {
     this.removeDuplicates(cards);
-    console.log('cards', cards);
 
     // json-server implementation
     // cards.forEach((card) => {
@@ -40,9 +39,7 @@ export class MagicServiceService {
           let index: number = previousCards.findIndex(
             (item) => item.id === card.id
           );
-          console.log('Index', index);
           previousCards.splice(index, 1);
-          console.log('previrous', previousCards);
         }
       });
     });
