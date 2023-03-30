@@ -33,6 +33,7 @@ export class MagicServiceService {
       localStorage.getItem('userCards') || '[]'
     );
     this.removeDuplicates(previousCards);
+    this.removeDuplicates(cards);
     previousCards.forEach((prevCard) => {
       cards.forEach((card) => {
         if (card.id === prevCard.id) {

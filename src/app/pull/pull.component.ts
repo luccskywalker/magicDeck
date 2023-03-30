@@ -13,6 +13,8 @@ export class PullComponent implements OnInit {
 
   public loading = false;
 
+  public saveButton = false;
+
   public rollsCounter = 0;
 
   public cardList!: Card[];
@@ -34,6 +36,7 @@ export class PullComponent implements OnInit {
   public async roll() {
     this.cardList = await this.getRandomCards();
     this.loading = false;
+    this.saveButton = true;
   }
 
   public generateRandom(number: number) {
@@ -41,6 +44,8 @@ export class PullComponent implements OnInit {
   }
 
   public saveToLibrary(cards: Card[]) {
+    this.saveButton = false;
+    cards = this.removeDuplicates(cards);
     this.magicService.saveCardsToLibrary(cards);
   }
 
@@ -59,6 +64,10 @@ export class PullComponent implements OnInit {
   public async getRandomCard() {
     this.randomCard = await Scry.Cards.random();
     return this.randomCard;
+  }
+
+  public removeDuplicates(array: Card[]) {
+    return [...new Set(array)];
   }
 
   ngOnInit() {}
