@@ -13,7 +13,6 @@
             type="date"
             [innerHTML]="option.getFullYear()"
             [ngValue]="option"
-            selected
           ></option>
         </ng-container>
       </select>
@@ -32,13 +31,19 @@
   <div>
     <div *ngIf="showSetCardList">
       <div class="align-center">
-        Filtrar por:
-        <select [(ngModel)]="sort">
+        Filtrar por: Filtrar por:
+        <select class="btn" required [(ngModel)]="sort">
+          <option [value]="sort" disabled hidden selected>
+            Choose a category
+          </option>
           <option value="rarity">Raridade</option>
           <option value="released_at">Data de Lançamento</option>
         </select>
         Ordenar por:
-        <select [(ngModel)]="order">
+        <select class="btn" required [(ngModel)]="order">
+          <option [value]="order" selected hidden disabled>
+            Choose a order
+          </option>
           <option value="asc">Ascendente</option>
           <option value="desc">Descendente</option>
         </select>

@@ -1,12 +1,14 @@
 <h1 class="title-text">User Cards List</h1>
 <div class="align-center">
   Filtrar por:
-  <select [(ngModel)]="sort">
+  <select class="btn" required [(ngModel)]="sort">
+    <option [value]="sort" disabled hidden selected>Choose a category</option>
     <option value="rarity">Raridade</option>
     <option value="released_at">Data de Lançamento</option>
   </select>
   Ordenar por:
-  <select [(ngModel)]="order">
+  <select class="btn" required [(ngModel)]="order">
+    <option [value]="order" selected hidden disabled>Choose a order</option>
     <option value="asc">Ascendente</option>
     <option value="desc">Descendente</option>
   </select>

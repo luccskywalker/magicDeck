@@ -11,8 +11,8 @@ import { UserLibraryComponent } from './user-library/user-library.component';
 import { CommonModule } from '@angular/common';
 import { UserLibraryModule } from './user-library/user-library.module';
 import { SetsComponent } from './sets/sets.component';
-import { PipesModule } from 'src/pipes/pipes/pipes.module';
-import { ManaPipe } from 'src/pipes/pipes/mana.pipe';
+import { PipesModule } from 'src/app/utils/pipes/pipes.module';
+import { ManaPipe } from 'src/app/utils/pipes/mana.pipe';
 import { UserDeckModule } from './user-deck/user-deck.module';
 
 const appRoutes: Routes = [

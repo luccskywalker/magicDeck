@@ -1,8 +1,9 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { finalize, take } from 'rxjs';
+import { finalize, from, take } from 'rxjs';
 import { Card, Rarity } from 'scryfall-sdk';
 import { ImageConfig } from '../card-image/card-image.component';
 import { MagicServiceService } from '../magicService/magicService.service';
+import { removeDuplicates } from '../utils/utils';
 
 @Component({
   selector: 'app-card-modal',
@@ -61,9 +62,6 @@ export class CardModalComponent implements OnInit {
     this.loading = false;
   }
 
-  public removeDuplicates(array: Card[]) {
-    return [...new Set(array)];
-  }
   public toggleFavourite(card: Card) {
     this.loading = true;
     this.alreadyHave = this.magicService.checkAlreadyHaveCard(this.card);
@@ -73,7 +71,7 @@ export class CardModalComponent implements OnInit {
     }
 
     this.saveToLibrary.push(card);
-    this.saveToLibrary = this.removeDuplicates(this.saveToLibrary);
+    this.saveToLibrary = removeDuplicates(this.saveToLibrary);
 
     this.magicService.saveCardsToLibrary(this.saveToLibrary);
     this.checkFavourite(card);

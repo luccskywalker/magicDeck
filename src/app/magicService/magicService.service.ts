@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Card } from 'scryfall-sdk';
+import { removeDuplicates } from '../utils/utils';
 
 @Injectable({
   providedIn: 'root',
@@ -11,12 +12,8 @@ export class MagicServiceService {
 
   public cardSet = new Set();
 
-  public removeDuplicates(array: Card[]) {
-    return [...new Set(array)];
-  }
-
   public saveCardsToLibrary(cards: Card[]) {
-    this.removeDuplicates(cards);
+    removeDuplicates(cards);
 
     // json-server implementation
     // cards.forEach((card) => {
@@ -32,8 +29,8 @@ export class MagicServiceService {
     let previousCards: Card[] = JSON.parse(
       localStorage.getItem('userCards') || '[]'
     );
-    this.removeDuplicates(previousCards);
-    this.removeDuplicates(cards);
+    removeDuplicates(previousCards);
+    removeDuplicates(cards);
     previousCards.forEach((prevCard) => {
       cards.forEach((card) => {
         if (card.id === prevCard.id) {

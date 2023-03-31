@@ -70,5 +70,6 @@ export class UserLibraryComponent implements OnInit {
 
   ngOnInit() {
     this.populateLibrary();
+    this.sort = 'rarity';
   }
 }
