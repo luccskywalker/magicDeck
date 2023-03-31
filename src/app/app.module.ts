@@ -14,6 +14,7 @@ import { SetsComponent } from './sets/sets.component';
 import { PipesModule } from 'src/app/utils/pipes/pipes.module';
 import { ManaPipe } from 'src/app/utils/pipes/mana.pipe';
 import { UserDeckModule } from './user-deck/user-deck.module';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 const appRoutes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
@@ -34,6 +35,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     PipesModule,
     UserDeckModule,
+    LazyLoadImageModule,
   ],
   providers: [AppModule],
   bootstrap: [AppComponent],

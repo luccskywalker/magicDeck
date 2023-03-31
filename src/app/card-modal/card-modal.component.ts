@@ -22,8 +22,8 @@ export class CardModalComponent implements OnInit {
   constructor(private magicService: MagicServiceService) {}
 
   public checkFavourite(card: Card) {
+    this.loading = true;
     this.isFavourite = this.magicService.checkAlreadyFavourited(card);
-
     if (this.isFavourite) {
       this.unfavouriteCard(card);
       return;
@@ -55,16 +55,19 @@ export class CardModalComponent implements OnInit {
   }
   public unfavouriteCard(card: Card) {
     this.magicService.unfavouriteCard(card);
+    this.isFavourite = false;
     this.loading = false;
   }
   public favouriteCard(card: Card) {
     this.magicService.favouriteCard(card);
+    this.isFavourite = true;
     this.loading = false;
   }
 
   public toggleFavourite(card: Card) {
     this.loading = true;
     this.alreadyHave = this.magicService.checkAlreadyHaveCard(this.card);
+
     if (this.alreadyHave) {
       this.checkFavourite(card);
       return;

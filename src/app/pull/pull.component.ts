@@ -15,6 +15,8 @@ export class PullComponent implements OnInit {
 
   public saveButton = false;
 
+  public showCards = false;
+
   public rollsCounter = 0;
 
   public cardList!: Card[];
@@ -22,6 +24,8 @@ export class PullComponent implements OnInit {
   public randomCard!: Card;
 
   public testCard!: Card;
+
+  public myInput!: number[];
 
   constructor(private magicService: MagicServiceService) {}
 
@@ -36,6 +40,7 @@ export class PullComponent implements OnInit {
   public async roll() {
     this.cardList = await this.getRandomCards();
     this.loading = false;
+    this.showCards = true;
     this.saveButton = true;
   }
 
@@ -53,6 +58,7 @@ export class PullComponent implements OnInit {
 
   public async getRandomCards() {
     this.loading = true;
+    this.showCards = false;
     const cardArray = [];
     for (let i = 0; i < this.rollsCounter; i++) {
       const card = await this.getRandomCard();

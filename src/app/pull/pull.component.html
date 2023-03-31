@@ -1,7 +1,13 @@
 <div class="pull-container flex-column align-center">
   <h3>How many times do you want to pull?</h3>
   <div class="form">
-    <input class="input" type="text" [(ngModel)]="rollsCounter" />
+    <input
+      class="input"
+      type="number"
+      [(ngModel)]="rollsCounter"
+      min="0"
+      max="10"
+    />
   </div>
   <button class="btn" (click)="roll()">Pull {{ rollsCounter }} times!</button>
 </div>
@@ -30,7 +36,7 @@
   </svg>
 </div>
 
-<div *ngIf="!loading">
+<div *ngIf="!loading && showCards">
   <div class="wrapper">
     <div *ngFor="let card of cardList">
       <div class="card-container">

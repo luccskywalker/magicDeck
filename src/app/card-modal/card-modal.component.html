@@ -1,9 +1,16 @@
 <div class="modal-container">
   <div class="close-buttons">
     <button (click)="toggleFavourite(card)" class="btn">
-      <img *ngIf="isFavourite && !loading" src="../../assets/heart.png" />
+      <img
+        *ngIf="!loading"
+        [src]="
+          isFavourite ? '../../assets/heart.png ' : '../../assets/love.png'
+        "
+      />
+
+      <!-- <img *ngIf="isFavourite && !loading" src="../../assets/heart.png" />
       <img *ngIf="!isFavourite && !loading" src="../../assets/love.png" />
-      <div *ngIf="loading">carregando</div>
+      <div *ngIf="loading">carregando</div> -->
     </button>
     <button class="btn" (click)="closeModal()">
       <div>X</div>
