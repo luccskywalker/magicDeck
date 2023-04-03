@@ -1,5 +1,8 @@
 <div class="pull-container flex-column align-center">
-  <h2 *ngIf="pulledToday">Your pulls Today</h2>
+  <ng-container *ngIf="pulledToday">
+    <h2>Your pulls Today</h2>
+    Time to pull again: {{ countdown }}
+  </ng-container>
   <button *ngIf="!pulledToday" class="btn" (click)="roll()">
     Get your Daily 10 cards
   </button>

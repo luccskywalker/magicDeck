@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
 import * as Scry from 'scryfall-sdk';
 import { Card } from 'scryfall-sdk';
 import { MagicServiceService } from '../magicService/magicService.service';
@@ -11,6 +11,8 @@ const DAILY_COUNTER = 10;
 })
 export class PullComponent implements OnInit {
   public randomNumber = 0;
+
+  public countdown!: string;
 
   public loading = false;
 
@@ -30,7 +32,10 @@ export class PullComponent implements OnInit {
 
   public myInput!: number[];
 
-  constructor(private magicService: MagicServiceService) {}
+  constructor(
+    private magicService: MagicServiceService,
+    private ngZone: NgZone
+  ) {}
 
   public getRandom(max: number) {
     return Math.floor(Math.random() * max);
@@ -81,6 +86,33 @@ export class PullComponent implements OnInit {
     return this.randomCard;
   }
 
+  public timer() {
+    // Set the date for tomorrow
+    let tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    tomorrow.setHours(0, 0, 0, 0);
+
+    // Update the countdown every second
+    setInterval(() => {
+      this.ngZone.run(() => {
+        let now = new Date().getTime();
+        let distance = tomorrow.getTime() - now;
+
+        // Calculate the days, hours, minutes, and seconds left
+        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        let hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Format the countdown string
+        this.countdown =
+          days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's';
+      });
+    }, 1000);
+  }
+
   public removeDuplicates(array: Card[]) {
     return [...new Set(array)];
   }
@@ -92,6 +124,7 @@ export class PullComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.timer();
     this.checkAlreadyPulled();
     if (this.pulledToday) {
       this.populateTodayPull();
