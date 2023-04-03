@@ -12,6 +12,7 @@ const LAST_YEAR_RELEASE = new Date('2023-10-20');
   styleUrls: ['./sets.component.less'],
 })
 export class SetsComponent implements OnInit {
+  public labelYear = LAST_YEAR_RELEASE;
   public loading = false;
   public showSetCardList = false;
   public cardsList: Card[] = [];
@@ -35,12 +36,11 @@ export class SetsComponent implements OnInit {
   public getOptionValue(event: any) {
     this.currentSearchYear = new Date(event);
   }
-  public increaseYear() {}
-  public decreaseYear() {}
 
   public searchBySpecificYear(year: any) {
     this.closeCardContainer();
     this.getSetsByYear(new Date(year));
+    this.labelYear = year;
   }
   public closeCardContainer() {
     this.showSetCardList = false;
@@ -72,10 +72,10 @@ export class SetsComponent implements OnInit {
   }
 
   public fillDatesArray(firstDate: Date, secondDate: Date) {
-    let iteratorDate = new Date(firstDate);
-    while (iteratorDate < secondDate) {
+    let iteratorDate = new Date(secondDate);
+    while (iteratorDate > firstDate) {
       this.optionValues.push(new Date(iteratorDate));
-      iteratorDate.setFullYear(iteratorDate.getFullYear() + 1);
+      iteratorDate.setFullYear(iteratorDate.getFullYear() - 1);
     }
   }
 
@@ -112,7 +112,7 @@ export class SetsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getSetsByYear(FIRST_YEAR_RELEASE);
+    this.getSetsByYear(LAST_YEAR_RELEASE);
     this.fillDatesArray(FIRST_YEAR_RELEASE, LAST_YEAR_RELEASE);
   }
 }
