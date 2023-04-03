@@ -3,6 +3,7 @@ import * as Scry from 'scryfall-sdk';
 import { Card } from 'scryfall-sdk';
 import { MagicServiceService } from '../magicService/magicService.service';
 
+const DAILY_COUNTER = 10;
 @Component({
   selector: 'app-pull',
   templateUrl: './pull.component.html',
@@ -17,13 +18,15 @@ export class PullComponent implements OnInit {
 
   public showCards = false;
 
-  public rollsCounter = 0;
+  public rollsCounter = DAILY_COUNTER;
 
   public cardList!: Card[];
 
   public randomCard!: Card;
 
   public testCard!: Card;
+
+  public pulledToday = false;
 
   public myInput!: number[];
 
@@ -42,6 +45,8 @@ export class PullComponent implements OnInit {
     this.loading = false;
     this.showCards = true;
     this.saveButton = true;
+    this.magicService.savePullTime();
+    this.magicService.saveTodayPull(this.cardList);
   }
 
   public generateRandom(number: number) {
@@ -54,7 +59,11 @@ export class PullComponent implements OnInit {
     this.magicService.saveCardsToLibrary(cards);
   }
 
-  public getCard(id: number) {}
+  public checkAlreadyPulled() {
+    const pullDate = this.magicService.getPullTime();
+    const actualDate = new Date().toDateString();
+    this.pulledToday = pullDate === actualDate;
+  }
 
   public async getRandomCards() {
     this.loading = true;
@@ -76,5 +85,16 @@ export class PullComponent implements OnInit {
     return [...new Set(array)];
   }
 
-  ngOnInit() {}
+  public async populateTodayPull() {
+    this.magicService.getTodayPull().subscribe((data: Card[]) => {
+      this.cardList = data;
+    });
+  }
+
+  ngOnInit() {
+    this.checkAlreadyPulled();
+    if (this.pulledToday) {
+      this.populateTodayPull();
+    }
+  }
 }

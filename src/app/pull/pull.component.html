@@ -1,20 +1,13 @@
 <div class="pull-container flex-column align-center">
-  <h3>How many times do you want to pull?</h3>
-  <div class="form">
-    <input
-      class="input"
-      type="number"
-      [(ngModel)]="rollsCounter"
-      min="0"
-      max="10"
-    />
-  </div>
-  <button class="btn" (click)="roll()">Pull {{ rollsCounter }} times!</button>
+  <h2 *ngIf="pulledToday">Your pulls Today</h2>
+  <button *ngIf="!pulledToday" class="btn" (click)="roll()">
+    Get your Daily 10 cards
+  </button>
 </div>
 
 <div *ngIf="loading">
   <div class="loading flex-column align-center">
-    <h1>Carregando...</h1>
+    <h1>Loading...</h1>
     <div class="loading-pulse"></div>
   </div>
   <svg
@@ -36,20 +29,32 @@
   </svg>
 </div>
 
-<div *ngIf="!loading && showCards">
+<ng-container *ngIf="pulledToday">
   <div class="wrapper">
     <div *ngFor="let card of cardList">
       <div class="card-container">
-        <app-card [card]="card"></app-card>
+        <app-card [revealed]="true" [card]="card"></app-card>
       </div>
     </div>
   </div>
-  <button
-    *ngIf="saveButton"
-    class="btn save-button"
-    (click)="saveToLibrary(cardList)"
-  >
-    Salvar na Biblioteca
-  </button>
-  <button *ngIf="!saveButton" class="btn save-button">Cartas Salvas!</button>
-</div>
+</ng-container>
+
+<ng-container *ngIf="!pulledToday">
+  <div *ngIf="!loading && showCards">
+    <div class="wrapper">
+      <div *ngFor="let card of cardList">
+        <div class="card-container">
+          <app-card [card]="card"></app-card>
+        </div>
+      </div>
+    </div>
+    <button
+      *ngIf="saveButton"
+      class="btn save-button"
+      (click)="saveToLibrary(cardList)"
+    >
+      Salvar na Biblioteca
+    </button>
+    <button *ngIf="!saveButton" class="btn save-button">Cartas Salvas!</button>
+  </div>
+</ng-container>

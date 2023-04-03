@@ -133,4 +133,21 @@ export class MagicServiceService {
     );
     return of(cards);
   }
+
+  public savePullTime() {
+    const actualDate = new Date();
+    localStorage.setItem('pullDate', actualDate.toDateString());
+  }
+
+  public getPullTime() {
+    return localStorage.getItem('pullDate');
+  }
+
+  public saveTodayPull(cards: Card[]) {
+    localStorage.setItem('todayPull', JSON.stringify(cards));
+  }
+  public getTodayPull(): Observable<Card[]> {
+    const cards: Card[] = JSON.parse(localStorage.getItem('todayPull') || '[]');
+    return of(cards);
+  }
 }
