@@ -40,6 +40,14 @@
       </div>
     </div>
   </div>
+  <button
+    *ngIf="saveButton"
+    class="btn save-button"
+    (click)="saveToLibrary(cardList)"
+  >
+    Salvar na Biblioteca
+  </button>
+  <button *ngIf="!saveButton" class="btn save-button">Cartas Salvas!</button>
 </ng-container>
 
 <ng-container *ngIf="!pulledToday">
