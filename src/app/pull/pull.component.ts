@@ -47,11 +47,12 @@ export class PullComponent implements OnInit {
 
   public async roll() {
     this.cardList = await this.getRandomCards();
-    this.loading = false;
     this.showCards = true;
     this.saveButton = true;
     this.magicService.savePullTime();
     this.magicService.saveTodayPull(this.cardList);
+    this.checkAlreadyPulled();
+    this.loading = false;
   }
 
   public generateRandom(number: number) {
