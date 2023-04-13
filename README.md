@@ -6,3 +6,4 @@ Pegue 10 cartas diárias.
 Adicone a sua coleção.
 Escolha suas favoritas.
 :)
+https://magic-deck.vercel.app/
