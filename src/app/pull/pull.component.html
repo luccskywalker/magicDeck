@@ -48,6 +48,7 @@
     Salvar na Biblioteca
   </button>
   <button *ngIf="!saveButton" class="btn save-button">Cartas Salvas!</button>
+  <app-share [cardList]="cardList"></app-share>
 </ng-container>
 
 <ng-container *ngIf="!pulledToday">

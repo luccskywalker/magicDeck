@@ -5,9 +5,16 @@ import { CardModule } from '../card/card.module';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { ShareModule } from '../share/share.module';
 
 @NgModule({
-  imports: [CommonModule, CardModule, FormsModule, HttpClientModule],
+  imports: [
+    CommonModule,
+    CardModule,
+    FormsModule,
+    ShareModule,
+    HttpClientModule,
+  ],
   declarations: [PullComponent],
   providers: [PullComponent],
   exports: [PullComponent],

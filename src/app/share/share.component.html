@@ -1,0 +1,6 @@
+<button>share</button>
+<div *ngFor="let card of cardList">
+  {{ card.name }} - <span [innerHTML]="card.rarity | rarity | async"></span> |
+  <span *ngFor="let color of card.colors">{{ color | color | async }}</span
+  >| {{ card.type_line }} <br />
+</div>
