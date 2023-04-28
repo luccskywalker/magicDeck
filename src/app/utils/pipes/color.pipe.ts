@@ -33,6 +33,6 @@ export class Color implements PipeTransform {
     if (value) {
       this.symbolsToReturn = this.getColor(value);
     }
-    return this.symbolsToReturn;
+    return this._sanitizer.bypassSecurityTrustHtml(this.symbolsToReturn);
   }
 }
