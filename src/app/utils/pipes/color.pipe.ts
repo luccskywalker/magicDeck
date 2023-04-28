@@ -20,7 +20,7 @@ export class Color implements PipeTransform {
       R: '🔴',
       G: '🟢',
       U: '🔵',
-      L: '⚪',
+      W: '⚪',
       B: '⚫',
     };
     return colors[value];
