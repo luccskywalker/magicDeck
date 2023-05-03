@@ -21,6 +21,10 @@ export class Rarity implements PipeTransform {
       uncommon: '⬜',
       rare: '🟨',
       mythic: '🟥',
+      Common: '🟫',
+      Uncommon: '⬜',
+      Rare: '🟨',
+      Mythic: '🟥',
     };
     return icons[value];
   }

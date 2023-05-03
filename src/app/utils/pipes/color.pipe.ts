@@ -22,6 +22,16 @@ export class Color implements PipeTransform {
       U: '🔵',
       W: '⚪',
       B: '⚫',
+      0: '0️⃣',
+      1: '1️⃣',
+      2: '2️⃣',
+      3: '3️⃣',
+      4: '4️⃣',
+      5: '5️⃣',
+      6: '6️⃣',
+      7: '7️⃣',
+      8: '8️⃣',
+      9: '9️⃣',
     };
     return colors[value];
   }
@@ -32,6 +42,7 @@ export class Color implements PipeTransform {
   ): Promise<SafeHtml> {
     if (value) {
       this.symbolsToReturn = this.getColor(value);
+      console.log('Value:', value);
     }
     return this._sanitizer.bypassSecurityTrustHtml(this.symbolsToReturn);
   }

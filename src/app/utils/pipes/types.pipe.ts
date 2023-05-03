@@ -456,6 +456,8 @@ export class Types implements PipeTransform {
       Vanguards: '🛡️🗡️',
       Schemes: '🤫',
       Conspiracies: '🕵️‍♂️',
+      //=== Rarity
+      Legendary: '👑',
     };
     return types[value];
   }
@@ -468,14 +470,12 @@ export class Types implements PipeTransform {
       let stringValues = value.split(/\b/g);
       stringValues = this.removeEmptyObjects(stringValues);
       stringValues.forEach((element) => {
-        console.log(element);
         if (element !== ' — ') {
           this.symbolsToReturn =
             this.symbolsToReturn + ' ' + this.getTypes(element) + ' ';
         }
       });
     }
-
     return this._sanitizer.bypassSecurityTrustHtml(this.symbolsToReturn);
   }
 }
