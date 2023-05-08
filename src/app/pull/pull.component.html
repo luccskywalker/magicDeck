@@ -33,7 +33,6 @@
 </div>
 
 <ng-container *ngIf="pulledToday">
-  <app-share [cardList]="cardList"></app-share>
   <div class="wrapper">
     <div *ngFor="let card of cardList">
       <div class="card-container">
@@ -48,7 +47,15 @@
   >
     Salvar na Biblioteca
   </button>
-  <button *ngIf="!saveButton" class="btn save-button">Cartas Salvas!</button>
+  <div class="bottom-buttons">
+    <button *ngIf="!saveButton" class="save-button">Cartas Salvas!</button>
+    <button *ngIf="!shareButton" (click)="toggleShare()" class="save-button">
+      Share
+    </button>
+  </div>
+  <ng-container *ngIf="showShare">
+    <app-share [cardList]="cardList"></app-share>
+  </ng-container>
 </ng-container>
 
 <ng-container *ngIf="!pulledToday">

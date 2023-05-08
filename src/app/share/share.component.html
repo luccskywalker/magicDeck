@@ -1,4 +1,3 @@
-<button class="btn">Share</button>
 <div class="myDiv" *ngFor="let card of cardList">
   {{ card.name }} - <span [innerHTML]="card.rarity | rarity | async"></span> |
   <span

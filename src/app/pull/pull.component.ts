@@ -18,6 +18,10 @@ export class PullComponent implements OnInit {
 
   public saveButton = false;
 
+  public shareButton = false;
+
+  public showShare = false;
+
   public showCards = false;
 
   public rollsCounter = DAILY_COUNTER;
@@ -45,6 +49,9 @@ export class PullComponent implements OnInit {
     this.rollsCounter = counter;
   }
 
+  public toggleShare() {
+    this.showShare = !this.showShare;
+  }
   public async roll() {
     this.cardList = await this.getRandomCards();
     this.showCards = true;

@@ -10,7 +10,5 @@ export class ShareComponent implements OnInit {
   constructor() {}
   @Input() cardList!: Card[];
 
-  public copyToText() {}
-
   ngOnInit() {}
 }

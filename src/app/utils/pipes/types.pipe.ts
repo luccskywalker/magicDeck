@@ -458,6 +458,7 @@ export class Types implements PipeTransform {
       Conspiracies: '🕵️‍♂️',
       //=== Rarity
       Legendary: '👑',
+      Token: '🔶',
     };
     return types[value];
   }
