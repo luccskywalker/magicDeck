@@ -1,9 +1,9 @@
-<div class="myDiv" *ngFor="let card of cardList">
+<div class="results" *ngFor="let card of cardList">
   {{ card.name }} - <span [innerHTML]="card.rarity | rarity | async"></span> |
   <span
     *ngFor="let color of card.colors"
     [innerHTML]="color | color | async"
   ></span
-  ><span *ngIf="card.power" [innerHtml]="card.power | color | async"> </span>|
-  <span [innerHTML]="card.type_line | type | async"></span> <br />
+  ><span *ngIf="card.power" [innerHtml]="card.toughness | color | async"> </span
+  >| <span [innerHTML]="card.type_line | type | async"></span> <br />
 </div>

@@ -453,12 +453,22 @@ export class Types implements PipeTransform {
       Battles: '⚔️',
       Planes: '✈️',
       Phenomena: '🌀',
-      Vanguards: '🛡️🗡️',
-      Schemes: '🤫',
+      Vanguard: '🛡️🗡️',
+      Scheme: '🤫',
       Conspiracies: '🕵️‍♂️',
+      Conspiracy: '🕵️‍♂️',
+
       //=== Rarity
       Legendary: '👑',
       Token: '🔶',
+      //====Missed Types:
+      World: '🌍',
+      Plains: '🌾',
+      Forest: '🌲',
+      Island: '🏝️',
+      Swamp: '🌫️',
+      Mountain: '⛰️',
+      Trap: '🪤',
     };
     return types[value];
   }

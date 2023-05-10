@@ -15,9 +15,21 @@
   gap: 15px; /* The gap between the row and columns */
 }
 
+@media (min-width: 801px) {
+  .header-items {
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+  }
+}
 @media (max-width: 800px) {
   .wrapper {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .header-items {
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
   }
 }
 @media (max-width: 500px) {
@@ -69,10 +81,25 @@
   }
 }
 
-.bottom-buttons {
+.header-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2%;
+  margin-right: 4%;
+}
+
+.header-items {
+  display: flex;
+  width: 80%;
+  justify-content: space-around;
+}
+
+.counter-items {
   display: flex;
   flex-direction: row;
-  width: 20%;
+  align-items: center;
+  gap: 2%;
 }
 
 .pull-container {

@@ -1,8 +1,21 @@
 <div class="pull-container flex-column align-center">
-  <ng-container *ngIf="!loading && pulledToday">
-    <h2>Your pulls Today</h2>
-    Time to pull again: {{ countdown }}
-  </ng-container>
+  <div class="header-items">
+    <ng-container *ngIf="!loading && pulledToday">
+      <div class="header-info">
+        <div class="counter-items">
+          <h2>Your pulls Today</h2>
+          <button *ngIf="!shareButton" (click)="toggleShare()" class="btn">
+            Share
+          </button>
+        </div>
+        Time to pull again: {{ countdown }}
+      </div>
+    </ng-container>
+    <ng-container *ngIf="showShare">
+      <app-share [cardList]="cardList"></app-share>
+    </ng-container>
+  </div>
+
   <ng-container *ngIf="!loading && !pulledToday">
     <button class="btn" (click)="roll()">Get your Daily 10 cards</button>
   </ng-container>
@@ -47,15 +60,7 @@
   >
     Salvar na Biblioteca
   </button>
-  <div class="bottom-buttons">
-    <button *ngIf="!saveButton" class="save-button">Cartas Salvas!</button>
-    <button *ngIf="!shareButton" (click)="toggleShare()" class="save-button">
-      Share
-    </button>
-  </div>
-  <ng-container *ngIf="showShare">
-    <app-share [cardList]="cardList"></app-share>
-  </ng-container>
+  <button *ngIf="!saveButton" class="btn save-button">Cartas Salvas!</button>
 </ng-container>
 
 <ng-container *ngIf="!pulledToday">
