@@ -150,4 +150,8 @@ export class MagicServiceService {
     const cards: Card[] = JSON.parse(localStorage.getItem('todayPull') || '[]');
     return of(cards);
   }
+  public clearTodayPull() {
+    localStorage.removeItem('todayPull');
+    localStorage.removeItem('pullDate');
+  }
 }

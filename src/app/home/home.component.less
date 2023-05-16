@@ -12,15 +12,33 @@
     width: 100vw;
     height: 100vh;
   }
+
+  .home {
+    top: 50%;
+    -webkit-text-stroke: 0.4px black;
+  }
+  .home-text {
+    font-size: 2em;
+    float: inline-end;
+  }
 }
 
 @media (min-width: 900px) {
   .background {
-    background-image: url("../../assets/Eleshwide.png");
-    background-size: cover;
-    position: absolute;
+    background-image: url("../../assets/Elesh-Norn-Variant-March-of-the-Machine-MtG-Art.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: black;
     width: 100vw;
     height: 100vh;
+    float: right;
+  }
+  .home {
+    top: 20%;
+  }
+  .home-text {
+    font-size: 3.5em;
   }
 }
 
@@ -195,7 +213,6 @@
 }
 .home {
   position: absolute;
-  top: 20%;
   left: 10%;
   display: flex;
   flex-direction: column;
@@ -204,20 +221,24 @@
 }
 
 .home-text {
-  font-size: 3.5em;
   color: white;
   font-family: "Cinzel Decorative", cursive;
-  text-align: justify;
-  -webkit-text-stroke: 0.4px black;
+  text-align: center;
 }
 
 .home-button {
   background-color: black;
-  border: none;
+  border: white 1px ridge;
   color: white;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+
+  &:hover {
+    border: black 2px ridge;
+    color: black;
+    background-color: white;
+  }
 }
