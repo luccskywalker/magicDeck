@@ -1,0 +1,48 @@
+<div class="background"></div>
+<div class="home-particles">
+  <div class="pre-container">
+    <div class="container">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="border"></div>
+      <div class="border"></div>
+    </div>
+    <svg>
+      <defs>
+        <filter id="goo">
+          <!--Give slow dripping slime effect in CSS-->
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+          <feColorMatrix
+            in="name"
+            mode="matrix"
+            values="1 0 0 0 0
+                    0 1 0 0 0
+                    0 0 1 0 0
+                    0 0 0 30 -15"
+          />
+          <feBlend in="SourceGraphic" />
+        </filter>
+      </defs>
+    </svg>
+  </div>
+</div>
+<div class="home">
+  <span class="home-text">
+    " Abondon your selfish ambitions and become one with the Flesh Singularity.
+    "
+  </span>
+  <a class="home-button" href="/pull">Try Your Luck</a>
+</div>

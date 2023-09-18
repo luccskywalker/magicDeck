@@ -1,0 +1,104 @@
+<div class="flex-column">
+  <div>
+    <div class="set-buttons">
+      <select
+        required
+        class="btn"
+        [(ngModel)]="yearTitle"
+        (ngModelChange)="getOptionValue($event)"
+      >
+        <option [value]="yearTitle" disabled selected>Choose a Year...</option>
+        <ng-container *ngFor="let option of optionValues">
+          <option
+            type="date"
+            [innerHTML]="option.getFullYear()"
+            [ngValue]="option"
+          ></option>
+        </ng-container>
+      </select>
+      <button class="btn" (click)="searchBySpecificYear(currentSearchYear)">
+        Buscar
+      </button>
+      <button
+        *ngIf="showSetCardList"
+        class="btn"
+        (click)="closeCardContainer()"
+      >
+        Voltar
+      </button>
+    </div>
+  </div>
+  <div>
+    <div *ngIf="showSetCardList">
+      <div class="align-center">
+        Filtrar por: Filtrar por:
+        <select class="btn" required [(ngModel)]="sort">
+          <option [value]="sort" disabled hidden selected>
+            Choose a category
+          </option>
+          <option value="rarity">Raridade</option>
+          <option value="released_at">Data de Lançamento</option>
+        </select>
+        Ordenar por:
+        <select class="btn" required [(ngModel)]="order">
+          <option [value]="order" selected hidden disabled>
+            Choose a order
+          </option>
+          <option value="asc">Ascendente</option>
+          <option value="desc">Descendente</option>
+        </select>
+        <button class="btn" (click)="sortBy(order, sort)">Filtrar</button>
+      </div>
+      <div class="wrapper">
+        <div *ngFor="let card of cardsList">
+          <div class="card-container">
+            <app-card [card]="card" [revealed]="true"></app-card>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="loading">
+      <div class="loading flex-column align-center">
+        <h1>Loading...</h1>
+        <div class="loading-pulse"></div>
+      </div>
+      <svg
+        class="spinner"
+        width="65px"
+        height="65px"
+        viewBox="0 0 66 66"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          class="path"
+          fill="none"
+          stroke-width="6"
+          stroke-linecap="round"
+          cx="33"
+          cy="33"
+          r="30"
+        ></circle>
+      </svg>
+    </div>
+
+    <div *ngIf="!loading && !showSetCardList">
+      <div class="text-justify">
+        <h1 class="title-text" [innerHTML]="labelYear.getFullYear()"></h1>
+      </div>
+      <div class="wrapper">
+        <div *ngFor="let set of setsList">
+          <div class="flex-column align-center">
+            <a (click)="showSetCards(set)">
+              <img class="set-icons" [src]="set.icon_svg_uri" alt="" />
+            </a>
+            <div class="text-justify">
+              <h6>{{ set.name }}({{ set.released_at }})</h6>
+              <h6>( 0 / {{ set.card_count }})</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

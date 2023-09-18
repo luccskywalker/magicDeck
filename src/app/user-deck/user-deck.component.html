@@ -1,0 +1,16 @@
+<div class="title">
+  <h1 class="title-text">User Favourite Cards</h1>
+</div>
+<div class="content">
+  <div class="user-decks"></div>
+  <div class="deck-cards">
+    <h1>Favourite Cards:</h1>
+    <div class="wrapper">
+      <div *ngFor="let card of userFavouriteCards">
+        <div class="card-container">
+          <app-card [card]="card" [revealed]="true"></app-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

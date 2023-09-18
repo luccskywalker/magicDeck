@@ -1,0 +1,84 @@
+<div class="pull-container flex-column align-center">
+  <div class="header-items">
+    <ng-container *ngIf="!loading && pulledToday">
+      <div class="header-info">
+        <div class="counter-items">
+          <h2>Your pulls Today</h2>
+          <button *ngIf="!shareButton" (click)="toggleShare()" class="btn">
+            Share
+          </button>
+        </div>
+        Time to pull again: {{ countdown }}
+      </div>
+    </ng-container>
+    <ng-container *ngIf="showShare">
+      <app-share [cardList]="cardList"></app-share>
+    </ng-container>
+  </div>
+
+  <ng-container *ngIf="!loading && !pulledToday">
+    <button class="btn" (click)="roll()">Get your Daily 5 cards</button>
+  </ng-container>
+</div>
+
+<div *ngIf="loading">
+  <div class="loading flex-column align-center">
+    <h1>Loading...</h1>
+    <div class="loading-pulse"></div>
+  </div>
+  <svg
+    class="spinner"
+    width="65px"
+    height="65px"
+    viewBox="0 0 66 66"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      class="path"
+      fill="none"
+      stroke-width="6"
+      stroke-linecap="round"
+      cx="33"
+      cy="33"
+      r="30"
+    ></circle>
+  </svg>
+</div>
+
+<ng-container *ngIf="pulledToday">
+  <div class="wrapper">
+    <div *ngFor="let card of cardList">
+      <div class="card-container">
+        <app-card [revealed]="true" [card]="card"></app-card>
+      </div>
+    </div>
+  </div>
+  <button
+    *ngIf="saveButton"
+    class="btn save-button"
+    (click)="saveToLibrary(cardList)"
+  >
+    Salvar na Biblioteca
+  </button>
+  <button *ngIf="!saveButton" class="btn save-button">Cartas Salvas!</button>
+</ng-container>
+
+<ng-container *ngIf="!pulledToday">
+  <div *ngIf="!loading && showCards">
+    <div class="wrapper">
+      <div *ngFor="let card of cardList">
+        <div class="card-container">
+          <app-card [card]="card"></app-card>
+        </div>
+      </div>
+    </div>
+    <button
+      *ngIf="saveButton"
+      class="btn save-button"
+      (click)="saveToLibrary(cardList)"
+    >
+      Salvar na Biblioteca
+    </button>
+    <button *ngIf="!saveButton" class="btn save-button">Cartas Salvas!</button>
+  </div>
+</ng-container>

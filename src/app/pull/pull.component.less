@@ -1,0 +1,130 @@
+@base-line-height: 35px;
+@white: rgb(255, 255, 255);
+@off-white: rgba(gray, 0.2);
+@spin-duration: 1s;
+@pulse-duration: 750ms;
+
+.wrapper {
+  margin: 2% 5% 2% 5%;
+  display: grid;
+  grid-template-columns: repeat(
+    5,
+    1fr
+  ); /* 10 is the number of items per column */
+  grid-template-rows: repeat(auto, 1fr); /* 20 is the number of items per row */
+  gap: 15px; /* The gap between the row and columns */
+}
+
+@media (min-width: 801px) {
+  .header-items {
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+  }
+}
+@media (max-width: 800px) {
+  .wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .header-items {
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+  }
+}
+@media (max-width: 500px) {
+  .wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  50% {
+    background: white;
+  }
+}
+
+.loading-pulse {
+  position: relative;
+  width: (@base-line-height / 4);
+  height: @base-line-height;
+  background: @off-white;
+  animation: pulse @pulse-duration infinite;
+  animation-delay: (@pulse-duration / 3);
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: (@base-line-height / 1.5);
+    width: (@base-line-height / 4);
+    background: @off-white;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: pulse @pulse-duration infinite;
+  }
+  &:before {
+    left: -(@base-line-height / 2);
+  }
+  &:after {
+    left: (@base-line-height / 2);
+    animation-delay: (@pulse-duration / 1.5);
+  }
+}
+
+.header-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2%;
+  margin-right: 4%;
+}
+
+.header-items {
+  display: flex;
+  width: 80%;
+  justify-content: space-around;
+}
+
+.counter-items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2%;
+}
+
+.pull-container {
+  margin: 2%;
+}
+.input {
+  background: #f7fafc;
+  border: 0;
+  border-radius: 1rem;
+  box-shadow: inset 5px 5px 3px #d2d5d6, inset -5px -5px 3px #ffffff;
+  color: #4a5568;
+  font-size: 1.7rem;
+  padding: 1rem;
+  margin: 2%;
+  transition: all 0.3s ease;
+}
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.save-button {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+}

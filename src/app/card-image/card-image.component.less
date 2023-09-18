@@ -1,0 +1,211 @@
+@uncommon-background-color: rgb(216, 216, 211);
+@uncommon-first-shadow-color: rgb(103, 110, 161);
+
+@rare-background-color: rgb(208, 192, 14);
+@rare-first-shadow-color: rgb(140, 119, 38);
+
+@mythic-background-color: rgb(228, 56, 8);
+@mythic-first-shadow-color: rgb(177, 96, 8);
+
+.img {
+  border-radius: 4%;
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+  border-radius: 4%;
+  background-color: #fff 50%;
+}
+
+.card-holo:nth-of-type {
+  &:before,
+  &:after {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+.card-holo:nth-of-type {
+  &:before,
+  &:after {
+    display: none;
+  }
+}
+
+.card-holo:nth-of-type {
+  background: none;
+  &:before {
+    background-position: center;
+  }
+  &:after {
+    display: none;
+  }
+}
+
+.card-holo {
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+  background-image: url(https://cdn.discordapp.com/attachments/671493771766136839/674081668507893780/Elias.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4%;
+  box-shadow: 0 35px 25px -15px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.card-holo:before,
+.card-holo:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  background-size: 300% 300%;
+  mix-blend-mode: color-dodge;
+  background-image: linear-gradient(115deg, transparent 0%, transparent 100%);
+  opacity: 0.2;
+  z-index: 1;
+  animation: holoGradient 15s ease infinite;
+}
+
+.card > span {
+  position: relative;
+  top: 45%;
+}
+
+.card-template(@background-color, @first-shadow-color) {
+  border-radius: 4%;
+  background-color: rgba(@background-color, 0.9);
+  box-shadow: -3px -3px 3px 0 rgba(@background-color, 0.9),
+    3px 3px 3px 0 rgba(@first-shadow-color, 0.9), 0 0 6px 2px rgba(#ffe759, 0.6),
+    0 35px 25px -15px rgba(0, 0, 0, 0.5);
+  &:after,
+  &:before {
+    background-image: linear-gradient(
+      115deg,
+      transparent 0%,
+      rgba(@background-color) 30%,
+      rgba(@first-shadow-color) 70%,
+      transparent 100%
+    );
+    animation: holoGradient 15s ease infinite;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-size: 300% 300%;
+    mix-blend-mode: color-dodge;
+    opacity: 0.2;
+    z-index: 1;
+    animation: holoGradient 15s ease infinite;
+  }
+  &.card-template::after {
+    border-radius: 4%;
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/13471/sparkles.gif");
+    background-position: center;
+    background-size: 180%;
+    mix-blend-mode: color-dodge;
+    opacity: 1;
+    z-index: 2;
+    animation: holoSparkle ease infinite;
+  }
+}
+
+.uncommon {
+  .card-template(@uncommon-background-color, @uncommon-first-shadow-color);
+}
+
+.rare {
+  .card-template(@rare-background-color, @rare-first-shadow-color);
+}
+
+.mythic {
+  .card-template(@mythic-background-color, @mythic-first-shadow-color);
+}
+
+.rare::after,
+.mythic::after {
+  border-radius: 4%;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/13471/sparkles.gif");
+  background-position: center;
+  background-size: 180%;
+  mix-blend-mode: color-dodge;
+  opacity: 1;
+  z-index: 2;
+  animation: holoSparkle ease infinite;
+}
+
+.card-holo.active:before {
+  opacity: 1;
+  animation: none;
+  transition: none;
+  background-image: linear-gradient(
+    115deg,
+    transparent 0%,
+    transparent 25%,
+    rgba(0, 231, 255, 0.7) 45%,
+    rgba(255, 0, 231, 0.7) 55%,
+    transparent 70%,
+    transparent 100%
+  );
+}
+
+@keyframes holoSparkle {
+  0% {
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  95% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes holoGradient {
+  3% {
+    opacity: 0;
+  }
+  5% {
+    background-position: 0% 0%;
+  }
+  7% {
+    opacity: 0.5;
+  }
+  9% {
+    background-position: 100% 100%;
+  }
+  11% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    background-position: 100% 100%;
+  }
+  55% {
+    opacity: 0.3;
+  }
+  70% {
+    opacity: 0;
+    background-position: 0% 0%;
+  }
+}
